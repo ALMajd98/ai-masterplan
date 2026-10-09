@@ -1,0 +1,251 @@
+﻿<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ط£ظ…ط§ظ† ط¨ط±ظˆطھظˆظƒظˆظ„ ط§ظ„ظ€ MCP â€” AI Master Plan</title>
+    <link rel="manifest" href="../manifest.json">
+    <link rel="icon" type="image/svg+xml" href="../assets/icons/favicon.svg">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+    <!-- Animated Background -->
+    <div class="animated-bg">
+        <div class="gradient-orb orb-1"></div>
+        <div class="gradient-orb orb-2"></div>
+        <div class="gradient-orb orb-3"></div>
+    </div>
+
+    <!-- Floating Sidebar Toggle -->
+    <button class="floating-sidebar-toggle" id="floatingToggle" onclick="toggleSidebar()" aria-label="ظپطھط­ ط§ظ„ظ‚ط§ط¦ظ…ط©">
+        <i class="fas fa-bars"></i>
+    </button>
+
+    <!-- Sidebar Overlay -->
+    <div class="sidebar-overlay" id="sidebarOverlay" onclick="toggleSidebar()"></div>
+
+    <!-- Sidebar -->
+    <nav class="sidebar" id="sidebar">
+        <div class="sidebar-header">
+            <a href="../index.html" class="logo">
+                <div class="logo-icon"><i class="fas fa-microchip"></i></div>
+                <div class="logo-text">
+                    <span class="logo-title">AI Master</span>
+                    <span class="logo-subtitle">Plan v4.0</span>
+                </div>
+            </a>
+            <button class="sidebar-close" onclick="toggleSidebar()" aria-label="ط¥ط؛ظ„ط§ظ‚"><i class="fas fa-xmark"></i></button>
+        </div>
+
+        <div class="sidebar-search">
+            <i class="fas fa-magnifying-glass"></i>
+            <input type="text" placeholder="ط¨ط­ط« ط³ط±ظٹط¹..." id="sidebarSearch" oninput="searchNav(this.value)">
+            <kbd>Ctrl+K</kbd>
+        </div>
+
+        <div class="sidebar-nav" id="sidebarNav">
+            <div class="nav-section">
+                <span class="nav-section-title"><i class="fas fa-circle-dot"></i>  ط§ظ„ط¨ط¯ط§ظٹط©</span>
+                <a href="../index.html" class="nav-link"><i class="fas fa-th-large"></i><span>ظ„ظˆط­ط© ط§ظ„طھط­ظƒظ…</span></a>
+                <a href="01-overview.html" class="nav-link"><i class="fas fa-compass"></i><span>ظ†ط¸ط±ط© ط¹ط§ظ…ط©</span></a>
+                <a href="18-ai-timeline.html" class="nav-link"><i class="fas fa-clock-rotate-left"></i><span>ط£ط­ط¯ط§ط« 2025-2026</span><span class="nav-badge new">ط¬ط¯ظٹط¯</span></a>
+            </div>
+            <div class="nav-section">
+                <span class="nav-section-title"><i class="fas fa-rocket"></i>  ط§ظ„طھط£ط³ظٹط³</span>
+                <a href="02-setup.html" class="nav-link"><i class="fas fa-hard-drive"></i><span>طھط¬ظ‡ظٹط² ط§ظ„ط¬ظ‡ط§ط²</span><span class="nav-badge phase">1</span></a>
+                <a href="03-ai-local.html" class="nav-link"><i class="fas fa-server"></i><span>AI ط§ظ„ظ…ط­ظ„ظٹ</span><span class="nav-badge phase">2</span></a>
+                <a href="04-ai-cloud.html" class="nav-link"><i class="fas fa-cloud"></i><span>AI ط§ظ„ط³ط­ط§ط¨ظٹ</span><span class="nav-badge phase">3</span></a>
+                <a href="05-vscode.html" class="nav-link"><i class="fas fa-code"></i><span>VS Code + Cline</span><span class="nav-badge phase">4</span></a>
+                <a href="19-ai-tools-compare.html" class="nav-link"><i class="fas fa-scale-balanced"></i><span>ظ…ظ‚ط§ط±ظ†ط© ط§ظ„ط£ط¯ظˆط§طھ</span><span class="nav-badge new">ط¬ط¯ظٹط¯</span></a>
+            </div>
+            <div class="nav-section">
+                <span class="nav-section-title"><i class="fas fa-wand-magic-sparkles"></i>  ط§ظ„ظ‚ط¯ط±ط§طھ</span>
+                <a href="06-mcps.html" class="nav-link"><i class="fas fa-plug"></i><span>MCPs</span><span class="nav-badge count">10K+</span></a>
+                <a href="17-mcp-security.html" class="nav-link active"><i class="fas fa-shield-virus"></i><span>ط£ظ…ط§ظ† MCP</span><span class="nav-badge new">ط¬ط¯ظٹط¯</span></a>
+                <a href="07-modes.html" class="nav-link"><i class="fas fa-masks-theater"></i><span>Custom Modes</span></a>
+                <a href="08-skills.html" class="nav-link"><i class="fas fa-graduation-cap"></i><span>Skills</span></a>
+                <a href="16-multi-agent.html" class="nav-link"><i class="fas fa-users-gear"></i><span>Multi-Agent</span><span class="nav-badge new">ط¬ط¯ظٹط¯</span></a>
+            </div>
+            <div class="nav-section">
+                <span class="nav-section-title"><i class="fas fa-shield-halved"></i>  ط§ظ„ظ…ط¹ط§ظٹظٹط±</span>
+                <a href="09-constitution.html" class="nav-link"><i class="fas fa-scroll"></i><span>ط§ظ„ط¯ط³طھظˆط±</span></a>
+                <a href="10-security.html" class="nav-link"><i class="fas fa-shield-halved"></i><span>ط§ظ„ط£ظ…ط§ظ†</span><span class="nav-badge count">60+</span></a>
+                <a href="11-performance.html" class="nav-link"><i class="fas fa-gauge-high"></i><span>ط§ظ„ط£ط¯ط§ط، ظˆط§ظ„طھظˆط³ط¹</span></a>
+            </div>
+            <div class="nav-section">
+                <span class="nav-section-title"><i class="fas fa-briefcase"></i>  ط§ظ„طھط®طµطµط§طھ</span>
+                <a href="12-ecommerce.html" class="nav-link"><i class="fas fa-store"></i><span>ط§ظ„طھط¬ط§ط±ط© ط§ظ„ط³ط¹ظˆط¯ظٹط©</span></a>
+                <a href="13-techstack.html" class="nav-link"><i class="fas fa-layer-group"></i><span>Tech Stack</span></a>
+                <a href="14-workflow.html" class="nav-link"><i class="fas fa-route"></i><span>ط®ط·ظˆط§طھ ط§ظ„ط¹ظ…ظ„</span></a>
+                <a href="15-resources.html" class="nav-link"><i class="fas fa-book-open"></i><span>ط§ظ„ظ…طµط§ط¯ط±</span></a>
+            </div>
+        </div>
+
+        <div class="sidebar-footer">
+            <div class="version-info">
+                <i class="fas fa-code-branch"></i>
+                <span>v4.0 â€” ط³ط¨طھظ…ط¨ط± 2026</span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <header class="topbar">
+            <button class="mobile-menu-btn" onclick="toggleSidebar()"><i class="fas fa-bars"></i></button>
+            <div class="topbar-title">
+                <div class="topbar-breadcrumb">
+                    <i class="fas fa-home"></i>
+                    <span>ط§ظ„ط±ط¦ظٹط³ظٹط© / ط§ظ„ظ‚ط¯ط±ط§طھ / ط£ظ…ط§ظ† MCP</span>
+                </div>
+                <h1>ط£ظ…ط§ظ† ط¨ط±ظˆطھظˆظƒظˆظ„ ط§ظ„ظ€ MCP</h1>
+            </div>
+            <div class="topbar-actions">
+                <button class="topbar-btn" onclick="scrollToTop()" title="ظ„ظ„ط£ط¹ظ„ظ‰"><i class="fas fa-arrow-up"></i></button>
+                <button class="theme-toggle" onclick="toggleTheme()" title="طھط¨ط¯ظٹظ„ ط§ظ„ظˆط¶ط¹"><i class="fas fa-moon" id="themeIcon"></i></button>
+            </div>
+        </header>
+
+        <div class="content-area">
+            <section class="hero-section animate-fade-in-up">
+                <div class="hero-grid-pattern"></div>
+                <div class="hero-content">
+                    <div class="hero-badge">
+                        <span class="badge-pulse"></span>
+                        <i class="fas fa-shield-virus"></i>
+                        Model Context Protocol Security
+                    </div>
+                    <h2 class="hero-title">
+                        <span class="gradient-text">ط­ظ…ط§ظٹط© ط³ظ„ط§ط³ظ„ ط§ظ„ط¥ظ…ط¯ط§ط¯ ط§ظ„ط¨ط±ظ…ط¬ظٹط©</span>
+                    </h2>
+                    <p class="hero-description">
+                        ظٹظ…ط«ظ„ ط¨ط±ظˆطھظˆظƒظˆظ„ ط§ظ„ظ€ MCP ظ…ط¹ظٹط§ط±ط§ظ‹ ط«ظˆط±ظٹط§ظ‹ ظ„ط±ط¨ط· ط§ظ„ظ†ظ…ط§ط°ط¬ ط¨ط§ظ„ط£ط¯ظˆط§طھطŒ ظˆظ„ظƒظ† طھظپط¹ظٹظ„ظ‡ ط¨طµظ„ط§ط­ظٹط§طھ ظƒط§ظ…ظ„ط© ظ‚ط¯ ظٹط´ظƒظ„ <strong class="hero-highlight">ط«ط؛ط±ط© ط£ظ…ظ†ظٹط© ط­ط±ط¬ط©</strong>.
+                        ط¯ظ„ظٹظ„ طھط£ظ…ظٹظ† ظˆط¥ط¯ط§ط±ط© طµظ„ط§ط­ظٹط§طھ ط®ظˆط§ط¯ظ… ط§ظ„ظ€ MCP ظ„ظ…ظ†ط¹ طھط³ط±ظٹط¨ ط§ظ„ط¨ظٹط§ظ†ط§طھ ظˆط§ظ„ظˆطµظˆظ„ ط؛ظٹط± ط§ظ„ظ…طµط±ط­ ظ„ظ„ط¬ظ‡ط§ط².
+                    </p>
+                </div>
+            </section>
+
+            <!-- BlueRock Security Stats -->
+            <section class="section animate-fade-in-up" style="animation-delay: 0.1s">
+                <h3 class="section-title">
+                    <i class="fas fa-chart-pie"></i>
+                    ط¥ط­طµط§ط¦ظٹط§طھ ط£ظ…ظ† ط®ظˆط§ط¯ظ… ط§ظ„ظ€ MCP ط§ظ„ط¹ط§ظ…ط© ظ„ط¹ط§ظ… 2026
+                    <span class="section-badge danger">ظ…ط®ط§ط·ط± ط­ظ‚ظٹظ‚ظٹط©</span>
+                </h3>
+                <div class="market-grid">
+                    <div class="market-card">
+                        <div class="market-icon" style="background: rgba(239, 68, 68, 0.1); color: var(--accent-danger);">
+                            <i class="fas fa-bug"></i>
+                        </div>
+                        <div class="market-value" style="color: var(--accent-danger);">36.7%</div>
+                        <div class="market-label">ظ…ظ† ط§ظ„ط®ظˆط§ط¯ظ… ط§ظ„ط¹ط§ظ…ط© ظ…ط¹ط±ط¶ط© ظ„ط«ط؛ط±ط§طھ SSRF</div>
+                    </div>
+                    <div class="market-card">
+                        <div class="market-icon" style="background: rgba(245, 158, 11, 0.1); color: var(--accent-warning);">
+                            <i class="fas fa-unlock"></i>
+                        </div>
+                        <div class="market-value" style="color: var(--accent-warning);">41%</div>
+                        <div class="market-label">ظ…ظ† ط§ظ„ط®ظˆط§ط¯ظ… طھط¹ظ…ظ„ ط¯ظˆظ† ظ†ط¸ط§ظ… ظ…طµط§ط¯ظ‚ط©</div>
+                    </div>
+                    <div class="market-card">
+                        <div class="market-icon" style="background: rgba(139, 92, 246, 0.1); color: var(--accent-secondary);">
+                            <i class="fas fa-key"></i>
+                        </div>
+                        <div class="market-value" style="color: var(--accent-secondary);">53%</div>
+                        <div class="market-label">طھط¹طھظ…ط¯ ط¹ظ„ظ‰ ظ…ظپط§طھظٹط­ API ط«ط§ط¨طھط© ظˆط؛ظٹط± ظ…ط´ظپط±ط©</div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Security Threats -->
+            <section class="section animate-fade-in-up" style="animation-delay: 0.2s">
+                <h3 class="section-title">
+                    <i class="fas fa-shield-virus"></i>
+                    ط§ظ„طھظ‡ط¯ظٹط¯ط§طھ ط§ظ„ط£ظ…ظ†ظٹط© ط§ظ„ط£ظƒط«ط± ط®ط·ظˆط±ط© ظˆظƒظٹظپظٹط© ط§ظ„ط­ط¯ ظ…ظ†ظ‡ط§
+                </h3>
+
+                <div class="model-card featured">
+                    <div class="model-badge" style="background: var(--accent-danger);">1. ظ‡ط¬ظ…ط§طھ ط³ظ„ط§ط³ظ„ ط§ظ„ط¥ظ…ط¯ط§ط¯ (Supply Chain)</div>
+                    <p class="model-desc">
+                        ط§ط³طھظٹط±ط§ط¯ ط£ظˆ طھط´ط؛ظٹظ„ ط®ظˆط§ط¯ظ… MCP ط؛ظٹط± ظ…ظˆط«ظˆظ‚ط© ظ…ظ† ظ…ط³طھظˆط¯ط¹ط§طھ GitHub ظ…ط¬ظ‡ظˆظ„ط© ظ‚ط¯ ظٹط¤ط¯ظٹ ظ„طھظ†ظپظٹط° ط³ظƒط±ط¨طھط§طھ ط®ط¨ظٹط«ط© طھظ‚ظˆظ… ط¨ط³ط­ط¨ ظ…ظ„ظپ ط§ظ„ط£ط³ط±ط§ط± <code>.env</code> ظˆط±ظپط¹ظ‡ ظ„ط®ظˆط§ط¯ظ… ط¨ط¹ظٹط¯ط©.
+                    </p>
+                    <div class="alert alert-info" style="margin: 0; padding: 12px 16px;">
+                        <i class="fas fa-shield-halved"></i>
+                        <span><strong>ط§ظ„ط­ظ„ ط§ظ„طµط§ط±ظ…:</strong> ظ„ط§ طھط«ط¨طھ ط£ظٹ ط®ط§ط¯ظ… MCP ط¥ظ„ط§ ط¨ط¹ط¯ ط§ظ„طھط­ظ‚ظ‚ ظ…ظ† طھظˆط«ظٹظ‚ظ‡ ظپظٹ ط§ظ„ط³ط¬ظ„ط§طھ ط§ظ„ظ…ط¹طھظ…ط¯ط© (Glama ط£ظˆ Smithery ط§ظ„ظ…ظˆط«ظ‚ط© ط¨ظ€ DNS)طŒ ظˆظ…ط±ط§ط¬ط¹ط© ط§ظ„ظƒظˆط¯ ط§ظ„ظ…طµط¯ط±ظٹ ظ„طھط£ظƒظٹط¯ ط§ظ„ظ†ظ‚ط§ط، ط§ظ„ط£ظ…ظ†ظٹ.</span>
+                    </div>
+                </div>
+
+                <div class="model-card featured" style="margin-top: 16px;">
+                    <div class="model-badge" style="background: var(--accent-warning); color: #000;">2. ط§ظ„ظˆطµظˆظ„ ط§ظ„ظ…ط·ظ„ظ‚ ظ„ظ†ط¸ط§ظ… ط§ظ„ظ…ظ„ظپط§طھ</div>
+                    <p class="model-desc">
+                        طھظپط¹ظٹظ„ ط®ط§ط¯ظ… ط§ظ„ظ€ `filesystem` ظˆظ…ظ†ط­ظ‡ ظˆطµظˆظ„ط§ظ‹ ظ„ظƒط§ظ…ظ„ ظ‚ط±طµ ط§ظ„ظ†ط¸ط§ظ… <code>C:\</code> ظٹظ…ظ†ط­ ط§ظ„ظ€ AI ظ‚ط¯ط±ط© ظƒط§ظ…ظ„ط© ط¹ظ„ظ‰ ظ‚ط±ط§ط،ط© ظ…ظ„ظپط§طھ طھط¹ط±ظٹظپ ط§ظ„ط§طھطµط§ظ„ ط§ظ„ط®ط§طµط© ط¨ظ€ SSH ظˆظ…ط¬ظ„ط¯ط§طھ ط§ظ„ظ…ط³طھط¹ط±ط¶ ظˆط§ظ„ظ€ Cache ظˆطھظ…ط±ظٹط±ظ‡ط§ ظ„ظ„ط®ط§ط±ط¬.
+                    </p>
+                    <div class="alert alert-info" style="margin: 0; padding: 12px 16px;">
+                        <i class="fas fa-shield-halved"></i>
+                        <span><strong>ط§ظ„ط­ظ„ ط§ظ„طµط§ط±ظ…:</strong> طھط­ط¯ظٹط¯ ظ…ط³ط§ط±ط§طھ ظˆطµظˆظ„ طµط§ط±ظ…ط© ظˆط¶ظٹظ‚ط© ط¬ط¯ط§ظ‹ ظ„ظ€ MCP ط§ظ„ظ…ظ„ظپط§طھ ظˆط­ط¸ط± ط§ظ„ظˆطµظˆظ„ ظ„ظ‚ط±طµ ط§ظ„ظ†ط¸ط§ظ… ط§ظ„ط±ط¦ظٹط³ظٹ.</span>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Secure .clineignore Configuration -->
+            <section class="section animate-fade-in-up" style="animation-delay: 0.3s">
+                <h3 class="section-title">
+                    <i class="fas fa-file-shield"></i>
+                    ط­ط¸ط± طھطµظپط­ ط§ظ„ظ…ظ„ظپط§طھ ط§ظ„ط­ط³ط§ط³ط© ط¹ط¨ط± ظ…ظ„ظپ `.clineignore`
+                    <span class="section-badge">ظ…ظ„ظپ ط­ظ…ط§ظٹط©</span>
+                </h3>
+                <p class="step-description">ظ‚ظ… ط¨ط¥ظ†ط´ط§ط، ظˆط­ظپط¸ ظ‡ط°ط§ ط§ظ„ظ…ظ„ظپ ظپظٹ ط¬ط°ط± ظ…ط³ط§ط± ظ…ط´ط§ط±ظٹط¹ظƒ ط§ظ„ط¨ط±ظ…ط¬ظٹط© ظ„ظ…ظ†ط¹ ظ…ط­ط±ظƒط§طھ ط§ظ„ط°ظƒط§ط، ط§ظ„ط§طµط·ظ†ط§ط¹ظٹ ظ…ظ† ظ‚ط±ط§ط،طھظ‡ط§ ظ†ظ‡ط§ط¦ظٹط§ظ‹:</p>
+                <div class="code-block">
+                    <div class="code-header">
+                        <span>.clineignore</span>
+                        <button class="copy-btn" onclick="copyCode(this)"><i class="fas fa-copy"></i></button>
+                    </div>
+                    <pre><code># ط­ط¸ط± ظ‚ط±ط§ط،ط© ظ…ظ„ظپط§طھ ط§ظ„ط¨ظٹط¦ط© ظˆط§ظ„ط£ط³ط±ط§ط±
+.env
+.env.*
+*.key
+*.pem
+secrets/
+credentials/
+
+# ط­ط¸ط± ظ…ظ„ظپط§طھ ط§ظ„ط§طھطµط§ظ„ ظˆطµظ„ط§ط­ظٹط§طھ ط§ظ„ظˆطµظˆظ„
+.aws/
+.ssh/
+.github/
+
+# ط§ط³طھط¨ط¹ط§ط¯ ط§ظ„ظ…ط¬ظ„ط¯ط§طھ ط§ظ„ط¶ط®ظ…ط© ظˆظ…ظ„ظپط§طھ ط§ظ„طھطھط¨ط¹
+node_modules/
+.git/
+dist/
+build/
+*.log
+*.sqlite</code></pre>
+                </div>
+            </section>
+
+            <!-- Nav Footer -->
+            <div class="page-nav-footer">
+                <a href="10-security.html" class="page-nav-btn prev">
+                    <i class="fas fa-arrow-right"></i>
+                    <div>
+                        <span>ط§ظ„ط³ط§ط¨ظ‚</span>
+                        <strong>ظ‚ط§ط¦ظ…ط© ظپط­طµ ط§ظ„ط£ظ…ط§ظ† (60+)</strong>
+                    </div>
+                </a>
+                <a href="11-performance.html" class="page-nav-btn next">
+                    <div>
+                        <span>ط§ظ„طھط§ظ„ظٹ</span>
+                        <strong>ط§ظ„ط£ط¯ط§ط، ظˆط§ظ„طھظˆط³ط¹ ط§ظ„ط¨ط±ظ…ط¬ظٹ</strong>
+                    </div>
+                    <i class="fas fa-arrow-left"></i>
+                </a>
+            </div>
+        </div>
+    </main>
+
+    <script src="../js/main.js"></script>
+</body>
+</html>

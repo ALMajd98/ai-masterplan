@@ -1,0 +1,817 @@
+﻿<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="ظ…ظ†ط¸ظˆظ…ط© ط°ظƒط§ط، ط§طµط·ظ†ط§ط¹ظٹ ط§ط­طھط±ط§ظپظٹط© â€” ط§ظ„ط¯ظ„ظٹظ„ ط§ظ„ط´ط§ظ…ظ„ ظ„ط³ط¨طھظ…ط¨ط± 2026">
+    <meta name="theme-color" content="#0a0e17">
+    <title>AI Master Plan â€” ط§ظ„ط¯ظ„ظٹظ„ ط§ظ„ط§ط­طھط±ط§ظپظٹ ط§ظ„ط´ط§ظ…ظ„ | ط³ط¨طھظ…ط¨ط± 2026</title>
+    <link rel="manifest" href="manifest.json">
+    <link rel="icon" type="image/svg+xml" href="assets/icons/favicon.svg">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- Animated Background -->
+    <div class="animated-bg">
+        <div class="gradient-orb orb-1"></div>
+        <div class="gradient-orb orb-2"></div>
+        <div class="gradient-orb orb-3"></div>
+    </div>
+
+    <!-- Floating Sidebar Toggle (ظٹط¸ظ‡ط± ط¹ظ†ط¯ ط¥ط®ظپط§ط، ط§ظ„ط³ط§ظٹط¯ط¨ط§ط±) -->
+    <button class="floating-sidebar-toggle" id="floatingToggle" onclick="toggleSidebar()" aria-label="ظپطھط­ ط§ظ„ظ‚ط§ط¦ظ…ط©">
+        <i class="fas fa-bars"></i>
+    </button>
+
+    <!-- Sidebar Overlay (ظ„ظ„ظ…ظˆط¨ط§ظٹظ„) -->
+    <div class="sidebar-overlay" id="sidebarOverlay" onclick="toggleSidebar()"></div>
+
+    <!-- Sidebar -->
+    <nav class="sidebar" id="sidebar">
+        <div class="sidebar-header">
+            <a href="index.html" class="logo">
+                <div class="logo-icon">
+                    <i class="fas fa-microchip"></i>
+                </div>
+                <div class="logo-text">
+                    <span class="logo-title">AI Master</span>
+                    <span class="logo-subtitle">Plan v4.0</span>
+                </div>
+            </a>
+            <button class="sidebar-close" onclick="toggleSidebar()" aria-label="ط¥ط؛ظ„ط§ظ‚ ط§ظ„ظ‚ط§ط¦ظ…ط©">
+                <i class="fas fa-xmark"></i>
+            </button>
+        </div>
+
+        <div class="sidebar-search">
+            <i class="fas fa-magnifying-glass"></i>
+            <input type="text" placeholder="ط¨ط­ط« ط³ط±ظٹط¹..." id="sidebarSearch" oninput="searchNav(this.value)">
+            <kbd>Ctrl+K</kbd>
+        </div>
+
+        <div class="sidebar-nav" id="sidebarNav">
+            <div class="nav-section">
+                <span class="nav-section-title"><i class="fas fa-circle-dot"></i> ط§ظ„ط¨ط¯ط§ظٹط©</span>
+                <a href="index.html" class="nav-link active">
+                    <i class="fas fa-th-large"></i>
+                    <span>ظ„ظˆط­ط© ط§ظ„طھط­ظƒظ…</span>
+                </a>
+                <a href="pages/01-overview.html" class="nav-link">
+                    <i class="fas fa-compass"></i>
+                    <span>ظ†ط¸ط±ط© ط¹ط§ظ…ط©</span>
+                </a>
+                <a href="pages/18-ai-timeline.html" class="nav-link">
+                    <i class="fas fa-clock-rotate-left"></i>
+                    <span>ط£ط­ط¯ط§ط« 2025-2026</span>
+                    <span class="nav-badge new">ط¬ط¯ظٹط¯</span>
+                </a>
+            </div>
+
+            <div class="nav-section">
+                <span class="nav-section-title"><i class="fas fa-rocket"></i> ط§ظ„طھط£ط³ظٹط³</span>
+                <a href="pages/02-setup.html" class="nav-link">
+                    <i class="fas fa-hard-drive"></i>
+                    <span>طھط¬ظ‡ظٹط² ط§ظ„ط¬ظ‡ط§ط²</span>
+                    <span class="nav-badge phase">1</span>
+                </a>
+                <a href="pages/03-ai-local.html" class="nav-link">
+                    <i class="fas fa-server"></i>
+                    <span>AI ط§ظ„ظ…ط­ظ„ظٹ</span>
+                    <span class="nav-badge phase">2</span>
+                </a>
+                <a href="pages/04-ai-cloud.html" class="nav-link">
+                    <i class="fas fa-cloud"></i>
+                    <span>AI ط§ظ„ط³ط­ط§ط¨ظٹ</span>
+                    <span class="nav-badge phase">3</span>
+                </a>
+                <a href="pages/05-vscode.html" class="nav-link">
+                    <i class="fas fa-code"></i>
+                    <span>VS Code + Cline</span>
+                    <span class="nav-badge phase">4</span>
+                </a>
+                <a href="pages/19-ai-tools-compare.html" class="nav-link">
+                    <i class="fas fa-scale-balanced"></i>
+                    <span>ظ…ظ‚ط§ط±ظ†ط© ط§ظ„ط£ط¯ظˆط§طھ</span>
+                    <span class="nav-badge new">ط¬ط¯ظٹط¯</span>
+                </a>
+            </div>
+
+            <div class="nav-section">
+                <span class="nav-section-title"><i class="fas fa-wand-magic-sparkles"></i> ط§ظ„ظ‚ط¯ط±ط§طھ</span>
+                <a href="pages/06-mcps.html" class="nav-link">
+                    <i class="fas fa-plug"></i>
+                    <span>MCPs</span>
+                    <span class="nav-badge count">10K+</span>
+                </a>
+                <a href="pages/17-mcp-security.html" class="nav-link">
+                    <i class="fas fa-shield-virus"></i>
+                    <span>ط£ظ…ط§ظ† MCP</span>
+                    <span class="nav-badge new">ط¬ط¯ظٹط¯</span>
+                </a>
+                <a href="pages/07-modes.html" class="nav-link">
+                    <i class="fas fa-masks-theater"></i>
+                    <span>Custom Modes</span>
+                </a>
+                <a href="pages/08-skills.html" class="nav-link">
+                    <i class="fas fa-graduation-cap"></i>
+                    <span>Skills</span>
+                </a>
+                <a href="pages/16-multi-agent.html" class="nav-link">
+                    <i class="fas fa-users-gear"></i>
+                    <span>Multi-Agent</span>
+                    <span class="nav-badge new">ط¬ط¯ظٹط¯</span>
+                </a>
+            </div>
+
+            <div class="nav-section">
+                <span class="nav-section-title"><i class="fas fa-shield-halved"></i> ط§ظ„ظ…ط¹ط§ظٹظٹط±</span>
+                <a href="pages/09-constitution.html" class="nav-link">
+                    <i class="fas fa-scroll"></i>
+                    <span>ط§ظ„ط¯ط³طھظˆط±</span>
+                </a>
+                <a href="pages/10-security.html" class="nav-link">
+                    <i class="fas fa-shield-halved"></i>
+                    <span>ط§ظ„ط£ظ…ط§ظ†</span>
+                    <span class="nav-badge count">60+</span>
+                </a>
+                <a href="pages/11-performance.html" class="nav-link">
+                    <i class="fas fa-gauge-high"></i>
+                    <span>ط§ظ„ط£ط¯ط§ط، ظˆط§ظ„طھظˆط³ط¹</span>
+                </a>
+            </div>
+
+            <div class="nav-section">
+                <span class="nav-section-title"><i class="fas fa-briefcase"></i> ط§ظ„طھط®طµطµط§طھ</span>
+                <a href="pages/12-ecommerce.html" class="nav-link">
+                    <i class="fas fa-store"></i>
+                    <span>ط§ظ„طھط¬ط§ط±ط© ط§ظ„ط³ط¹ظˆط¯ظٹط©</span>
+                </a>
+                <a href="pages/13-techstack.html" class="nav-link">
+                    <i class="fas fa-layer-group"></i>
+                    <span>Tech Stack</span>
+                </a>
+                <a href="pages/14-workflow.html" class="nav-link">
+                    <i class="fas fa-route"></i>
+                    <span>ط®ط·ظˆط§طھ ط§ظ„ط¹ظ…ظ„</span>
+                </a>
+                <a href="pages/15-resources.html" class="nav-link">
+                    <i class="fas fa-book-open"></i>
+                    <span>ط§ظ„ظ…طµط§ط¯ط±</span>
+                </a>
+            </div>
+        </div>
+
+        <div class="sidebar-footer">
+            <div class="progress-container">
+                <div class="progress-header">
+                    <span><i class="fas fa-chart-line"></i> ط§ظ„طھظ‚ط¯ظ… ط§ظ„ط¥ط¬ظ…ط§ظ„ظٹ</span>
+                    <span class="progress-percent">0%</span>
+                </div>
+                <div class="progress-bar">
+                    <div class="progress-fill" id="totalProgress" style="width: 0%"></div>
+                </div>
+                <div class="progress-stats">
+                    <span id="completedCount">0</span> ظ…ظ† <span id="totalCount">0</span> ظ…ظ‡ظ…ط©
+                </div>
+            </div>
+            <div class="version-info">
+                <i class="fas fa-code-branch"></i>
+                <span>v4.0 â€” ط³ط¨طھظ…ط¨ط± 2026</span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <!-- Top Bar -->
+        <header class="topbar">
+            <button class="mobile-menu-btn" onclick="toggleSidebar()" aria-label="ظپطھط­ ط§ظ„ظ‚ط§ط¦ظ…ط©">
+                <i class="fas fa-bars"></i>
+            </button>
+            <div class="topbar-title">
+                <div class="topbar-breadcrumb">
+                    <i class="fas fa-home"></i>
+                    <span>ط§ظ„ط±ط¦ظٹط³ظٹط©</span>
+                </div>
+                <h1>ظ„ظˆط­ط© ط§ظ„طھط­ظƒظ…</h1>
+            </div>
+            <div class="topbar-actions">
+                <button class="topbar-btn" onclick="scrollToTop()" title="ظ„ظ„ط£ط¹ظ„ظ‰">
+                    <i class="fas fa-arrow-up"></i>
+                </button>
+                <button class="topbar-btn" onclick="toggleFullscreen()" title="ظ…ظ„ط، ط§ظ„ط´ط§ط´ط©" id="fullscreenBtn">
+                    <i class="fas fa-expand"></i>
+                </button>
+                <button class="theme-toggle" onclick="toggleTheme()" title="طھط¨ط¯ظٹظ„ ط§ظ„ظˆط¶ط¹">
+                    <i class="fas fa-moon" id="themeIcon"></i>
+                </button>
+            </div>
+        </header>
+
+        <!-- Dashboard Content -->
+        <div class="content-area">
+            <!-- Hero Section -->
+            <section class="hero-section animate-fade-in-up">
+                <div class="hero-grid-pattern"></div>
+                <div class="hero-content">
+                    <div class="hero-badge">
+                        <span class="badge-pulse"></span>
+                        <i class="fas fa-sparkles"></i>
+                        v4.0 â€” Enterprise Edition آ· ط³ط¨طھظ…ط¨ط± 2026
+                    </div>
+                    <h2 class="hero-title">
+                        <span class="gradient-text">AI Master Plan</span>
+                    </h2>
+                    <p class="hero-description">
+                        ظ…ظ†ط¸ظˆظ…ط© ط°ظƒط§ط، ط§طµط·ظ†ط§ط¹ظٹ ط§ط­طھط±ط§ظپظٹط© ظ…طھظƒط§ظ…ظ„ط© â€” ظ…ط­ظ„ظٹط© ظˆط³ط­ط§ط¨ظٹط© â€”
+                        ظ…ط­ط¯ظ‘ط«ط© ط¨ط£ط­ط¯ط« ظ†ظ…ط§ط°ط¬ <strong class="hero-highlight">Phi-4</strong>طŒ
+                        <strong class="hero-highlight">Qwen3</strong>طŒ
+                        <strong class="hero-highlight">DeepSeek V4</strong>طŒ
+                        ظˆ <strong class="hero-highlight">10,000+ MCP</strong> طھط­طھ ط±ط¹ط§ظٹط© Linux Foundation.
+                    </p>
+                    <div class="hero-cta">
+                        <a href="pages/02-setup.html" class="cta-primary">
+                            <i class="fas fa-rocket"></i>
+                            <span>ط§ط¨ط¯ط£ ط§ظ„ط¢ظ†</span>
+                        </a>
+                        <a href="pages/01-overview.html" class="cta-secondary">
+                            <i class="fas fa-circle-play"></i>
+                            <span>ظ†ط¸ط±ط© ط¹ط§ظ…ط©</span>
+                        </a>
+                    </div>
+                    <div class="hero-stats">
+                        <div class="hero-stat">
+                            <div class="hero-stat-icon">
+                                <i class="fas fa-microchip"></i>
+                            </div>
+                            <div class="hero-stat-content">
+                                <strong class="counter" data-target="11">0</strong>
+                                <span>ظ†ظ…ظˆط°ط¬ ظ…ط­ظ„ظٹ</span>
+                            </div>
+                        </div>
+                        <div class="hero-stat">
+                            <div class="hero-stat-icon">
+                                <i class="fas fa-cloud"></i>
+                            </div>
+                            <div class="hero-stat-content">
+                                <strong class="counter" data-target="5">0</strong>
+                                <span>ظ…ط²ظˆط¯ ط³ط­ط§ط¨ظٹ</span>
+                            </div>
+                        </div>
+                        <div class="hero-stat">
+                            <div class="hero-stat-icon">
+                                <i class="fas fa-plug"></i>
+                            </div>
+                            <div class="hero-stat-content">
+                                <strong class="counter" data-target="10000" data-suffix="+">0</strong>
+                                <span>MCP</span>
+                            </div>
+                        </div>
+                        <div class="hero-stat">
+                            <div class="hero-stat-icon">
+                                <i class="fas fa-shield-halved"></i>
+                            </div>
+                            <div class="hero-stat-content">
+                                <strong class="counter" data-target="60" data-suffix="+">0</strong>
+                                <span>ظپط­طµ ط£ظ…ظ†ظٹ</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Critical Update Alert -->
+            <section class="alert-banner animate-fade-in-up" style="animation-delay: 0.1s">
+                <div class="alert-banner-icon">
+                    <i class="fas fa-triangle-exclamation"></i>
+                </div>
+                <div class="alert-banner-content">
+                    <strong>طھط­ط¯ظٹط« ط­ط±ط¬ (ط³ط¨طھظ…ط¨ط± 2026):</strong>
+                    Cerebras ظˆ SambaNova ظˆ GitHub Models ظˆ Together AI ط¬ظ…ظٹط¹ظ‡ظ… ط£ظˆظ‚ظپظˆط§ ط§ظ„ط·ط¨ظ‚ط§طھ ط§ظ„ظ…ط¬ط§ظ†ظٹط©.
+                    <strong class="highlight">Google Gemini + Groq + OpenRouter + Qwen API + DeepSeek</strong>
+                    ظ‡ظ… ط§ظ„ط£ط¨ط·ط§ظ„ ط§ظ„ط­ظ‚ظٹظ‚ظٹظˆظ† ط§ظ„ط¢ظ†.
+                </div>
+                <button class="alert-close" onclick="this.parentElement.style.display='none'">
+                    <i class="fas fa-xmark"></i>
+                </button>
+            </section>
+
+            <!-- System Specs -->
+            <section class="section animate-fade-in-up" style="animation-delay: 0.2s">
+                <h3 class="section-title">
+                    <i class="fas fa-desktop"></i>
+                    ظ…ظˆط§طµظپط§طھ ط§ظ„ظ†ط¸ط§ظ…
+                    <span class="section-badge">ظ…ط¤ظƒط¯</span>
+                </h3>
+                <div class="specs-grid">
+                    <div class="spec-card">
+                        <div class="spec-icon cpu">
+                            <i class="fas fa-microchip"></i>
+                        </div>
+                        <div class="spec-info">
+                            <span class="spec-label">ط§ظ„ظ…ط¹ط§ظ„ط¬</span>
+                            <strong class="spec-value">Intel Core i7-14700</strong>
+                            <span class="spec-detail">20 ظ†ظˆط§ط© â€” 28 ط®ظٹط·</span>
+                        </div>
+                        <span class="spec-badge excellent"><i class="fas fa-check-circle"></i> ظ…ظ…طھط§ط²</span>
+                    </div>
+                    <div class="spec-card">
+                        <div class="spec-icon ram">
+                            <i class="fas fa-memory"></i>
+                        </div>
+                        <div class="spec-info">
+                            <span class="spec-label">ط§ظ„ط°ط§ظƒط±ط©</span>
+                            <strong class="spec-value">32 GB DDR4</strong>
+                            <span class="spec-detail">3600 MHz</span>
+                        </div>
+                        <span class="spec-badge excellent"><i class="fas fa-check-circle"></i> ظ…ظ…طھط§ط²</span>
+                    </div>
+                    <div class="spec-card">
+                        <div class="spec-icon gpu">
+                            <i class="fas fa-display"></i>
+                        </div>
+                        <div class="spec-info">
+                            <span class="spec-label">ظƒط±طھ ط§ظ„ط´ط§ط´ط©</span>
+                            <strong class="spec-value">RTX 3060 12GB</strong>
+                            <span class="spec-detail">CUDA â€” 10GB VRAM ط¢ظ…ظ†</span>
+                        </div>
+                        <span class="spec-badge excellent"><i class="fas fa-check-circle"></i> ظ…ظ…طھط§ط²</span>
+                    </div>
+                    <div class="spec-card">
+                        <div class="spec-icon psu">
+                            <i class="fas fa-bolt"></i>
+                        </div>
+                        <div class="spec-info">
+                            <span class="spec-label">ظ…ط²ظˆط¯ ط§ظ„ط·ط§ظ‚ط©</span>
+                            <strong class="spec-value">Corsair CX650</strong>
+                            <span class="spec-detail">80+ Bronze</span>
+                        </div>
+                        <span class="spec-badge good"><i class="fas fa-check"></i> ط¬ظٹط¯</span>
+                    </div>
+                </div>
+                <div class="capability-note">
+                    <i class="fas fa-circle-info"></i>
+                    <div>
+                        <strong>ظ‚ط¯ط±ط§طھ ط§ظ„ط¬ظ‡ط§ط²:</strong>
+                        ظٹط´ط؛ظ‘ظ„ ظ†ظ…ط§ط°ط¬ ط­طھظ‰ 14B parameters ط¨ط£ط¯ط§ط، ظ…ظ…طھط§ط² (25-40 tokens/sec).
+                        ط§ظ„ظ†ظ…ط§ط°ط¬ ط§ظ„ط£ظ…ط«ظ„: <strong class="highlight">Phi-4 14B</strong>طŒ
+                        <strong class="highlight">Qwen3 14B</strong>طŒ
+                        <strong class="highlight">DeepSeek-R1 14B</strong>.
+                    </div>
+                </div>
+            </section>
+
+            <!-- Market Stats -->
+            <section class="section market-stats-section animate-fade-in-up" style="animation-delay: 0.3s">
+                <h3 class="section-title">
+                    <i class="fas fa-chart-line"></i>
+                    ط§ظ„ط³ظˆظ‚ ط§ظ„ظ…ط³طھظ‡ط¯ظپ: ط§ظ„ظ…ظ…ظ„ظƒط© ط§ظ„ط¹ط±ط¨ظٹط© ط§ظ„ط³ط¹ظˆط¯ظٹط©
+                    <span class="section-badge success">ظ†ط´ط·</span>
+                </h3>
+                <div class="market-grid">
+                    <div class="market-card">
+                        <div class="market-icon">
+                            <i class="fas fa-sack-dollar"></i>
+                        </div>
+                        <div class="market-value">$31.29<span>B</span></div>
+                        <div class="market-label">ط­ط¬ظ… ط§ظ„طھط¬ط§ط±ط© ط§ظ„ط¥ظ„ظƒطھط±ظˆظ†ظٹط© 2026</div>
+                        <div class="market-trend up">
+                            <i class="fas fa-arrow-trend-up"></i>
+                            <span>ظ†ظ…ظˆ ظ…ط³طھظ…ط±</span>
+                        </div>
+                    </div>
+                    <div class="market-card">
+                        <div class="market-icon">
+                            <i class="fas fa-arrow-trend-up"></i>
+                        </div>
+                        <div class="market-value">11.92<span>%</span></div>
+                        <div class="market-label">ط§ظ„ظ†ظ…ظˆ ط§ظ„ط³ظ†ظˆظٹ CAGR</div>
+                        <div class="market-trend up">
+                            <i class="fas fa-chart-line"></i>
+                            <span>ظ…طھظˆظ‚ط¹ 2031</span>
+                        </div>
+                    </div>
+                    <div class="market-card">
+                        <div class="market-icon">
+                            <i class="fas fa-store"></i>
+                        </div>
+                        <div class="market-value counter-animated" data-target="19600">0<span>+</span></div>
+                        <div class="market-label">ظ…طھط¬ط± Salla ظ†ط´ط·</div>
+                        <div class="market-trend up">
+                            <i class="fas fa-fire"></i>
+                            <span>ط§ظ„ط£ظƒط¨ط± ظ…ط­ظ„ظٹط§ظ‹</span>
+                        </div>
+                    </div>
+                    <div class="market-card">
+                        <div class="market-icon">
+                            <i class="fas fa-users"></i>
+                        </div>
+                        <div class="market-value">36<span>M+</span></div>
+                        <div class="market-label">ظ…ط³طھط®ط¯ظ… ط§ظ†طھط±ظ†طھ</div>
+                        <div class="market-trend up">
+                            <i class="fas fa-mobile-screen"></i>
+                            <span>98% ظ…ظˆط¨ط§ظٹظ„</span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Roadmap -->
+            <section class="section animate-fade-in-up" style="animation-delay: 0.4s">
+                <h3 class="section-title">
+                    <i class="fas fa-route"></i>
+                    ط®ط§ط±ط·ط© ط§ظ„ط·ط±ظٹظ‚ ط§ظ„طھظپط§ط¹ظ„ظٹط©
+                    <span class="section-badge">طھطھط¨ط¹ طھظ‚ط¯ظ…ظƒ</span>
+                </h3>
+                <div class="roadmap">
+                    <div class="roadmap-phase" data-phase="1">
+                        <div class="phase-header">
+                            <div class="phase-number">01</div>
+                            <div class="phase-info">
+                                <h4>ط§ظ„طھط£ط³ظٹط³ ظˆط§ظ„طھط¬ظ‡ظٹط²</h4>
+                                <span><i class="fas fa-calendar"></i> ط§ظ„ط£ط³ط¨ظˆط¹ 1</span>
+                            </div>
+                            <div class="phase-status pending">
+                                <i class="fas fa-clock"></i>
+                                <span>ظ„ظ… ظٹط¨ط¯ط£</span>
+                            </div>
+                            <button class="phase-expand" onclick="togglePhase(this)">
+                                <i class="fas fa-chevron-down"></i>
+                            </button>
+                        </div>
+                        <div class="phase-tasks">
+                            <label class="task-item">
+                                <input type="checkbox" onchange="updateProgress()">
+                                <span class="task-check"><i class="fas fa-check"></i></span>
+                                <span class="task-text">ظپظˆط±ظ…ط§طھ ط§ظ„ط¬ظ‡ط§ط² + Windows 11 Pro</span>
+                            </label>
+                            <label class="task-item">
+                                <input type="checkbox" onchange="updateProgress()">
+                                <span class="task-check"><i class="fas fa-check"></i></span>
+                                <span class="task-text">طھط«ط¨ظٹطھ ط§ظ„ط£ط¯ظˆط§طھ ط§ظ„ط£ط³ط§ط³ظٹط© (WSL2, Docker, Git, Node.js 22, Bun)</span>
+                            </label>
+                            <label class="task-item">
+                                <input type="checkbox" onchange="updateProgress()">
+                                <span class="task-check"><i class="fas fa-check"></i></span>
+                                <span class="task-text">طھط«ط¨ظٹطھ Ollama + ط§ظ„ظ†ظ…ط§ط°ط¬ ط§ظ„ظ…ط­ظ„ظٹط© (Phi-4, Qwen3, DeepSeek-R1)</span>
+                            </label>
+                            <label class="task-item">
+                                <input type="checkbox" onchange="updateProgress()">
+                                <span class="task-check"><i class="fas fa-check"></i></span>
+                                <span class="task-text">ط¥ط¹ط¯ط§ط¯ VS Code + Cline v3.81</span>
+                            </label>
+                            <label class="task-item">
+                                <input type="checkbox" onchange="updateProgress()">
+                                <span class="task-check"><i class="fas fa-check"></i></span>
+                                <span class="task-text">ط§ظ„ط­طµظˆظ„ ط¹ظ„ظ‰ ط§ظ„ظ…ظپط§طھظٹط­ ط§ظ„ط³ط­ط§ط¨ظٹط©</span>
+                            </label>
+                        </div>
+                    </div>
+
+                    <div class="roadmap-phase" data-phase="2">
+                        <div class="phase-header">
+                            <div class="phase-number">02</div>
+                            <div class="phase-info">
+                                <h4>ط§ظ„ظ‚ط¯ط±ط§طھ ظˆط§ظ„ط£ط¯ظˆط§طھ</h4>
+                                <span><i class="fas fa-calendar"></i> ط§ظ„ط£ط³ط¨ظˆط¹ 2</span>
+                            </div>
+                            <div class="phase-status pending">
+                                <i class="fas fa-clock"></i>
+                                <span>ظ„ظ… ظٹط¨ط¯ط£</span>
+                            </div>
+                            <button class="phase-expand" onclick="togglePhase(this)">
+                                <i class="fas fa-chevron-down"></i>
+                            </button>
+                        </div>
+                        <div class="phase-tasks">
+                            <label class="task-item">
+                                <input type="checkbox" onchange="updateProgress()">
+                                <span class="task-check"><i class="fas fa-check"></i></span>
+                                <span class="task-text">طھط«ط¨ظٹطھ MCPs ط§ظ„ط£ط³ط§ط³ظٹط© ظ…ظ† Cline MCP Marketplace</span>
+                            </label>
+                            <label class="task-item">
+                                <input type="checkbox" onchange="updateProgress()">
+                                <span class="task-check"><i class="fas fa-check"></i></span>
+                                <span class="task-text">ط¥ط¹ط¯ط§ط¯ Custom Modes + Roo Code</span>
+                            </label>
+                            <label class="task-item">
+                                <input type="checkbox" onchange="updateProgress()">
+                                <span class="task-check"><i class="fas fa-check"></i></span>
+                                <span class="task-text">ط§ط³طھظ†ط³ط§ط® Skills ظ…ظ† GitHub</span>
+                            </label>
+                            <label class="task-item">
+                                <input type="checkbox" onchange="updateProgress()">
+                                <span class="task-check"><i class="fas fa-check"></i></span>
+                                <span class="task-text">طھط«ط¨ظٹطھ Docker Services (Open WebUI, n8n, SearXNG, Qdrant)</span>
+                            </label>
+                        </div>
+                    </div>
+
+                    <div class="roadmap-phase" data-phase="3">
+                        <div class="phase-header">
+                            <div class="phase-number">03</div>
+                            <div class="phase-info">
+                                <h4>ط§ظ„ظ…ط¹ط§ظٹظٹط± ط§ظ„ط§ط­طھط±ط§ظپظٹط©</h4>
+                                <span><i class="fas fa-calendar"></i> ط§ظ„ط£ط³ط¨ظˆط¹ 3</span>
+                            </div>
+                            <div class="phase-status pending">
+                                <i class="fas fa-clock"></i>
+                                <span>ظ„ظ… ظٹط¨ط¯ط£</span>
+                            </div>
+                            <button class="phase-expand" onclick="togglePhase(this)">
+                                <i class="fas fa-chevron-down"></i>
+                            </button>
+                        </div>
+                        <div class="phase-tasks">
+                            <label class="task-item">
+                                <input type="checkbox" onchange="updateProgress()">
+                                <span class="task-check"><i class="fas fa-check"></i></span>
+                                <span class="task-text">ط¨ظ†ط§ط، ط§ظ„ط¯ط³طھظˆط± (Constitution)</span>
+                            </label>
+                            <label class="task-item">
+                                <input type="checkbox" onchange="updateProgress()">
+                                <span class="task-check"><i class="fas fa-check"></i></span>
+                                <span class="task-text">ط¥ط¹ط¯ط§ط¯ Security Checklist (OWASP 2025 + Passkeys)</span>
+                            </label>
+                            <label class="task-item">
+                                <input type="checkbox" onchange="updateProgress()">
+                                <span class="task-check"><i class="fas fa-check"></i></span>
+                                <span class="task-text">ط¥ط¹ط¯ط§ط¯ Performance Standards</span>
+                            </label>
+                            <label class="task-item">
+                                <input type="checkbox" onchange="updateProgress()">
+                                <span class="task-check"><i class="fas fa-check"></i></span>
+                                <span class="task-text">ط§ط®طھط¨ط§ط± ط§ظ„ظ…ظ†ط¸ظˆظ…ط© ط¨ظ…ط´ط±ظˆط¹ Next.js 16 + Supabase</span>
+                            </label>
+                        </div>
+                    </div>
+
+                    <div class="roadmap-phase" data-phase="4">
+                        <div class="phase-header">
+                            <div class="phase-number">04</div>
+                            <div class="phase-info">
+                                <h4>ط§ظ„ط¥ظ†طھط§ط¬ ظˆط§ظ„ظ…ط´ط§ط±ظٹط¹</h4>
+                                <span><i class="fas fa-calendar"></i> ط§ظ„ط£ط³ط¨ظˆط¹ 4+</span>
+                            </div>
+                            <div class="phase-status pending">
+                                <i class="fas fa-clock"></i>
+                                <span>ظ„ظ… ظٹط¨ط¯ط£</span>
+                            </div>
+                            <button class="phase-expand" onclick="togglePhase(this)">
+                                <i class="fas fa-chevron-down"></i>
+                            </button>
+                        </div>
+                        <div class="phase-tasks">
+                            <label class="task-item">
+                                <input type="checkbox" onchange="updateProgress()">
+                                <span class="task-check"><i class="fas fa-check"></i></span>
+                                <span class="task-text">ط£ظˆظ„ ظ…ط´ط±ظˆط¹ ط­ظ‚ظٹظ‚ظٹ (SaaS ط£ظˆ ظ…طھط¬ط±)</span>
+                            </label>
+                            <label class="task-item">
+                                <input type="checkbox" onchange="updateProgress()">
+                                <span class="task-check"><i class="fas fa-check"></i></span>
+                                <span class="task-text">ط¨ظ†ط§ط، ظ…طھط¬ط± ط¹ظ„ظ‰ Salla (ZATCA Phase 2 + Moyasar)</span>
+                            </label>
+                            <label class="task-item">
+                                <input type="checkbox" onchange="updateProgress()">
+                                <span class="task-check"><i class="fas fa-check"></i></span>
+                                <span class="task-text">ط¥ظ†ط´ط§ط، Multi-Agent Workflows</span>
+                            </label>
+                            <label class="task-item">
+                                <input type="checkbox" onchange="updateProgress()">
+                                <span class="task-check"><i class="fas fa-check"></i></span>
+                                <span class="task-text">ط§ظ„طھظˆط³ط¹ ظˆط§ظ„طھط­ط³ظٹظ† ط§ظ„ظ…ط³طھظ…ط±</span>
+                            </label>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Quick Actions -->
+            <section class="section animate-fade-in-up" style="animation-delay: 0.5s">
+                <h3 class="section-title">
+                    <i class="fas fa-bolt"></i>
+                    ظˆطµظˆظ„ ط³ط±ظٹط¹
+                    <span class="section-badge">ظ…ظڈظپط¶ظ‘ظ„</span>
+                </h3>
+                <div class="quick-actions-grid">
+                    <a href="pages/02-setup.html" class="action-card">
+                        <div class="action-icon setup">
+                            <i class="fas fa-hard-drive"></i>
+                        </div>
+                        <div class="action-info">
+                            <h4>ط§ط¨ط¯ط£ ط§ظ„طھط¬ظ‡ظٹط²</h4>
+                            <p>ظپظˆط±ظ…ط§طھ ظˆطھط«ط¨ظٹطھ ظ†ط¸ظٹظپ</p>
+                        </div>
+                        <div class="action-arrow">
+                            <i class="fas fa-arrow-left"></i>
+                        </div>
+                    </a>
+                    <a href="pages/18-ai-timeline.html" class="action-card">
+                        <div class="action-icon timeline">
+                            <i class="fas fa-clock-rotate-left"></i>
+                        </div>
+                        <div class="action-info">
+                            <h4>ط£ط­ط¯ط§ط« 2025-2026</h4>
+                            <p>DeepSeek R1طŒ GPT-5طŒ Qwen3.8</p>
+                        </div>
+                        <div class="action-arrow">
+                            <i class="fas fa-arrow-left"></i>
+                        </div>
+                    </a>
+                    <a href="pages/06-mcps.html" class="action-card">
+                        <div class="action-icon tools">
+                            <i class="fas fa-plug"></i>
+                        </div>
+                        <div class="action-info">
+                            <h4>MCPs</h4>
+                            <p>10,000+ ط£ط¯ط§ط© ط§ط­طھط±ط§ظپظٹط©</p>
+                        </div>
+                        <div class="action-arrow">
+                            <i class="fas fa-arrow-left"></i>
+                        </div>
+                    </a>
+                    <a href="pages/12-ecommerce.html" class="action-card">
+                        <div class="action-icon commerce">
+                            <i class="fas fa-store"></i>
+                        </div>
+                        <div class="action-info">
+                            <h4>ط§ظ„طھط¬ط§ط±ط© ط§ظ„ط³ط¹ظˆط¯ظٹط©</h4>
+                            <p>Salla + ZATCA + Moyasar</p>
+                        </div>
+                        <div class="action-arrow">
+                            <i class="fas fa-arrow-left"></i>
+                        </div>
+                    </a>
+                </div>
+            </section>
+
+            <!-- Cost Summary -->
+            <section class="section animate-fade-in-up" style="animation-delay: 0.6s">
+                <h3 class="section-title">
+                    <i class="fas fa-wallet"></i>
+                    ظ…ظ„ط®طµ ط§ظ„طھظƒظ„ظپط© ط§ظ„ظƒط§ظ…ظ„ط©
+                    <span class="section-badge success">$0 ظ„ظ„ط¨ط¯ط،</span>
+                </h3>
+                <div class="cost-table">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>ط§ظ„ط¨ظ†ط¯</th>
+                                <th>ط§ظ„طھظƒظ„ظپط©</th>
+                                <th>ط§ظ„ط­ط§ظ„ط©</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><i class="fas fa-server"></i> AI ط§ظ„ظ…ط­ظ„ظٹ (Ollama + 11 ظ†ظ…ظˆط°ط¬)</td>
+                                <td class="cost-free">$0</td>
+                                <td><span class="status-badge free"><i class="fas fa-check"></i> ظ…ط¬ط§ظ†ظٹ</span></td>
+                            </tr>
+                            <tr>
+                                <td><i class="fab fa-google"></i> Gemini 3 Flash (1500 ط·ظ„ط¨/ظٹظˆظ…)</td>
+                                <td class="cost-free">$0</td>
+                                <td><span class="status-badge free"><i class="fas fa-check"></i> ظ…ط¬ط§ظ†ظٹ</span></td>
+                            </tr>
+                            <tr>
+                                <td><i class="fas fa-bolt"></i> Groq (gpt-oss + Qwen 3.8)</td>
+                                <td class="cost-free">$0</td>
+                                <td><span class="status-badge free"><i class="fas fa-check"></i> ظ…ط¬ط§ظ†ظٹ</span></td>
+                            </tr>
+                            <tr>
+                                <td><i class="fas fa-shuffle"></i> OpenRouter (20+ ظ†ظ…ظˆط°ط¬ ظ…ط¬ط§ظ†ظٹ)</td>
+                                <td class="cost-free">$0</td>
+                                <td><span class="status-badge free"><i class="fas fa-check"></i> ظ…ط¬ط§ظ†ظٹ</span></td>
+                            </tr>
+                            <tr>
+                                <td><i class="fas fa-dragon"></i> Qwen API (70M ط±ظ…ط² ظ…ط¬ط§ظ†ط§ظ‹!)</td>
+                                <td class="cost-free">$0</td>
+                                <td><span class="status-badge free"><i class="fas fa-check"></i> ظ…ط¬ط§ظ†ظٹ</span></td>
+                            </tr>
+                            <tr>
+                                <td><i class="fas fa-code"></i> VS Code + Cline + MCPs</td>
+                                <td class="cost-free">$0</td>
+                                <td><span class="status-badge free"><i class="fas fa-check"></i> ظ…ط¬ط§ظ†ظٹ</span></td>
+                            </tr>
+                            <tr>
+                                <td><i class="fas fa-tools"></i> n8n + Open WebUI + Qdrant</td>
+                                <td class="cost-free">$0</td>
+                                <td><span class="status-badge free"><i class="fas fa-check"></i> ظ…ط¬ط§ظ†ظٹ</span></td>
+                            </tr>
+                            <tr>
+                                <td><i class="fas fa-globe"></i> Vercel + Supabase (Free tier)</td>
+                                <td class="cost-free">$0</td>
+                                <td><span class="status-badge free"><i class="fas fa-check"></i> ظ…ط¬ط§ظ†ظٹ ظ„ظ„ط¨ط¯ط،</span></td>
+                            </tr>
+                            <tr class="cost-optional">
+                                <td><i class="fas fa-key"></i> OpenRouter $10 (1000 req/day ظ„ظ„ط£ط¨ط¯)</td>
+                                <td>$10 ظ…ط±ط©</td>
+                                <td><span class="status-badge optional"><i class="fas fa-star"></i> ظ…ظˆطµظ‰</span></td>
+                            </tr>
+                            <tr class="cost-optional">
+                                <td><i class="fas fa-gem"></i> DeepSeek V4 API</td>
+                                <td>$0.14/M</td>
+                                <td><span class="status-badge optional"><i class="fas fa-circle-info"></i> ط­ط³ط¨ ط§ظ„ط§ط³طھط®ط¯ط§ظ…</span></td>
+                            </tr>
+                            <tr class="cost-total">
+                                <td><strong>ط§ظ„ظ…ط¬ظ…ظˆط¹ ظ„ظ„ط¨ط¯ط، ط§ظ„ط§ط­طھط±ط§ظپظٹ ط§ظ„ظƒط§ظ…ظ„</strong></td>
+                                <td class="cost-free"><strong>$0 - $10</strong></td>
+                                <td><span class="status-badge free"><i class="fas fa-crown"></i> ط§ط­طھط±ط§ظپظٹ</span></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+
+            <!-- Deprecated Section -->
+            <section class="section deprecated-section animate-fade-in-up" style="animation-delay: 0.7s">
+                <h3 class="section-title">
+                    <i class="fas fa-ban"></i>
+                    ط®ط¯ظ…ط§طھ ظ„ظ… طھط¹ط¯ ظ…طھط§ط­ط©
+                    <span class="section-badge danger">طھط­ط°ظٹط±</span>
+                </h3>
+                <div class="deprecated-grid">
+                    <div class="deprecated-card">
+                        <i class="fas fa-circle-xmark"></i>
+                        <div>
+                            <strong>Cerebras</strong>
+                            <span>ط£ظˆظ‚ظپ ط§ظ„ط·ط¨ظ‚ط© ط§ظ„ظ…ط¬ط§ظ†ظٹط© (16 ظٹظˆظ„ظٹظˆ 2026)</span>
+                        </div>
+                    </div>
+                    <div class="deprecated-card">
+                        <i class="fas fa-circle-xmark"></i>
+                        <div>
+                            <strong>GitHub Models</strong>
+                            <span>ط£ظڈط؛ظ„ظ‚ ظ†ظ‡ط§ط¦ظٹط§ظ‹ (30 ظٹظˆظ„ظٹظˆ 2026)</span>
+                        </div>
+                    </div>
+                    <div class="deprecated-card">
+                        <i class="fas fa-circle-xmark"></i>
+                        <div>
+                            <strong>SambaNova</strong>
+                            <span>ظ„ط§ ط±طµظٹط¯ ظ„ظ„ط­ط³ط§ط¨ط§طھ ط§ظ„ط¬ط¯ظٹط¯ط©</span>
+                        </div>
+                    </div>
+                    <div class="deprecated-card">
+                        <i class="fas fa-circle-xmark"></i>
+                        <div>
+                            <strong>Together AI</strong>
+                            <span>ظٹط­طھط§ط¬ $5 ظ„ظ„ط¨ط¯ط،</span>
+                        </div>
+                    </div>
+                    <div class="deprecated-card">
+                        <i class="fas fa-circle-xmark"></i>
+                        <div>
+                            <strong>Phind</strong>
+                            <span>طھظˆظ‚ظپ ظٹظ†ط§ظٹط± 2026</span>
+                        </div>
+                    </div>
+                    <div class="deprecated-card">
+                        <i class="fas fa-circle-xmark"></i>
+                        <div>
+                            <strong>Groq Llama 3.3</strong>
+                            <span>ط±ط­ظ„ ظ…ظ† ط§ظ„ط·ط¨ظ‚ط© ط§ظ„ظ…ط¬ط§ظ†ظٹط©</span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Footer -->
+            <footer class="main-footer">
+                <div class="footer-content">
+                    <div class="footer-brand">
+                        <div class="logo-icon">
+                            <i class="fas fa-microchip"></i>
+                        </div>
+                        <div>
+                            <strong>AI Master Plan v4.0</strong>
+                            <span>ط§ظ„ط¯ظ„ظٹظ„ ط§ظ„ط§ط­طھط±ط§ظپظٹ ط§ظ„ط´ط§ظ…ظ„ â€” ط³ط¨طھظ…ط¨ط± 2026</span>
+                        </div>
+                    </div>
+                    <div class="footer-info">
+                        <div class="footer-stat">
+                            <i class="fas fa-file"></i>
+                            <span>19 طµظپط­ط©</span>
+                        </div>
+                        <div class="footer-stat">
+                            <i class="fas fa-clock"></i>
+                            <span>4-6 ط£ط³ط§ط¨ظٹط¹</span>
+                        </div>
+                        <div class="footer-stat">
+                            <i class="fas fa-shield-halved"></i>
+                            <span>Enterprise Grade</span>
+                        </div>
+                    </div>
+                </div>
+            </footer>
+        </div>
+    </main>
+
+    <!-- Scripts -->
+    <script src="js/main.js"></script>
+</body>
+</html>

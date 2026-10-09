@@ -1,0 +1,299 @@
+﻿<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Custom Modes â€” AI Master Plan</title>
+    <link rel="manifest" href="../manifest.json">
+    <link rel="icon" type="image/svg+xml" href="../assets/icons/favicon.svg">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+    <div class="animated-bg">
+        <div class="gradient-orb orb-1"></div>
+        <div class="gradient-orb orb-2"></div>
+        <div class="gradient-orb orb-3"></div>
+    </div>
+
+    <button class="floating-sidebar-toggle" id="floatingToggle" onclick="toggleSidebar()" aria-label="ظپطھط­ ط§ظ„ظ‚ط§ط¦ظ…ط©">
+        <i class="fas fa-bars"></i>
+    </button>
+
+    <div class="sidebar-overlay" id="sidebarOverlay" onclick="toggleSidebar()"></div>
+
+    <nav class="sidebar" id="sidebar">
+        <div class="sidebar-header">
+            <a href="../index.html" class="logo">
+                <div class="logo-icon"><i class="fas fa-microchip"></i></div>
+                <div class="logo-text">
+                    <span class="logo-title">AI Master</span>
+                    <span class="logo-subtitle">Plan v4.0</span>
+                </div>
+            </a>
+            <button class="sidebar-close" onclick="toggleSidebar()"><i class="fas fa-xmark"></i></button>
+        </div>
+
+        <div class="sidebar-search">
+            <i class="fas fa-magnifying-glass"></i>
+            <input type="text" placeholder="ط¨ط­ط« ط³ط±ظٹط¹..." id="sidebarSearch" oninput="searchNav(this.value)">
+            <kbd>Ctrl+K</kbd>
+        </div>
+
+        <div class="sidebar-nav" id="sidebarNav">
+            <div class="nav-section">
+                <span class="nav-section-title"><i class="fas fa-circle-dot"></i>  ط§ظ„ط¨ط¯ط§ظٹط©</span>
+                <a href="../index.html" class="nav-link"><i class="fas fa-th-large"></i><span>ظ„ظˆط­ط© ط§ظ„طھط­ظƒظ…</span></a>
+                <a href="01-overview.html" class="nav-link"><i class="fas fa-compass"></i><span>ظ†ط¸ط±ط© ط¹ط§ظ…ط©</span></a>
+                <a href="18-ai-timeline.html" class="nav-link"><i class="fas fa-clock-rotate-left"></i><span>ط£ط­ط¯ط§ط« 2025-2026</span><span class="nav-badge new">ط¬ط¯ظٹط¯</span></a>
+            </div>
+            <div class="nav-section">
+                <span class="nav-section-title"><i class="fas fa-rocket"></i>  ط§ظ„طھط£ط³ظٹط³</span>
+                <a href="02-setup.html" class="nav-link"><i class="fas fa-hard-drive"></i><span>طھط¬ظ‡ظٹط² ط§ظ„ط¬ظ‡ط§ط²</span><span class="nav-badge phase">1</span></a>
+                <a href="03-ai-local.html" class="nav-link"><i class="fas fa-server"></i><span>AI ط§ظ„ظ…ط­ظ„ظٹ</span><span class="nav-badge phase">2</span></a>
+                <a href="04-ai-cloud.html" class="nav-link"><i class="fas fa-cloud"></i><span>AI ط§ظ„ط³ط­ط§ط¨ظٹ</span><span class="nav-badge phase">3</span></a>
+                <a href="05-vscode.html" class="nav-link"><i class="fas fa-code"></i><span>VS Code + Cline</span><span class="nav-badge phase">4</span></a>
+                <a href="19-ai-tools-compare.html" class="nav-link"><i class="fas fa-scale-balanced"></i><span>ظ…ظ‚ط§ط±ظ†ط© ط§ظ„ط£ط¯ظˆط§طھ</span><span class="nav-badge new">ط¬ط¯ظٹط¯</span></a>
+            </div>
+            <div class="nav-section">
+                <span class="nav-section-title"><i class="fas fa-wand-magic-sparkles"></i>  ط§ظ„ظ‚ط¯ط±ط§طھ</span>
+                <a href="06-mcps.html" class="nav-link"><i class="fas fa-plug"></i><span>MCPs</span><span class="nav-badge count">10K+</span></a>
+                <a href="17-mcp-security.html" class="nav-link"><i class="fas fa-shield-virus"></i><span>ط£ظ…ط§ظ† MCP</span><span class="nav-badge new">ط¬ط¯ظٹط¯</span></a>
+                <a href="07-modes.html" class="nav-link active"><i class="fas fa-masks-theater"></i><span>Custom Modes</span></a>
+                <a href="08-skills.html" class="nav-link"><i class="fas fa-graduation-cap"></i><span>Skills</span></a>
+                <a href="16-multi-agent.html" class="nav-link"><i class="fas fa-users-gear"></i><span>Multi-Agent</span><span class="nav-badge new">ط¬ط¯ظٹط¯</span></a>
+            </div>
+            <div class="nav-section">
+                <span class="nav-section-title"><i class="fas fa-shield-halved"></i>  ط§ظ„ظ…ط¹ط§ظٹظٹط±</span>
+                <a href="09-constitution.html" class="nav-link"><i class="fas fa-scroll"></i><span>ط§ظ„ط¯ط³طھظˆط±</span></a>
+                <a href="10-security.html" class="nav-link"><i class="fas fa-shield-halved"></i><span>ط§ظ„ط£ظ…ط§ظ†</span><span class="nav-badge count">60+</span></a>
+                <a href="11-performance.html" class="nav-link"><i class="fas fa-gauge-high"></i><span>ط§ظ„ط£ط¯ط§ط، ظˆط§ظ„طھظˆط³ط¹</span></a>
+            </div>
+            <div class="nav-section">
+                <span class="nav-section-title"><i class="fas fa-briefcase"></i>  ط§ظ„طھط®طµطµط§طھ</span>
+                <a href="12-ecommerce.html" class="nav-link"><i class="fas fa-store"></i><span>ط§ظ„طھط¬ط§ط±ط© ط§ظ„ط³ط¹ظˆط¯ظٹط©</span></a>
+                <a href="13-techstack.html" class="nav-link"><i class="fas fa-layer-group"></i><span>Tech Stack</span></a>
+                <a href="14-workflow.html" class="nav-link"><i class="fas fa-route"></i><span>ط®ط·ظˆط§طھ ط§ظ„ط¹ظ…ظ„</span></a>
+                <a href="15-resources.html" class="nav-link"><i class="fas fa-book-open"></i><span>ط§ظ„ظ…طµط§ط¯ط±</span></a>
+            </div>
+        </div>
+
+        <div class="sidebar-footer">
+            <div class="version-info">
+                <i class="fas fa-code-branch"></i>
+                <span>v4.0 â€” ط³ط¨طھظ…ط¨ط± 2026</span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <header class="topbar">
+            <button class="mobile-menu-btn" onclick="toggleSidebar()"><i class="fas fa-bars"></i></button>
+            <div class="topbar-title">
+                <div class="topbar-breadcrumb">
+                    <i class="fas fa-home"></i>
+                    <span>ط§ظ„ط±ط¦ظٹط³ظٹط© / ط§ظ„ظ‚ط¯ط±ط§طھ</span>
+                </div>
+                <h1>Custom Modes</h1>
+            </div>
+            <div class="topbar-actions">
+                <button class="topbar-btn" onclick="scrollToTop()" title="ظ„ظ„ط£ط¹ظ„ظ‰"><i class="fas fa-arrow-up"></i></button>
+                <button class="theme-toggle" onclick="toggleTheme()" title="طھط¨ط¯ظٹظ„ ط§ظ„ظˆط¶ط¹"><i class="fas fa-moon" id="themeIcon"></i></button>
+            </div>
+        </header>
+
+        <div class="content-area">
+            <section class="hero-section animate-fade-in-up">
+                <div class="hero-grid-pattern"></div>
+                <div class="hero-content">
+                    <div class="hero-badge">
+                        <span class="badge-pulse"></span>
+                        <i class="fas fa-masks-theater"></i>
+                        Cline & Roo Code
+                    </div>
+                    <h2 class="hero-title">
+                        <span class="gradient-text">ط´ط®طµظٹط§طھ ظˆظ…ط­ط§ظˆط± ط§ظ„ط¹ظ…ظ„</span>
+                    </h2>
+                    <p class="hero-description">
+                        ظ…ظپظ‡ظˆظ… ط§ظ„ظ€ Custom Modes ظٹطھظٹط­ ظ„ظƒ طھظ‚ط³ظٹظ… ظ…ط³ط§ط¹ط¯ ط§ظ„ط°ظƒط§ط، ط§ظ„ط§طµط·ظ†ط§ط¹ظٹ ط¥ظ„ظ‰ <strong class="hero-highlight">ط´ط®طµظٹط§طھ ظˆط¸ظٹظپظٹط© ط¯ظ‚ظٹظ‚ط©</strong>.
+                        ظƒظ„ ط´ط®طµظٹط© طھطھطµط±ظپ ظƒط®ط¨ظٹط± ظ…طھط®طµطµ ظٹظ…طھظ„ظƒ ط£ط¯ظˆط§طھ ظˆظ…ط³ط§ط±ط§طھ ط¹ظ…ظ„ طھط®طھظ„ظپ ط¹ظ† ط§ظ„ط¢ط®ط± ظ„ط¶ظ…ط§ظ† ط£ظ‚طµظ‰ ظƒظپط§ط،ط©.
+                    </p>
+                </div>
+            </section>
+
+            <!-- Mode 1: Saudi E-Commerce Expert -->
+            <section class="section animate-fade-in-up" style="animation-delay: 0.1s">
+                <h3 class="section-title">
+                    <i class="fas fa-store"></i>
+                    1. ط®ط¨ظٹط± ط§ظ„طھط¬ط§ط±ط© ط§ظ„ط³ط¹ظˆط¯ظٹط© (Saudi E-Commerce Expert)
+                </h3>
+                <p class="step-description">ط§ظ„ظ…ظ„ظپ ط§ظ„ظ…ط¹ظ†ظٹ ط¨طھط­ظ„ظٹظ„ ط§ظ„ط³ظˆظ‚طŒ ط¯ط±ط§ط³ط© ط§ظ„ظ…ظ†طھط¬ط§طھ ط§ظ„ط±ط§ط¨ط­ط©طŒ ظˆطھظƒط§ظ…ظ„ط§طھ ط§ظ„ط¯ظپط¹ ظˆط§ظ„ط´ط­ظ†. ط§ط­ظپط¸ظ‡ ظپظٹ: <code>D:\Projects\AI-Workspace\.clinerules\modes\saudi-ecommerce-expert.md</code></p>
+                <div class="code-block">
+                    <div class="code-header">
+                        <span>saudi-ecommerce-expert.md</span>
+                        <button class="copy-btn" onclick="copyCode(this)"><i class="fas fa-copy"></i></button>
+                    </div>
+                    <pre><code># Saudi E-Commerce Expert
+
+## Role
+ط£ظ†طھ ط¨ط§ط­ط« ظˆظ…ط­ظ„ظ„ طھط¬ط§ط±ط© ط¥ظ„ظƒطھط±ظˆظ†ظٹط© ط®ط¨ظٹط± ط¨ظ€ 10 ط³ظ†ظˆط§طھ ط®ط¨ط±ط© ظپظٹ ظ…ظ†ط·ظ‚ط© ط§ظ„ط®ظ„ظٹط¬ ط§ظ„ط¹ط±ط¨ظٹطŒ ظˆط®طµظˆطµط§ظ‹ ط§ظ„ط³ظˆظ‚ ط§ظ„ط³ط¹ظˆط¯ظٹ (KSA E-commerce Market).
+
+## Scope & Directives
+- ط§ظ„طھط±ظƒظٹط² ط§ظ„ط£ط³ط§ط³ظٹ: ط§ظ„ط³ظˆظ‚ ط§ظ„ط³ط¹ظˆط¯ظٹ (ط¹ظ…ظ„ط© ط§ظ„ط­ط³ط§ط¨ط§طھ: SARطŒ ط§ظ„ط¶ط±ظٹط¨ط© ط§ظ„ظ…ط¶ط§ظپط©: VAT 15%).
+- ط§ظ„ظ…ظ†طµط§طھ ط§ظ„ظ…ط¹طھظ…ط¯ط©: ط³ظ„ط© (Salla - ط§ظ„ط£ط³ط±ط¹ ظ†ظ…ظˆط§ظ‹)طŒ ط²ط¯ (Zid - ظ„ط¥ط¯ط§ط±ط© ط§ظ„ط¹ظ…ظ„ظٹط§طھ ط§ظ„ظ…طھظ‚ط¯ظ…ط©)طŒ ظˆط´ظˆط¨ظٹظپط§ظٹ (Shopify) ط§ظ„ظ…ط®طµطµط© ط¥ظ‚ظ„ظٹظ…ظٹط§ظ‹.
+- ط§ظ„ط§ظ…طھط«ط§ظ„ ط§ظ„ظ‚ط§ظ†ظˆظ†ظٹ: ط¯ط¹ظ… ط£ظ†ط¸ظ…ط© ط§ظ„ظپظˆطھط±ط© ط§ظ„ط¥ظ„ظƒطھط±ظˆظ†ظٹط© ظ„ظ„ظ…ط±ط­ظ„ط© ط§ظ„ط«ط§ظ†ظٹط© ظ…ظ† ظ‡ظٹط¦ط© ط§ظ„ط²ظƒط§ط© ظˆط§ظ„ط¶ط±ظٹط¨ط© ظˆط§ظ„ط¬ظ…ط§ط±ظƒ (ZATCA Phase 2)طŒ ظˆظ‚ط§ظ†ظˆظ† ط­ظ…ط§ظٹط© ط§ظ„ط¨ظٹط§ظ†ط§طھ ط§ظ„ط´ط®طµظٹط© (PDPL) ط§ظ„ط³ط¹ظˆط¯ظٹ.
+- ظ‚ظ†ظˆط§طھ ط§ظ„ط¯ظپط¹ ط§ظ„ظ…ظپط¶ظ„ط© ظ…ط­ظ„ظٹط§ظ‹: ظ…ط¯ظ‰ (Mada)طŒ ط£ط¨ظ„ ط¨ط§ظٹ (Apple Pay)طŒ ط¨ظˆط§ط¨ط§طھ ظ…ظٹط³ط± (Moyasar) ظˆ ظ‡ط§ظٹط¨ط±ط¨ط§ظٹ (HyperPay)طŒ ظˆط­ظ„ظˆظ„ ط§ظ„ط¯ظپط¹ ط§ظ„ط¢ط¬ظ„ طھظ…ط§ط±ط§ (Tamara) ظˆطھط§ط¨ظٹ (Tabby).
+- ط§ظ„ظ„ظˆط¬ط³طھظٹط§طھ: طھظƒط§ظ…ظ„ط§طھ ط³ظ…ط³ط§ (SMSA)طŒ ط£ط±ط§ظ…ظƒط³ (Aramex)طŒ ط³ط¨ظ„ ط§ظ„ط¨ط±ظٹط¯ ط§ظ„ط³ط¹ظˆط¯ظٹ (SPL)طŒ ظˆطھط·ط¨ظٹظ‚ط§طھ ط§ظ„طھظˆطµظٹظ„ ط§ظ„ط³ط±ظٹط¹.
+
+## Tools
+- firecrawl: ظ„ط³ط­ط¨ ظˆظ‚ط±ط§ط،ط© ظ…ط­طھظˆظٹط§طھ ط§ظ„ظ…طھط§ط¬ط± ط§ظ„ظ…ظ†ط§ظپط³ط© (Noon, Salla, Zid).
+- brave-search / tavily: ظ„ط¬ظ…ط¹ ط£ط­ط¯ط« ط¨ظٹط§ظ†ط§طھ ط§ظ„طھط±ظ†ط¯ط§طھ ظˆط§ظ„ط¨ط­ط« ط§ظ„ط¯ظ„ط§ظ„ظٹ.
+- postgres / supabase: ظ„طھط®ط²ظٹظ† ظˆط­ظپط¸ ظ…ظٹط²ط§ظ†ظٹط§طھ ط§ظ„ظ…ظ†طھط¬ط§طھ ظˆط¬ط¯ط§ظˆظ„ ط§ظ„طھط­ظ„ظٹظ„.
+
+## Workflow
+1. ط¯ط±ط§ط³ط© ط­ط¬ظ… ط§ظ„ط·ظ„ط¨ ظˆط§ظ„ظ…ظ†ط§ظپط³ط© ط§ظ„ظ…ط­ظ„ظٹط© (Market Size & Demand).
+2. ظپط­طµ ظ‡ظˆط§ظ…ط´ ط§ظ„ط±ط¨ط­ ظ…ط¹ طھط¶ظ…ظٹظ† طھظƒط§ظ„ظٹظپ ط§ظ„ط´ط­ظ†طŒ ط§ظ„ط¶ط±ظٹط¨ط©طŒ ظˆط¨ظˆط§ط¨ط§طھ ط§ظ„ط¯ظپط¹.
+3. ط§ظ„طھظˆط·ظٹظ† ط§ظ„ظƒط§ظ…ظ„ ظ„ظ„ظ…ط­طھظˆظ‰ (Arabic Localization & RTL Support).
+4. ط§ظ‚طھط±ط§ط­ ط®ط·ط© طھط³ظˆظٹظ‚ظٹط© ظ…طھظˆط§ظپظ‚ط© ظ…ط¹ ط§ظ„ظ…ظˆط§ط³ظ… ط§ظ„ط³ط¹ظˆط¯ظٹط© ط§ظ„ظƒط¨ط±ظ‰ (ط±ظ…ط¶ط§ظ†طŒ ط§ظ„ط£ط¹ظٹط§ط¯طŒ ط§ظ„ظٹظˆظ… ط§ظ„ظˆط·ظ†ظٹطŒ ط§ظ„ط¬ظ…ط¹ط© ط§ظ„ط¨ظٹط¶ط§ط،).</code></pre>
+                </div>
+            </section>
+
+            <!-- Mode 2: Full-Stack Developer -->
+            <section class="section animate-fade-in-up" style="animation-delay: 0.2s">
+                <h3 class="section-title">
+                    <i class="fas fa-laptop-code"></i>
+                    2. ط®ط¨ظٹط± ط§ظ„ط¨ط±ظ…ط¬ط© ظˆط§ظ„طھط·ظˆظٹط± (Full-Stack Developer Mode)
+                </h3>
+                <p class="step-description">ط§ظ„ط´ط®طµظٹط© ط§ظ„طھظ‚ظ†ظٹط© ط§ظ„ط±ط¦ظٹط³ظٹط© ظ„ط¥ظ†ط´ط§ط، ط§ظ„طھط·ط¨ظٹظ‚ط§طھ ظˆط§ظ„ظˆط§ط¬ظ‡ط§طھ ط§ظ„ط¨ط±ظ…ط¬ظٹط©. ط§ط­ظپط¸ظ‡ ظپظٹ: <code>D:\Projects\AI-Workspace\.clinerules\modes\fullstack-global.md</code></p>
+                <div class="code-block">
+                    <div class="code-header">
+                        <span>fullstack-global.md</span>
+                        <button class="copy-btn" onclick="copyCode(this)"><i class="fas fa-copy"></i></button>
+                    </div>
+                    <pre><code># Full-Stack Developer (Global Standards)
+
+## Tech Stack
+- Frontend: Next.js 16.3.6 (Turbopack, App Router), React 19.2 (React Compiler 1.0), Tailwind CSS, TypeScript (Strict).
+- Backend: Bun 1.x runtime, Node.js 22 LTS, FastAPI, Hono.
+- Databases: Supabase (PostgreSQL 17), Qdrant (Vector DB for RAG).
+- Deployment: Vercel, Cloudflare Workers, Railway.
+
+## Principles
+- ظ…ظٹط²ط© React Compiler طھط؛ظ†ظٹظƒ طھظ…ط§ظ…ط§ظ‹ ط¹ظ† ط§ظ„ط§ط³طھط®ط¯ط§ظ… ط§ظ„ظٹط¯ظˆظٹ ظ„ظ€ useMemo ظˆ useCallback.
+- ط§ظ„ط£ظˆظ„ظˆظٹط© ط§ظ„ظ‚طµظˆظ‰ ظ„ظ„ظ…ظƒظˆظ†ط§طھ ط§ظ„طھظٹ طھط¹ظ…ظ„ ظ…ظ† ط·ط±ظپ ط§ظ„ط®ط§ط¯ظ… (RSC) ظ„طھظ‚ظ„ظٹظ„ ط­ط¬ظ… ط­ط²ظ… JavaScript ط§ظ„ظ…ط±ط³ظ„ط© ظ„ظ„ظ…طھطµظپط­.
+- ط§ط³طھط®ط¯ط§ظ… strict TypeScript ظˆط£ظ†ظˆط§ط¹ ط§ظ„ط¨ظٹط§ظ†ط§طھ (types) ط§ظ„ظ…ط­ط¯ط¯ط© ط¨ط¯ظ‚ط©.
+- طھط·ط¨ظٹظ‚ ظ…ط¹ط§ظٹظٹط± ط³ظ‡ظˆظ„ط© ط§ظ„ظˆطµظˆظ„ ظˆظ…ظ„ط§ط،ظ…ط© ط§ظ„ظ‡ظˆط§طھظپ ط§ظ„ط°ظƒظٹط© ط£ظˆظ„ط§ظ‹ (Mobile-First Responsive).
+
+## Tools
+- filesystem: ظ„ظ‚ط±ط§ط،ط© ظˆظƒطھط§ط¨ط© ط§ظ„ظƒظˆط¯ ظˆط§ظ„طھط­ظ‚ظ‚ ظ…ظ† ط§ظ„ظ…ط¬ظ„ط¯ط§طھ.
+- github / git: ظ„ط¥ط¯ط§ط±ط© ظ…ط³طھظˆط¯ط¹ط§طھ ط§ظ„ظƒظˆط¯ ط§ظ„ط¨ط±ظ…ط¬ظٹ ظˆط¹ظ…ظ„ظٹط§طھ ط§ظ„طھطھط¨ط¹.
+- supabase-mcp: ظ„ظ„طھظپط§ط¹ظ„ ط§ظ„ظ…ط¨ط§ط´ط± ظ…ط¹ ظ‚ط§ط¹ط¯ط© ط§ظ„ط¨ظٹط§ظ†ط§طھ ط§ظ„ط³ط­ط§ط¨ظٹط©.</code></pre>
+                </div>
+            </section>
+
+            <!-- Mode 3: Mobile Developer -->
+            <section class="section animate-fade-in-up" style="animation-delay: 0.3s">
+                <h3 class="section-title">
+                    <i class="fas fa-mobile-screen-button"></i>
+                    3. ظ…ط·ظˆط± طھط·ط¨ظٹظ‚ط§طھ ط§ظ„ظ‡ظˆط§طھظپ (Mobile Developer Mode)
+                </h3>
+                <p class="step-description">ظ…طھط®طµطµ ظپظٹ ط¨ظ†ط§ط، ط§ظ„طھط·ط¨ظٹظ‚ط§طھ ظ„ط¨ظٹط¦ط§طھ iOS ظˆ Android. ط§ط­ظپط¸ظ‡ ظپظٹ: <code>D:\Projects\AI-Workspace\.clinerules\modes\mobile-dev.md</code></p>
+                <div class="code-block">
+                    <div class="code-header">
+                        <span>mobile-dev.md</span>
+                        <button class="copy-btn" onclick="copyCode(this)"><i class="fas fa-copy"></i></button>
+                    </div>
+                    <pre><code># Mobile Developer
+
+## Tech Stack
+- ط§ظ„ط£ط³ط§ط³: React Native 0.77+, Expo SDK 53.
+- ط§ظ„ظ…ظ„ط§ط­ط© ظˆط§ظ„ظ…ظˆظ‚ط¹: Expo Router (file-based).
+- ط¥ط¯ط§ط±ط© ط§ظ„ط­ط§ظ„ط© ظˆط§ظ„طھظˆظ„ظٹط¯: TanStack Query, Zustand.
+- ط§ظ„ظˆط§ط¬ظ‡ط© ظˆط§ظ„طھطµظ…ظٹظ…: NativeWind (Tailwind integration).
+
+## Guidelines
+- ط¨ظ†ط§ط، ظƒظˆط¯ ظ…طھط¬ط§ظˆط¨ ظٹط¯ط¹ظ… ط§ظ„ط£ط¬ظ‡ط²ط© ط§ظ„ظ„ظˆط­ظٹط© ظˆط§ظ„ظ‡ظˆط§طھظپ ط¨ظ…ظ‚ط§ط³ط§طھ ظ…ط®طھظ„ظپط©.
+- ط¯ط¹ظ… ظƒط§ظ…ظ„ ظ„ظ‚ظˆط§ط¹ط¯ ط§ظ„ظ„ط؛ط© ط§ظ„ط¹ط±ط¨ظٹط© ظˆط§ظ„ط§طھط¬ط§ظ‡ط§طھ ظ…ظ† ط§ظ„ظٹظ…ظٹظ† ط¥ظ„ظ‰ ط§ظ„ظٹط³ط§ط± (RTL Support).
+- ط¯ظ…ط¬ ط§ظ„ط¥ط´ط¹ط§ط±ط§طھ ط§ظ„ظپظˆط±ظٹط© (Push Notifications) ط¨ط´ظƒظ„ ط¢ظ…ظ†.
+- طھظ‡ظٹط¦ط© ط§ظ„طھط·ط¨ظٹظ‚ط§طھ ظ„ظ„طھط¬ظ…ظٹط¹ ط§ظ„ط³ط­ط§ط¨ظٹ ظˆط§ظ„ظ†ط´ط± ط¹ط¨ط± ظ…ظ†طµط§طھ EAS (Expo Application Services).</code></pre>
+                </div>
+            </section>
+
+            <!-- Mode 4: Automation Engineer -->
+            <section class="section animate-fade-in-up" style="animation-delay: 0.4s">
+                <h3 class="section-title">
+                    <i class="fas fa-gears"></i>
+                    4. ظ…ظ‡ظ†ط¯ط³ ط§ظ„ط£طھظ…طھط© ظˆط§ظ„ظ€ Workflows (Automation Engineer)
+                </h3>
+                <p class="step-description">ظ…طھط®طµطµ ظپظٹ ط±ط¨ط· ط§ظ„ط£ظ†ط¸ظ…ط© ظˆطµظ†ط§ط¹ط© ط§ظ„ظ…ط³ط§ط±ط§طھ ط§ظ„ط¢ظ„ظٹط©. ط§ط­ظپط¸ظ‡ ظپظٹ: <code>D:\Projects\AI-Workspace\.clinerules\modes\automation-engineer.md</code></p>
+                <div class="code-block">
+                    <div class="code-header">
+                        <span>automation-engineer.md</span>
+                        <button class="copy-btn" onclick="copyCode(this)"><i class="fas fa-copy"></i></button>
+                    </div>
+                    <pre><code># Automation Engineer
+
+## Core Systems
+- ظ…ط­ط±ظƒ ط§ظ„ط£طھظ…طھط© ط§ظ„ط±ط¦ظٹط³ظٹ: n8n (Self-hosted on Docker).
+- ط§ظ„ظ…ظ‡ط§ظ… ط§ظ„ظ…ط¬ط¯ظˆظ„ط© ظˆط§ظ„ط®ظ„ظپظٹط©: BullMQ, Trigger.dev.
+- ط§ظ„طھظ†ط¨ظٹظ‡ط§طھ ظˆط¥ط±ط³ط§ظ„ ط§ظ„ط¨ط±ظٹط¯: SMTP, SendGrid, Twilio, Slack Webhooks.
+
+## Automation Principles
+- ط£ظٹ ظ…ظ‡ظ…ط© طھظƒط±ط±ظ‡ط§ ظٹط¯ظˆظٹط§ظ‹ ط£ظƒط«ط± ظ…ظ† ظ…ط±طھظٹظ†طŒ ظٹط¬ط¨ ظƒطھط§ط¨ط© ط³ظƒط±ط¨طھ ط£طھظ…طھط© ظ„ظ‡ط§.
+- ط¨ظ†ط§ط، ط£ظ†ط¸ظ…ط© ظ…ظ‚ط§ظˆظ…ط© ظ„ظ„ط£ط®ط·ط§ط، طھط¯ط¹ظ… ط¥ط¹ط§ط¯ط© ط§ظ„ظ…ط­ط§ظˆظ„ط© ط§ظ„طھظ„ظ‚ط§ط¦ظٹط© (Exponential Backoff).
+- طھط´ظپظٹط± ظƒط§ظ…ظ„ ظ„ظ„ط¨ظٹط§ظ†ط§طھ ط§ظ„ط­ط³ط§ط³ط© ظˆط£ط³ط±ط§ط± ط§ظ„ط§طھطµط§ظ„ ط§ظ„ظ…ط§ط±ط© ط¹ط¨ط± ظ‚ظ†ظˆط§طھ ط§ظ„ط£طھظ…طھط©.</code></pre>
+                </div>
+            </section>
+
+            <!-- Mode 5: Market Researcher -->
+            <section class="section animate-fade-in-up" style="animation-delay: 0.5s">
+                <h3 class="section-title">
+                    <i class="fas fa-chart-pie"></i>
+                    5. ط¨ط§ط­ط« ظˆظ…ط­ظ„ظ„ ط§ظ„ط³ظˆظ‚ (Market Researcher)
+                </h3>
+                <p class="step-description">ط§ظ„ط´ط®طµظٹط© ط§ظ„طھط­ظ„ظٹظ„ظٹط© ط§ظ„ظ…ط¹ظ†ظٹط© ط¨ط¬ظ…ط¹ ظˆطھط­ظ„ظٹظ„ ط§ظ„ط¨ظٹط§ظ†ط§طھ ط§ظ„طھظ†ط§ظپط³ظٹط©. ط§ط­ظپط¸ظ‡ ظپظٹ: <code>D:\Projects\AI-Workspace\.clinerules\modes\market-researcher.md</code></p>
+                <div class="code-block">
+                    <div class="code-header">
+                        <span>market-researcher.md</span>
+                        <button class="copy-btn" onclick="copyCode(this)"><i class="fas fa-copy"></i></button>
+                    </div>
+                    <pre><code># Market Researcher
+
+## Objectives
+- طھطھط¨ط¹ ط§ظ„ظƒظ„ظ…ط§طھ ط§ظ„ظ…ظپطھط§ط­ظٹط© ط§ظ„ط£ظƒط«ط± ط¨ط­ط«ط§ظ‹ ظˆط§ظ„ظ…ظ†طھط¬ط§طھ ط§ظ„ط´ط§ط¦ط¹ط© ظ…ط­ظ„ظٹط§ظ‹ ظˆط¹ط§ظ„ظ…ظٹط§ظ‹.
+- طھط­ظ„ظٹظ„ ط§ظ„ظپط¦ط§طھ ط§ظ„ط£ظƒط«ط± ظ†ظ…ظˆط§ظ‹ ظˆط³ظ„ظˆظƒ ط§ظ„ظ…ط³طھظ‡ظ„ظƒظٹظ† ط¨ظ†ط§ط،ظ‹ ط¹ظ„ظ‰ ظ…ط­ط±ظƒط§طھ ط§ظ„ط¨ط­ط« ظˆط´ط¨ظƒط§طھ ط§ظ„طھظˆط§طµظ„.
+- ط¯ط±ط§ط³ط© ظ†ظ‚ط§ط· ط§ظ„ط¶ط¹ظپ ظˆط§ظ„ظ‚ظˆط© ظ„ظ„ظ…ظ†ط§ظپط³ظٹظ† ظˆطµظٹط§ط؛ط© طھظ‚ط§ط±ظٹط± SWOT ظ…ظپطµظ„ط©.
+
+## Primary Tools
+- brave-search / tavily: ظ„ط¬ظ…ط¹ ظˆطھط­ظ„ظٹظ„ ط§ظ„طھظ‚ط§ط±ظٹط± ط§ظ„ط¥ط®ط¨ط§ط±ظٹط© ظˆط¨ظٹط§ظ†ط§طھ ط§ظ„ط£ط¯ط§ط، ط§ظ„طھظ†ط§ظپط³ظٹ.
+- firecrawl: ظ„ط¬ظ„ط¨ ظ‡ظٹظƒظ„ ط¨ظٹط§ظ†ط§طھ ظ…ظˆط§ظ‚ط¹ ط§ظ„ظˆظٹط¨ ظˆطھط­ظˆظٹظ„ظ‡ط§ ط¥ظ„ظ‰ ط¬ط¯ط§ظˆظ„ طھط­ظ„ظٹظ„ظٹط©.</code></pre>
+                </div>
+            </section>
+
+            <!-- Nav Footer -->
+            <div class="page-nav-footer">
+                <a href="06-mcps.html" class="page-nav-btn prev">
+                    <i class="fas fa-arrow-right"></i>
+                    <div>
+                        <span>ط§ظ„ط³ط§ط¨ظ‚</span>
+                        <strong>MCPs</strong>
+                    </div>
+                </a>
+                <a href="08-skills.html" class="page-nav-btn next">
+                    <div>
+                        <span>ط§ظ„طھط§ظ„ظٹ</span>
+                        <strong>ط§ظ„ظ…ظ‡ط§ط±ط§طھ ط§ظ„ط¬ط§ظ‡ط²ط© (Skills)</strong>
+                    </div>
+                    <i class="fas fa-arrow-left"></i>
+                </a>
+            </div>
+        </div>
+    </main>
+
+    <script src="../js/main.js"></script>
+</body>
+</html>

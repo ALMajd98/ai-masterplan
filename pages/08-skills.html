@@ -1,0 +1,209 @@
+﻿<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Skills â€” AI Master Plan</title>
+    <link rel="manifest" href="../manifest.json">
+    <link rel="icon" type="image/svg+xml" href="../assets/icons/favicon.svg">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+    <div class="animated-bg">
+        <div class="gradient-orb orb-1"></div>
+        <div class="gradient-orb orb-2"></div>
+        <div class="gradient-orb orb-3"></div>
+    </div>
+
+    <button class="floating-sidebar-toggle" id="floatingToggle" onclick="toggleSidebar()" aria-label="ظپطھط­ ط§ظ„ظ‚ط§ط¦ظ…ط©">
+        <i class="fas fa-bars"></i>
+    </button>
+
+    <div class="sidebar-overlay" id="sidebarOverlay" onclick="toggleSidebar()"></div>
+
+    <nav class="sidebar" id="sidebar">
+        <div class="sidebar-header">
+            <a href="../index.html" class="logo">
+                <div class="logo-icon"><i class="fas fa-microchip"></i></div>
+                <div class="logo-text">
+                    <span class="logo-title">AI Master</span>
+                    <span class="logo-subtitle">Plan v4.0</span>
+                </div>
+            </a>
+            <button class="sidebar-close" onclick="toggleSidebar()"><i class="fas fa-xmark"></i></button>
+        </div>
+
+        <div class="sidebar-search">
+            <i class="fas fa-magnifying-glass"></i>
+            <input type="text" placeholder="ط¨ط­ط« ط³ط±ظٹط¹..." id="sidebarSearch" oninput="searchNav(this.value)">
+            <kbd>Ctrl+K</kbd>
+        </div>
+
+        <div class="sidebar-nav" id="sidebarNav">
+            <div class="nav-section">
+                <span class="nav-section-title"><i class="fas fa-circle-dot"></i> ط§ظ„ط¨ط¯ط§ظٹط©</span>
+                <a href="../index.html" class="nav-link"><i class="fas fa-th-large"></i><span>ظ„ظˆط­ط© ط§ظ„طھط­ظƒظ…</span></a>
+                <a href="01-overview.html" class="nav-link"><i class="fas fa-compass"></i><span>ظ†ط¸ظ„ط© ط¹ط§ظ…ط©</span></a>
+                <a href="18-ai-timeline.html" class="nav-link"><i class="fas fa-clock-rotate-left"></i><span>ط£ط­ط¯ط§ط« 2025-2026</span><span class="nav-badge new">ط¬ط¯ظٹط¯</span></a>
+            </div>
+            <div class="nav-section">
+                <span class="nav-section-title"><i class="fas fa-rocket"></i> ط§ظ„طھط£ط³ظٹط³</span>
+                <a href="02-setup.html" class="nav-link"><i class="fas fa-hard-drive"></i><span>طھط¬ظ‡ظٹط² ط§ظ„ط¬ظ‡ط§ط²</span><span class="nav-badge phase">1</span></a>
+                <a href="03-ai-local.html" class="nav-link"><i class="fas fa-server"></i><span>AI ط§ظ„ظ…ط­ظ„ظٹ</span><span class="nav-badge phase">2</span></a>
+                <a href="04-ai-cloud.html" class="nav-link"><i class="fas fa-cloud"></i><span>AI ط§ظ„ط³ط­ط§ط¨ظٹ</span><span class="nav-badge phase">3</span></a>
+                <a href="05-vscode.html" class="nav-link"><i class="fas fa-code"></i><span>VS Code + Cline</span><span class="nav-badge phase">4</span></a>
+                <a href="19-ai-tools-compare.html" class="nav-link"><i class="fas fa-scale-balanced"></i><span>ظ…ظ‚ط§ط±ظ†ط© ط§ظ„ط£ط¯ظˆط§طھ</span><span class="nav-badge new">ط¬ط¯ظٹط¯</span></a>
+            </div>
+            <div class="nav-section">
+                <span class="nav-section-title"><i class="fas fa-wand-magic-sparkles"></i> ط§ظ„ظ‚ط¯ط±ط§طھ</span>
+                <a href="06-mcps.html" class="nav-link"><i class="fas fa-plug"></i><span>MCPs</span><span class="nav-badge count">10K+</span></a>
+                <a href="17-mcp-security.html" class="nav-link"><i class="fas fa-shield-virus"></i><span>ط£ظ…ط§ظ† MCP</span><span class="nav-badge new">ط¬ط¯ظٹط¯</span></a>
+                <a href="07-modes.html" class="nav-link"><i class="fas fa-masks-theater"></i><span>Custom Modes</span></a>
+                <a href="08-skills.html" class="nav-link active"><i class="fas fa-graduation-cap"></i><span>Skills</span></a>
+                <a href="16-multi-agent.html" class="nav-link"><i class="fas fa-users-gear"></i><span>Multi-Agent</span><span class="nav-badge new">ط¬ط¯ظٹط¯</span></a>
+            </div>
+            <div class="nav-section">
+                <span class="nav-section-title"><i class="fas fa-shield-halved"></i> ط§ظ„ظ…ط¹ط§ظٹظٹط±</span>
+                <a href="09-constitution.html" class="nav-link"><i class="fas fa-scroll"></i><span>ط§ظ„ط¯ط³طھظˆط±</span></a>
+                <a href="10-security.html" class="nav-link"><i class="fas fa-shield-halved"></i><span>ط§ظ„ط£ظ…ط§ظ†</span><span class="nav-badge count">60+</span></a>
+                <a href="11-performance.html" class="nav-link"><i class="fas fa-gauge-high"></i><span>ط§ظ„ط£ط¯ط§ط، ظˆط§ظ„طھظˆط³ط¹</span></a>
+            </div>
+            <div class="nav-section">
+                <span class="nav-section-title"><i class="fas fa-briefcase"></i> ط§ظ„طھط®طµطµط§طھ</span>
+                <a href="12-ecommerce.html" class="nav-link"><i class="fas fa-store"></i><span>ط§ظ„طھط¬ط§ط±ط© ط§ظ„ط³ط¹ظˆط¯ظٹط©</span></a>
+                <a href="13-techstack.html" class="nav-link"><i class="fas fa-layer-group"></i><span>Tech Stack</span></a>
+                <a href="14-workflow.html" class="nav-link"><i class="fas fa-route"></i><span>ط®ط·ظˆط§طھ ط§ظ„ط¹ظ…ظ„</span></a>
+                <a href="15-resources.html" class="nav-link"><i class="fas fa-book-open"></i><span>ط§ظ„ظ…طµط§ط¯ط±</span></a>
+            </div>
+        </div>
+
+        <div class="sidebar-footer">
+            <div class="version-info">
+                <i class="fas fa-code-branch"></i>
+                <span>v4.0 â€” ط³ط¨طھظ…ط¨ط± 2026</span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <header class="topbar">
+            <button class="mobile-menu-btn" onclick="toggleSidebar()"><i class="fas fa-bars"></i></button>
+            <div class="topbar-title">
+                <div class="topbar-breadcrumb">
+                    <i class="fas fa-home"></i>
+                    <span>ط§ظ„ط±ط¦ظٹط³ظٹط© / ط§ظ„ظ‚ط¯ط±ط§طھ</span>
+                </div>
+                <h1>AI Skills</h1>
+            </div>
+            <div class="topbar-actions">
+                <button class="topbar-btn" onclick="scrollToTop()" title="ظ„ظ„ط£ط¹ظ„ظ‰"><i class="fas fa-arrow-up"></i></button>
+                <button class="theme-toggle" onclick="toggleTheme()" title="طھط¨ط¯ظٹظ„ ط§ظ„ظˆط¶ط¹"><i class="fas fa-moon" id="themeIcon"></i></button>
+            </div>
+        </header>
+
+        <div class="content-area">
+            <section class="hero-section animate-fade-in-up">
+                <div class="hero-grid-pattern"></div>
+                <div class="hero-content">
+                    <div class="hero-badge">
+                        <span class="badge-pulse"></span>
+                        <i class="fas fa-graduation-cap"></i>
+                        ط§ظ„ظ‚ط¯ط±ط§طھ ظˆط§ظ„ظ…ظƒطھط¨ط§طھ ط§ظ„ط¬ط§ظ‡ط²ط©
+                    </div>
+                    <h2 class="hero-title">
+                        <span class="gradient-text">Claude Skills</span>
+                    </h2>
+                    <p class="hero-description">
+                        ط§ظ„ظ€ Skills ظ‡ظٹ ظ‚ط¯ط±ط§طھ ظ…ط¹ظٹط§ط±ظٹط© ظ…طµط§ط؛ط© ط¨ظ…ظ„ظپط§طھ ظˆط«ط§ط¦ظ‚ظٹط© (Markdown) ظ…ط¹ ط³ظƒط±ظٹط¨طھط§طھ ظ…ط³ط§ط¹ط¯ط©طŒ طھظ…ظ†ط­ ط§ظ„ط°ظƒط§ط، ط§ظ„ط§طµط·ظ†ط§ط¹ظٹ
+                        ط·ط±ظ‚ط§ظ‹ ط¯ظ‚ظٹظ‚ط© ظ„ظ„طھط¹ط§ظ…ظ„ ظ…ط¹ <strong class="hero-highlight">ظ…ظ‡ط§ظ… ظ…ط¹ط§ظ„ط¬ط© ظ…طھط®طµطµط©</strong> ظ…ط«ظ„ طھط­ظˆظٹظ„ ط§ظ„ط¨ظٹط§ظ†ط§طھ ظˆطھطµظ…ظٹظ… ط§ظ„ظˆط§ط¬ظ‡ط§طھ.
+                    </p>
+                </div>
+            </section>
+
+            <!-- GitHub Skills Libraries -->
+            <section class="section animate-fade-in-up" style="animation-delay: 0.1s">
+                <h3 class="section-title">
+                    <i class="fab fa-github"></i>
+                    ط£ظ‚ظˆظ‰ ظ…ط³طھظˆط¯ط¹ط§طھ ط§ظ„ظ€ Skills ط¹ظ„ظ‰ GitHub (طھط­ط¯ظٹط« ط³ط¨طھظ…ط¨ط± 2026)
+                    <span class="section-badge success">ظ…ط³طھظˆط¯ط¹ط§طھ ظ…ط¹طھظ…ط¯ط©</span>
+                </h3>
+                <div class="search-apis-grid">
+                    <div class="api-card">
+                        <div class="api-icon" style="background: #24292e;"><i class="fab fa-github"></i></div>
+                        <h4>anthropics/skills</h4>
+                        <p class="api-stats">ط§ظ„ظ…ط³طھظˆط¯ط¹ ط§ظ„ط±ط³ظ…ظٹ ظ…ظ† Anthropic</p>
+                        <p>ظٹط­طھظˆظٹ ط¹ظ„ظ‰ ظ…ظ‡ط§ط±ط§طھ ظ…ط¹ط§ظ„ط¬ط© ظ…ظ„ظپط§طھ PDFطŒ طھظˆظ„ظٹط¯ ط¹ط±ظˆط¶ PowerPointطŒ ظ…ط±ط§ط¬ط¹ط© ط§ظ„ط¨ظٹط§ظ†ط§طھ ظˆط¬ط¯ط§ظˆظ„ Excel.</p>
+                        <a href="https://github.com/anthropics/skills" target="_blank" class="link-btn"><i class="fas fa-link"></i> ط§ظ„ظ…ط³طھظˆط¯ط¹</a>
+                    </div>
+
+                    <div class="api-card">
+                        <div class="api-icon" style="background: #8b5cf6;"><i class="fas fa-wand-magic-sparkles"></i></div>
+                        <h4>obra/superpowers</h4>
+                        <p class="api-stats">ظ…ط¬ظ…ظˆط¹ط© ظ‚ط¯ط±ط§طھ ط®ط§ط±ظ‚ط© ظ„ظ„ط¥ظ†طھط§ط¬ظٹط©</p>
+                        <p>ظٹط¬ظ…ط¹ ط£ظƒط«ط± ظ…ظ† 30 ظ‚ط¯ط±ط© ظ…طھظ‚ط¯ظ…ط© ظپظٹ طھظˆظ„ظٹط¯ ط§ظ„ظˆط§ط¬ظ‡ط§طھطŒ ط³ط­ط¨ ط§ظ„ط¨ظٹط§ظ†ط§طھ ظˆظ…ط¹ط§ظ„ط¬ط© ط§ظ„طµظˆط± ط§ظ„ط¨ط±ظ…ط¬ظٹط©.</p>
+                        <a href="https://github.com/obra/superpowers" target="_blank" class="link-btn"><i class="fas fa-link"></i> ط§ظ„ظ…ط³طھظˆط¯ط¹</a>
+                    </div>
+
+                    <div class="api-card">
+                        <div class="api-icon" style="background: #10b981;"><i class="fas fa-users-gear"></i></div>
+                        <h4>wshobson/agents</h4>
+                        <p class="api-stats">ظپط±ظٹظ‚ ط¹ظ…ظ„ط§ط، ظپط±ط¹ظٹظٹظ† (Sub-Agents)</p>
+                        <p>ظٹظˆظپط± ط£ظƒط«ط± ظ…ظ† 100 ط®ط¨ظٹط± ظپط±ط¹ظٹ ظ…ط®طµطµ ظ„ظ„ظ…ط±ط§ط¬ط¹ط© ط§ظ„طµط§ط±ظ…ط© ظˆط§ظ„ط§ط®طھط¨ط§ط±ط§طھ ط§ظ„ط¨ط±ظ…ط¬ظٹط© ظˆظ‡ظ†ط¯ط³ط© ط§ظ„ظ…ظ†ط¸ظˆظ…ط§طھ.</p>
+                        <a href="https://github.com/wshobson/agents" target="_blank" class="link-btn"><i class="fas fa-link"></i> ط§ظ„ظ…ط³طھظˆط¯ط¹</a>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Script to pull all skills directly into workspace -->
+            <section class="section animate-fade-in-up" style="animation-delay: 0.2s">
+                <h3 class="section-title">
+                    <i class="fas fa-cloud-arrow-down"></i>
+                    ط³ظƒط±ظٹط¨طھ طھظ†ط²ظٹظ„ ظ…ظƒطھط¨ط§طھ ط§ظ„ظ€ Skills ظ…ط¨ط§ط´ط±ط© ظ„ظ„ظ‚ط±طµ D
+                </h3>
+                <p class="step-description">ظ†ظپط° ظ‡ط°ط§ ط§ظ„ط£ظ…ط± ظپظٹ ط¨ظٹط¦ط© PowerShell ظ„ط³ط­ط¨ ظƒظ„ ط§ظ„ظ…ظ‡ط§ط±ط§طھ ط§ظ„ط±ط³ظ…ظٹط© ظˆط§ظ„ظپط±ط¹ظٹط© ط¥ظ„ظ‰ ظ…ط¬ظ„ط¯ ظ…ظ†ط¸ظˆظ…طھظƒ:</p>
+                <div class="code-block">
+                    <div class="code-header">
+                        <span>PowerShell</span>
+                        <button class="copy-btn" onclick="copyCode(this)"><i class="fas fa-copy"></i></button>
+                    </div>
+                    <pre><code># ط§ظ„ط§ظ†طھظ‚ط§ظ„ ط¥ظ„ظ‰ ط§ظ„ظ…ط¬ظ„ط¯ ط§ظ„ظ…ط®طµطµ ظ„ظ„ظ€ Skills ط¹ظ„ظ‰ ط§ظ„ظ‚ط±طµ D
+cd "D:\Projects\AI-Workspace\.clinerules\skills"
+
+# ط§ط³طھظ†ط³ط§ط® ط£ظ‡ظ… ط§ظ„ظ…ط³طھظˆط¯ط¹ط§طھ ط§ظ„ط´ط§ظ…ظ„ط©
+git clone https://github.com/anthropics/skills.git anthropic-skills
+git clone https://github.com/obra/superpowers.git superpowers
+git clone https://github.com/wshobson/agents.git wshobson-agents
+git clone https://github.com/VoltAgent/awesome-claude-code-subagents.git voltagent-subagents
+
+Write-Host "âœ… طھظ… ط§ط³طھظٹط±ط§ط¯ ظ…ظƒطھط¨ط§طھ ط§ظ„ظ…ظ‡ط§ط±ط§طھ ط¨ظ†ط¬ط§ط­!" -ForegroundColor Green</code></pre>
+                </div>
+            </section>
+
+            <!-- Nav Footer -->
+            <div class="page-nav-footer">
+                <a href="07-modes.html" class="page-nav-btn prev">
+                    <i class="fas fa-arrow-right"></i>
+                    <div>
+                        <span>ط§ظ„ط³ط§ط¨ظ‚</span>
+                        <strong>Custom Modes</strong>
+                    </div>
+                </a>
+                <a href="16-multi-agent.html" class="page-nav-btn next">
+                    <div>
+                        <span>ط§ظ„طھط§ظ„ظٹ</span>
+                        <strong>ط£ظ†ط¸ظ…ط© ط§ظ„ظ€ Multi-Agent</strong>
+                    </div>
+                    <i class="fas fa-arrow-left"></i>
+                </a>
+            </div>
+        </div>
+    </main>
+
+    <script src="../js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,98 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630">
+    <defs>
+        <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" style="stop-color:#0f172a"/>
+            <stop offset="50%" style="stop-color:#1e1b4b"/>
+            <stop offset="100%" style="stop-color:#0f172a"/>
+        </linearGradient>
+        <linearGradient id="textGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" style="stop-color:#3b82f6"/>
+            <stop offset="100%" style="stop-color:#8b5cf6"/>
+        </linearGradient>
+        <linearGradient id="iconGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" style="stop-color:#3b82f6"/>
+            <stop offset="100%" style="stop-color:#8b5cf6"/>
+        </linearGradient>
+        <radialGradient id="glowGrad" cx="50%" cy="50%" r="50%">
+            <stop offset="0%" style="stop-color:#3b82f6;stop-opacity:0.3"/>
+            <stop offset="100%" style="stop-color:#3b82f6;stop-opacity:0"/>
+        </radialGradient>
+    </defs>
+    
+    <!-- Background -->
+    <rect width="1200" height="630" fill="url(#bgGrad)"/>
+    
+    <!-- Grid Pattern -->
+    <defs>
+        <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+            <path d="M 40 0 L 0 0 0 40" fill="none" stroke="rgba(255,255,255,0.03)" stroke-width="1"/>
+        </pattern>
+    </defs>
+    <rect width="1200" height="630" fill="url(#grid)"/>
+    
+    <!-- Glow Orbs -->
+    <circle cx="200" cy="150" r="200" fill="url(#glowGrad)"/>
+    <circle cx="1000" cy="480" r="200" fill="url(#glowGrad)"/>
+    
+    <!-- Icon Box -->
+    <g transform="translate(100, 215)">
+        <rect x="0" y="0" width="180" height="180" rx="36" ry="36" fill="url(#iconGrad)"/>
+        <rect x="45" y="45" width="90" height="90" rx="12" ry="12" fill="rgba(255,255,255,0.95)"/>
+        <circle cx="90" cy="90" r="12" fill="url(#iconGrad)"/>
+        
+        <!-- Connection Lines -->
+        <rect x="63" y="18" width="5" height="22" fill="rgba(255,255,255,0.9)" rx="2"/>
+        <rect x="86" y="18" width="5" height="22" fill="rgba(255,255,255,0.9)" rx="2"/>
+        <rect x="109" y="18" width="5" height="22" fill="rgba(255,255,255,0.9)" rx="2"/>
+        
+        <rect x="63" y="140" width="5" height="22" fill="rgba(255,255,255,0.9)" rx="2"/>
+        <rect x="86" y="140" width="5" height="22" fill="rgba(255,255,255,0.9)" rx="2"/>
+        <rect x="109" y="140" width="5" height="22" fill="rgba(255,255,255,0.9)" rx="2"/>
+        
+        <rect x="18" y="63" width="22" height="5" fill="rgba(255,255,255,0.9)" rx="2"/>
+        <rect x="18" y="86" width="22" height="5" fill="rgba(255,255,255,0.9)" rx="2"/>
+        <rect x="18" y="109" width="22" height="5" fill="rgba(255,255,255,0.9)" rx="2"/>
+        
+        <rect x="140" y="63" width="22" height="5" fill="rgba(255,255,255,0.9)" rx="2"/>
+        <rect x="140" y="86" width="22" height="5" fill="rgba(255,255,255,0.9)" rx="2"/>
+        <rect x="140" y="109" width="22" height="5" fill="rgba(255,255,255,0.9)" rx="2"/>
+    </g>
+    
+    <!-- Version Badge -->
+    <g transform="translate(320, 180)">
+        <rect x="0" y="0" width="200" height="40" rx="20" ry="20" fill="rgba(59, 130, 246, 0.15)" stroke="rgba(59, 130, 246, 0.4)" stroke-width="1"/>
+        <circle cx="20" cy="20" r="4" fill="#10b981"/>
+        <text x="40" y="27" font-family="monospace" font-size="14" font-weight="600" fill="#3b82f6">v4.0 — Enterprise Edition</text>
+    </g>
+    
+    <!-- Main Title -->
+    <text x="320" y="300" font-family="Arial, sans-serif" font-size="72" font-weight="900" fill="url(#textGrad)">AI Master Plan</text>
+    
+    <!-- Subtitle -->
+    <text x="320" y="360" font-family="Arial, sans-serif" font-size="28" font-weight="500" fill="#94a3b8">الدليل الاحترافي الشامل · سبتمبر 2026</text>
+    
+    <!-- Features -->
+    <g transform="translate(320, 420)">
+        <!-- Feature 1 -->
+        <g>
+            <circle cx="10" cy="10" r="5" fill="#3b82f6"/>
+            <text x="25" y="15" font-family="Arial, sans-serif" font-size="20" fill="#e8edf5">19 صفحة توثيقية احترافية</text>
+        </g>
+        
+        <!-- Feature 2 -->
+        <g transform="translate(0, 40)">
+            <circle cx="10" cy="10" r="5" fill="#8b5cf6"/>
+            <text x="25" y="15" font-family="Arial, sans-serif" font-size="20" fill="#e8edf5">10,000+ أداة MCP + 11 نموذج AI</text>
+        </g>
+        
+        <!-- Feature 3 -->
+        <g transform="translate(0, 80)">
+            <circle cx="10" cy="10" r="5" fill="#10b981"/>
+            <text x="25" y="15" font-family="Arial, sans-serif" font-size="20" fill="#e8edf5">ميزانية $0 - $20 شهرياً</text>
+        </g>
+    </g>
+    
+    <!-- Footer -->
+    <text x="100" y="580" font-family="monospace" font-size="18" fill="#64748b">ai-masterplan.github.io</text>
+    <text x="1100" y="580" font-family="Arial, sans-serif" font-size="18" fill="#64748b" text-anchor="end">صُنع في 🇸🇦</text>
+</svg>

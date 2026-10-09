@@ -1,0 +1,279 @@
+﻿<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ط§ظ„ط£ط¯ط§ط، ط§ظ„ظ…طھظ‚ط¯ظ… ظˆط§ظ„طھظˆط³ط¹ â€” AI Master Plan</title>
+    <link rel="manifest" href="../manifest.json">
+    <link rel="icon" type="image/svg+xml" href="../assets/icons/favicon.svg">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+    <!-- Animated Background -->
+    <div class="animated-bg">
+        <div class="gradient-orb orb-1"></div>
+        <div class="gradient-orb orb-2"></div>
+        <div class="gradient-orb orb-3"></div>
+    </div>
+
+    <!-- Floating Sidebar Toggle -->
+    <button class="floating-sidebar-toggle" id="floatingToggle" onclick="toggleSidebar()" aria-label="ظپطھط­ ط§ظ„ظ‚ط§ط¦ظ…ط©">
+        <i class="fas fa-bars"></i>
+    </button>
+
+    <!-- Sidebar Overlay -->
+    <div class="sidebar-overlay" id="sidebarOverlay" onclick="toggleSidebar()"></div>
+
+    <!-- Sidebar -->
+    <nav class="sidebar" id="sidebar">
+        <div class="sidebar-header">
+            <a href="../index.html" class="logo">
+                <div class="logo-icon"><i class="fas fa-microchip"></i></div>
+                <div class="logo-text">
+                    <span class="logo-title">AI Master</span>
+                    <span class="logo-subtitle">Plan v4.0</span>
+                </div>
+            </a>
+            <button class="sidebar-close" onclick="toggleSidebar()" aria-label="ط¥ط؛ظ„ط§ظ‚"><i class="fas fa-xmark"></i></button>
+        </div>
+
+        <div class="sidebar-search">
+            <i class="fas fa-magnifying-glass"></i>
+            <input type="text" placeholder="ط¨ط­ط« ط³ط±ظٹط¹..." id="sidebarSearch" oninput="searchNav(this.value)">
+            <kbd>Ctrl+K</kbd>
+        </div>
+
+        <div class="sidebar-nav" id="sidebarNav">
+            <div class="nav-section">
+                <span class="nav-section-title"><i class="fas fa-circle-dot"></i>  ط§ظ„ط¨ط¯ط§ظٹط©</span>
+                <a href="../index.html" class="nav-link"><i class="fas fa-th-large"></i><span>ظ„ظˆط­ط© ط§ظ„طھط­ظƒظ…</span></a>
+                <a href="01-overview.html" class="nav-link"><i class="fas fa-compass"></i><span>ظ†ط¸ط±ط© ط¹ط§ظ…ط©</span></a>
+                <a href="18-ai-timeline.html" class="nav-link"><i class="fas fa-clock-rotate-left"></i><span>ط£ط­ط¯ط§ط« 2025-2026</span><span class="nav-badge new">ط¬ط¯ظٹط¯</span></a>
+            </div>
+            <div class="nav-section">
+                <span class="nav-section-title"><i class="fas fa-rocket"></i>  ط§ظ„طھط£ط³ظٹط³</span>
+                <a href="02-setup.html" class="nav-link"><i class="fas fa-hard-drive"></i><span>طھط¬ظ‡ظٹط² ط§ظ„ط¬ظ‡ط§ط²</span><span class="nav-badge phase">1</span></a>
+                <a href="03-ai-local.html" class="nav-link"><i class="fas fa-server"></i><span>AI ط§ظ„ظ…ط­ظ„ظٹ</span><span class="nav-badge phase">2</span></a>
+                <a href="04-ai-cloud.html" class="nav-link"><i class="fas fa-cloud"></i><span>AI ط§ظ„ط³ط­ط§ط¨ظٹ</span><span class="nav-badge phase">3</span></a>
+                <a href="05-vscode.html" class="nav-link"><i class="fas fa-code"></i><span>VS Code + Cline</span><span class="nav-badge phase">4</span></a>
+                <a href="19-ai-tools-compare.html" class="nav-link"><i class="fas fa-scale-balanced"></i><span>ظ…ظ‚ط§ط±ظ†ط© ط§ظ„ط£ط¯ظˆط§طھ</span><span class="nav-badge new">ط¬ط¯ظٹط¯</span></a>
+            </div>
+            <div class="nav-section">
+                <span class="nav-section-title"><i class="fas fa-wand-magic-sparkles"></i>  ط§ظ„ظ‚ط¯ط±ط§طھ</span>
+                <a href="06-mcps.html" class="nav-link"><i class="fas fa-plug"></i><span>MCPs</span><span class="nav-badge count">10K+</span></a>
+                <a href="17-mcp-security.html" class="nav-link"><i class="fas fa-shield-virus"></i><span>ط£ظ…ط§ظ† MCP</span><span class="nav-badge new">ط¬ط¯ظٹط¯</span></a>
+                <a href="07-modes.html" class="nav-link"><i class="fas fa-masks-theater"></i><span>Custom Modes</span></a>
+                <a href="08-skills.html" class="nav-link"><i class="fas fa-graduation-cap"></i><span>Skills</span></a>
+                <a href="16-multi-agent.html" class="nav-link"><i class="fas fa-users-gear"></i><span>Multi-Agent</span><span class="nav-badge new">ط¬ط¯ظٹط¯</span></a>
+            </div>
+            <div class="nav-section">
+                <span class="nav-section-title"><i class="fas fa-shield-halved"></i>  ط§ظ„ظ…ط¹ط§ظٹظٹط±</span>
+                <a href="09-constitution.html" class="nav-link"><i class="fas fa-scroll"></i><span>ط§ظ„ط¯ط³طھظˆط±</span></a>
+                <a href="10-security.html" class="nav-link"><i class="fas fa-shield-halved"></i><span>ط§ظ„ط£ظ…ط§ظ†</span><span class="nav-badge count">60+</span></a>
+                <a href="11-performance.html" class="nav-link active"><i class="fas fa-gauge-high"></i><span>ط§ظ„ط£ط¯ط§ط، ظˆط§ظ„طھظˆط³ط¹</span></a>
+            </div>
+            <div class="nav-section">
+                <span class="nav-section-title"><i class="fas fa-briefcase"></i>  ط§ظ„طھط®طµطµط§طھ</span>
+                <a href="12-ecommerce.html" class="nav-link"><i class="fas fa-store"></i><span>ط§ظ„طھط¬ط§ط±ط© ط§ظ„ط³ط¹ظˆط¯ظٹط©</span></a>
+                <a href="13-techstack.html" class="nav-link"><i class="fas fa-layer-group"></i><span>Tech Stack</span></a>
+                <a href="14-workflow.html" class="nav-link"><i class="fas fa-route"></i><span>ط®ط·ظˆط§طھ ط§ظ„ط¹ظ…ظ„</span></a>
+                <a href="15-resources.html" class="nav-link"><i class="fas fa-book-open"></i><span>ط§ظ„ظ…طµط§ط¯ط±</span></a>
+            </div>
+        </div>
+
+        <div class="sidebar-footer">
+            <div class="version-info">
+                <i class="fas fa-code-branch"></i>
+                <span>v4.0 â€” ط³ط¨طھظ…ط¨ط± 2026</span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <header class="topbar">
+            <button class="mobile-menu-btn" onclick="toggleSidebar()"><i class="fas fa-bars"></i></button>
+            <div class="topbar-title">
+                <div class="topbar-breadcrumb">
+                    <i class="fas fa-home"></i>
+                    <span>ط§ظ„ط±ط¦ظٹط³ظٹط© / ط§ظ„ظ…ط¹ط§ظٹظٹط± / ط§ظ„ط£ط¯ط§ط،</span>
+                </div>
+                <h1>ط§ظ„ط£ط¯ط§ط، ظˆط§ظ„طھظˆط³ط¹ ط§ظ„ط¨ط±ظ…ط¬ظٹ</h1>
+            </div>
+            <div class="topbar-actions">
+                <button class="topbar-btn" onclick="scrollToTop()" title="ظ„ظ„ط£ط¹ظ„ظ‰"><i class="fas fa-arrow-up"></i></button>
+                <button class="theme-toggle" onclick="toggleTheme()" title="طھط¨ط¯ظٹظ„ ط§ظ„ظˆط¶ط¹"><i class="fas fa-moon" id="themeIcon"></i></button>
+            </div>
+        </header>
+
+        <div class="content-area">
+            <section class="hero-section animate-fade-in-up">
+                <div class="hero-grid-pattern"></div>
+                <div class="hero-content">
+                    <div class="hero-badge">
+                        <span class="badge-pulse"></span>
+                        <i class="fas fa-gauge-high"></i>
+                        React Compiler + Turbopack
+                    </div>
+                    <h2 class="hero-title">
+                        <span class="gradient-text">ط§ظ„ط³ط±ط¹ط© ظˆطھط¯ظپظ‚ ط§ظ„ط¹ظ…ظ„ظٹط§طھ</span>
+                    </h2>
+                    <p class="hero-description">
+                        طھط·ظˆظٹط± ظˆط§ط¬ظ‡ط§طھ ظˆطھط·ط¨ظٹظ‚ط§طھ ط³ط­ط§ط¨ظٹط© ظپط§ط¦ظ‚ط© ط§ظ„ط³ط±ط¹ط© طھطھظˆط§ظپظ‚ ظ…ط¹ ظ…ط¤ط´ط±ط§طھ ط§ظ„ظˆظٹط¨ ط§ظ„ط­ظٹظˆظٹط© (Core Web Vitals) ظ„ط¹ط§ظ… 2026طŒ
+                        ط¨ط§ط¹طھظ…ط§ط¯ طھظ‚ظ†ظٹط§طھ ط§ظ„ط¶ط؛ط· ظˆط§ظ„طھط±ط¬ظ…ط© ط§ظ„طھظ„ظ‚ط§ط¦ظٹط©طŒ ظˆط¥ط³ظ†ط§ط¯ ط§ظ„ظ…ظ‡ط§ظ… ط§ظ„ظ…ط¹ظ‚ط¯ط© ظ„ظ‚ظ†ظˆط§طھ ط§ظ„ظ…ط¹ط§ظ„ط¬ط© ط§ظ„ط®ظ„ظپظٹط© ط§ظ„ظ…ط³طھظ‚ط±ط©.
+                    </p>
+                </div>
+            </section>
+
+            <!-- Metrics -->
+            <section class="section animate-fade-in-up" style="animation-delay: 0.1s">
+                <h3 class="section-title">
+                    <i class="fas fa-bullseye"></i>
+                    ط§ظ„ظ…ظ‚ط§ظٹظٹط³ ط§ظ„ظ…ط¹ظٹط§ط±ظٹط© ظ„ظ…ط¤ط´ط±ط§طھ ط§ظ„ط£ط¯ط§ط، ظ„ط¹ط§ظ… 2026
+                    <span class="section-badge success">ط£ط±ظ‚ط§ظ… ط¥ظ„ط²ط§ظ…ظٹط©</span>
+                </h3>
+                <div class="comparison-table">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>ط§ظ„ظ…ط¤ط´ط± ط§ظ„ظپظ†ظٹ</th>
+                                <th>ط§ظ„ظˆطµظپ ط§ظ„ط¹ظ„ظ…ظٹ</th>
+                                <th>ط§ظ„ط­ط¯ ط§ظ„ط£ظ‚طµظ‰ ط§ظ„ظ…ظ‚ط¨ظˆظ„ ظ„ط²ظ…ظ† ط§ظ„ط§ط³طھط¬ط§ط¨ط©</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><strong>LCP</strong></td>
+                                <td>Largest Contentful Paint - ط²ظ…ظ† ط±ط³ظ… ط£ظƒط¨ط± ظƒطھظ„ط© ظ…ط­طھظˆظ‰ ظ…ط±ط¦ظٹط©</td>
+                                <td><span class="status-badge free">ط£ظ‚ظ„ ظ…ظ† 1.8 ط«ط§ظ†ظٹط©</span></td>
+                            </tr>
+                            <tr>
+                                <td><strong>INP</strong></td>
+                                <td>Interaction to Next Paint - ط³ط±ط¹ط© ط§ط³طھط¬ط§ط¨ط© ط¹ظ†ط§طµط± ط§ظ„ظˆط§ط¬ظ‡ط© ظ„ظ„طھظپط§ط¹ظ„ ط§ظ„ط¨ط´ط±ظٹ</td>
+                                <td><span class="status-badge free">ط£ظ‚ظ„ ظ…ظ† 100 ظ…ظ„ظٹ ط«ط§ظ†ظٹط©</span></td>
+                            </tr>
+                            <tr>
+                                <td><strong>CLS</strong></td>
+                                <td>Cumulative Layout Shift - ظ…ط¹ط¯ظ„ ط§ظ„ط§ظ†ط²ظٹط§ط­ ظˆط§ظ„ط§ظ‡طھط²ط§ط² ط§ظ„ظ‡ظٹظƒظ„ظٹ ظ„ظ„ظˆط§ط¬ظ‡ط©</td>
+                                <td><span class="status-badge free">ط£ظ‚ظ„ ظ…ظ† 0.05 (ط´ط¨ظ‡ ظ…ط¹ط¯ظˆظ…)</span></td>
+                            </tr>
+                            <tr>
+                                <td><strong>TTFB</strong></td>
+                                <td>Time to First Byte - ط²ظ…ظ† ظˆطµظˆظ„ ط£ظˆظ„ ط¨ط§ظٹطھ ط¨ظٹط§ظ†ط§طھ ظ…ظ† ط§ظ„ط®ط§ط¯ظ… ظ„ظ„ط¹ظ…ظٹظ„</td>
+                                <td><span class="status-badge free">ط£ظ‚ظ„ ظ…ظ† 400 ظ…ظ„ظٹ ط«ط§ظ†ظٹط©</span></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+
+            <!-- Next.js 16.3.6 Dev -->
+            <section class="section animate-fade-in-up" style="animation-delay: 0.2s">
+                <h3 class="section-title">
+                    <i class="fas fa-microprocessor"></i>
+                    ط¥ط¹ط¯ط§ط¯ط§طھ ط¨ظٹط¦ط© ط¨ظ†ط§ط، Next.js 16.3.6 ط§ظ„ط§ط­طھط±ط§ظپظٹط©
+                    <span class="section-badge">ظ…ظ„ظپ طھظƒظˆظٹظ†</span>
+                </h3>
+                <p class="step-description">طھظپط¹ظٹظ„ ظ…ظٹط²ط© ط§ظ„طھط¬ظ…ظٹط¹ ط§ظ„ط°ظƒظٹ ظ„ظ€ React Compiler ظˆط§ظ„طھط¬ط±ظٹط¨ ط§ظ„ط¬ط²ط¦ظٹ ظ„ظ„ظ€ PPR ظپظٹ ظ…ظ„ظپ <code>next.config.ts</code>:</p>
+                <div class="code-block">
+                    <div class="code-header">
+                        <span>next.config.ts</span>
+                        <button class="copy-btn" onclick="copyCode(this)"><i class="fas fa-copy"></i></button>
+                    </div>
+                    <pre><code>import type { NextConfig } from "next";
+
+const nextConfig: NextConfig = {
+  // طھظپط¹ظٹظ„ ظ…طھط±ط¬ظ… React Compiler 1.0 ظ„ظ„طھط®ط²ظٹظ† ط§ظ„ظ…ظٹظ…ظˆط±ظٹ ط§ظ„طھظ„ظ‚ط§ط¦ظٹ ظ„ظ„ظƒظˆط¯
+  experimental: {
+    reactCompiler: true,
+    ppr: 'incremental', // طھظپط¹ظٹظ„ Partial Prerendering ط§ظ„طھط¯ط±ظٹط¬ظٹ ظ„ظ„ط£ط¯ط§ط، ط§ظ„ط¹ط§ظ„ظٹ
+  },
+  images: {
+    formats: ['image/avif', 'image/webp'], // طھط±ظ…ظٹط² ط§ظ„طµظˆط± ط§ظ„ط­ط¯ظٹط« ظ„ظ„ظ…طھطµظپط­ط§طھ
+    minimumCacheTTL: 31536000, // ط§ظ„ط§ط­طھظپط§ط¸ ط¨ط§ظ„طµظˆط± ظپظٹ ط§ظ„ظ€ CDN ظ„ظ…ط¯ط© ط³ظ†ط© ظƒط§ظ…ظ„ط©
+  },
+  compress: true, // طھظپط¹ظٹظ„ ط¶ط؛ط· gzipped ظ„ظ„ظ…ظ„ظپط§طھ
+};
+
+export default nextConfig;</code></pre>
+                </div>
+            </section>
+
+            <!-- Load testing via k6 -->
+            <section class="section animate-fade-in-up" style="animation-delay: 0.3s">
+                <h3 class="section-title">
+                    <i class="fas fa-vial"></i>
+                    ط§ط®طھط¨ط§ط± ط£ظ‚طµظ‰ ط·ط§ظ‚ط© طھط­ظ…ظ„ ظ„ظ„ظ†ط¸ط§ظ… (Stress Testing via k6)
+                </h3>
+                <p class="step-description">ط§ط³طھط®ط¯ظ… ظ‡ط°ظ‡ ط§ظ„ط´ظپط±ط© ط§ظ„ط¨ط±ظ…ط¬ظٹط© ظ„ظ…ط­ط§ظƒط§ط© طµط¹ظˆط¯ ظپظˆط±ظٹ ظ„ظ„ظ…ط³طھط®ط¯ظ…ظٹظ† ظ„ظ€ 1,000 ظ…ط³طھط®ط¯ظ… ظ†ط´ط· ظپظٹ ط¢ظ† ظˆط§ط­ط¯ ط¹ظ„ظ‰ ط§ظ„ط®ط§ط¯ظ… ظ„ظ„طھط£ظƒط¯ ظ…ظ† ط«ط¨ط§طھظ‡ ظˆظ…ط±ط§ظ‚ط¨طھظ‡:</p>
+                <div class="code-block">
+                    <div class="code-header">
+                        <span>stress_test.js</span>
+                        <button class="copy-btn" onclick="copyCode(this)"><i class="fas fa-copy"></i></button>
+                    </div>
+                    <pre><code>import http from 'k6/http';
+import { check, sleep } from 'k6';
+
+// ظ…ط­ط§ظƒط§ط© طµط¹ظˆط¯ ظˆطھط¯ظپظ‚ ط§ظ„ظ…ط³طھط®ط¯ظ…ظٹظ† ط§ظ„طھط¯ط±ظٹط¬ظٹ ط«ظ… ط§ظ„ظ‡ط¨ظˆط· ط§ظ„ظ…ظپط§ط¬ط¦
+export const options = {
+  stages: [
+    { duration: '1m', target: 100 },  // طµط¹ظˆط¯ ظ„ظ€ 100 ظ…ط³طھط®ط¯ظ…
+    { duration: '3m', target: 500 },  // طµط¹ظˆط¯ ظ…طھظˆط³ط· ظ„ظ€ 500 ظ…ط³طھط®ط¯ظ…
+    { duration: '1m', target: 1000 }, // ظ‚ظپط²ط© ظ‡ط¬ظˆظ…ظٹط© ظ„ظ€ 1000 ظ…ط³طھط®ط¯ظ… ظ†ط´ط·
+    { duration: '3m', target: 1000 }, // ط§ظ„ط«ط¨ط§طھ ط¹ظ†ط¯ ط§ظ„ظ‚ظ…ط© ظ„ظ…ط±ط§ظ‚ط¨ط© ط§ط³طھظ‚ط±ط§ط± ط§ظ„ظ…ط¹ط§ظ„ط¬
+    { duration: '1m', target: 0 },    // ظ‡ط¨ظˆط· ط¢ظ…ظ† ظ„ظ„طµظپط±
+  ],
+  thresholds: {
+    http_req_failed: ['rate<0.01'],   // ظٹظ…ظ†ط¹ طھط¬ط§ظˆط² ظ†ط³ط¨ط© ظپط´ظ„ ط§ظ„ط¹ظ…ظ„ظٹط§طھ ط§ظ„ظ€ 1%
+    http_req_duration: ['p(95)<400'], // 95% ظ…ظ† ط§ط³طھط¬ط§ط¨ط§طھ ط§ظ„ط·ظ„ط¨ط§طھ ظٹط¬ط¨ ط£ظ† طھظƒظˆظ† طھط­طھ 400ms
+  },
+};
+
+export default function () {
+  const url = 'https://your-production-app.com/api/v1/products';
+  const params = {
+    headers: {
+      'Content-Type': 'application/json',
+      'X-App-Client': 'k6-load-testing-agent',
+    },
+  };
+  
+  const res = http.get(url, params);
+  
+  check(res, {
+    'ط§ط³طھط¬ط§ط¨ط© ط§ظ„ط®ط§ط¯ظ… ظ†ط§ط¬ط­ط© 200': (r) => r.status === 200,
+    'ط²ظ…ظ† ط§ظ„ظ…ط¹ط§ظ„ط¬ط© ظ…ظ‚ط¨ظˆظ„': (r) => r.timings.duration < 400,
+  });
+  
+  sleep(1);
+}</code></pre>
+                </div>
+            </section>
+
+            <!-- Nav Footer -->
+            <div class="page-nav-footer">
+                <a href="17-mcp-security.html" class="page-nav-btn prev">
+                    <i class="fas fa-arrow-right"></i>
+                    <div>
+                        <span>ط§ظ„ط³ط§ط¨ظ‚</span>
+                        <strong>ط£ظ…ط§ظ† ط¨ط±ظˆطھظˆظƒظˆظ„ ط§ظ„ظ€ MCP</strong>
+                    </div>
+                </a>
+                <a href="12-ecommerce.html" class="page-nav-btn next">
+                    <div>
+                        <span>ط§ظ„طھط§ظ„ظٹ</span>
+                        <strong>ط§ظ„طھط¬ط§ط±ط© ط§ظ„ط³ط¹ظˆط¯ظٹط© ظˆط§ظ„ظ…ط¹ط§ظٹظٹط± ط§ظ„ظ…ط§ظ„ظٹط©</strong>
+                    </div>
+                    <i class="fas fa-arrow-left"></i>
+                </a>
+            </div>
+        </div>
+    </main>
+
+    <script src="../js/main.js"></script>
+</body>
+</html>

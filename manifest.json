@@ -1,0 +1,34 @@
+﻿{
+  "name": "AI Master Plan v4.0",
+  "short_name": "AI Master Plan",
+  "description": "ط§ظ„ط¯ظ„ظٹظ„ ط§ظ„ط§ط­طھط±ط§ظپظٹ ط§ظ„ط´ط§ظ…ظ„ ظ„ط¨ظ†ط§ط، ظ…ظ†ط¸ظˆظ…ط© ط°ظƒط§ط، ط§طµط·ظ†ط§ط¹ظٹ ظ…طھظƒط§ظ…ظ„ط© ظ„ط¹ط§ظ… 2026",
+  "start_url": "/ai-masterplan/index.html",
+  "display": "standalone",
+  "background_color": "#050810",
+  "theme_color": "#3b82f6",
+  "orientation": "portrait-primary",
+  "dir": "rtl",
+  "lang": "ar",
+  "categories": ["education", "developer", "productivity"],
+  "icons": [
+    {
+      "src": "assets/icons/favicon.svg",
+      "sizes": "192x192 512x512",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ],
+  "shortcuts": [
+    {
+      "name": "ظ„ظˆط­ط© ط§ظ„طھط­ظƒظ…",
+      "url": "/ai-masterplan/index.html",
+      "icons": [{ "src": "assets/icons/favicon.svg", "sizes": "192x192" }]
+    },
+    {
+      "name": "طھط¬ظ‡ظٹط² ط§ظ„ط¬ظ‡ط§ط²",
+      "url": "/ai-masterplan/pages/02-setup.html",
+      "icons": [{ "src": "assets/icons/favicon.svg", "sizes": "192x192" }]
+    }
+  ]
+}
+

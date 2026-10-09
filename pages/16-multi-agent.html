@@ -1,0 +1,257 @@
+﻿<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ط£ظ†ط¸ظ…ط© ط§ظ„ظ€ Multi-Agent â€” AI Master Plan</title>
+    <link rel="manifest" href="../manifest.json">
+    <link rel="icon" type="image/svg+xml" href="../assets/icons/favicon.svg">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+    <div class="animated-bg">
+        <div class="gradient-orb orb-1"></div>
+        <div class="gradient-orb orb-2"></div>
+        <div class="gradient-orb orb-3"></div>
+    </div>
+
+    <button class="floating-sidebar-toggle" id="floatingToggle" onclick="toggleSidebar()" aria-label="ظپطھط­ ط§ظ„ظ‚ط§ط¦ظ…ط©">
+        <i class="fas fa-bars"></i>
+    </button>
+
+    <div class="sidebar-overlay" id="sidebarOverlay" onclick="toggleSidebar()"></div>
+
+    <nav class="sidebar" id="sidebar">
+        <div class="sidebar-header">
+            <a href="../index.html" class="logo">
+                <div class="logo-icon"><i class="fas fa-microchip"></i></div>
+                <div class="logo-text">
+                    <span class="logo-title">AI Master</span>
+                    <span class="logo-subtitle">Plan v4.0</span>
+                </div>
+            </a>
+            <button class="sidebar-close" onclick="toggleSidebar()"><i class="fas fa-xmark"></i></button>
+        </div>
+
+        <div class="sidebar-search">
+            <i class="fas fa-magnifying-glass"></i>
+            <input type="text" placeholder="ط¨ط­ط« ط³ط±ظٹط¹..." id="sidebarSearch" oninput="searchNav(this.value)">
+            <kbd>Ctrl+K</kbd>
+        </div>
+
+        <div class="sidebar-nav" id="sidebarNav">
+            <div class="nav-section">
+                <span class="nav-section-title"><i class="fas fa-circle-dot"></i> ط§ظ„ط¨ط¯ط§ظٹط©</span>
+                <a href="../index.html" class="nav-link"><i class="fas fa-th-large"></i><span>ظ„ظˆط­ط© ط§ظ„طھط­ظƒظ…</span></a>
+                <a href="01-overview.html" class="nav-link"><i class="fas fa-compass"></i><span>ظ†ط¸ط±ط© ط¹ط§ظ…ط©</span></a>
+                <a href="18-ai-timeline.html" class="nav-link"><i class="fas fa-clock-rotate-left"></i><span>ط£ط­ط¯ط§ط« 2025-2026</span><span class="nav-badge new">ط¬ط¯ظٹط¯</span></a>
+            </div>
+            <div class="nav-section">
+                <span class="nav-section-title"><i class="fas fa-rocket"></i> ط§ظ„طھط£ط³ظٹط³</span>
+                <a href="02-setup.html" class="nav-link"><i class="fas fa-hard-drive"></i><span>طھط¬ظ‡ظٹط² ط§ظ„ط¬ظ‡ط§ط²</span><span class="nav-badge phase">1</span></a>
+                <a href="03-ai-local.html" class="nav-link"><i class="fas fa-server"></i><span>AI ط§ظ„ظ…ط­ظ„ظٹ</span><span class="nav-badge phase">2</span></a>
+                <a href="04-ai-cloud.html" class="nav-link"><i class="fas fa-cloud"></i><span>AI ط§ظ„ط³ط­ط§ط¨ظٹ</span><span class="nav-badge phase">3</span></a>
+                <a href="05-vscode.html" class="nav-link"><i class="fas fa-code"></i><span>VS Code + Cline</span><span class="nav-badge phase">4</span></a>
+                <a href="19-ai-tools-compare.html" class="nav-link"><i class="fas fa-scale-balanced"></i><span>ظ…ظ‚ط§ط±ظ†ط© ط§ظ„ط£ط¯ظˆط§طھ</span><span class="nav-badge new">ط¬ط¯ظٹط¯</span></a>
+            </div>
+            <div class="nav-section">
+                <span class="nav-section-title"><i class="fas fa-wand-magic-sparkles"></i> ط§ظ„ظ‚ط¯ط±ط§طھ</span>
+                <a href="06-mcps.html" class="nav-link"><i class="fas fa-plug"></i><span>MCPs</span><span class="nav-badge count">10K+</span></a>
+                <a href="17-mcp-security.html" class="nav-link"><i class="fas fa-shield-virus"></i><span>ط£ظ…ط§ظ† MCP</span><span class="nav-badge new">ط¬ط¯ظٹط¯</span></a>
+                <a href="07-modes.html" class="nav-link"><i class="fas fa-masks-theater"></i><span>Custom Modes</span></a>
+                <a href="08-skills.html" class="nav-link"><i class="fas fa-graduation-cap"></i><span>Skills</span></a>
+                <a href="16-multi-agent.html" class="nav-link active"><i class="fas fa-users-gear"></i><span>Multi-Agent</span><span class="nav-badge new">ط¬ط¯ظٹط¯</span></a>
+            </div>
+            <div class="nav-section">
+                <span class="nav-section-title"><i class="fas fa-shield-halved"></i> ط§ظ„ظ…ط¹ط§ظٹظٹط±</span>
+                <a href="09-constitution.html" class="nav-link"><i class="fas fa-scroll"></i><span>ط§ظ„ط¯ط³طھظˆط±</span></a>
+                <a href="10-security.html" class="nav-link"><i class="fas fa-shield-halved"></i><span>ط§ظ„ط£ظ…ط§ظ†</span><span class="nav-badge count">60+</span></a>
+                <a href="11-performance.html" class="nav-link"><i class="fas fa-gauge-high"></i><span>ط§ظ„ط£ط¯ط§ط، ظˆط§ظ„طھظˆط³ط¹</span></a>
+            </div>
+            <div class="nav-section">
+                <span class="nav-section-title"><i class="fas fa-briefcase"></i> ط§ظ„طھط®طµطµط§طھ</span>
+                <a href="12-ecommerce.html" class="nav-link"><i class="fas fa-store"></i><span>ط§ظ„طھط¬ط§ط±ط© ط§ظ„ط³ط¹ظˆط¯ظٹط©</span></a>
+                <a href="13-techstack.html" class="nav-link"><i class="fas fa-layer-group"></i><span>Tech Stack</span></a>
+                <a href="14-workflow.html" class="nav-link"><i class="fas fa-route"></i><span>ط®ط·ظˆط§طھ ط§ظ„ط¹ظ…ظ„</span></a>
+                <a href="15-resources.html" class="nav-link"><i class="fas fa-book-open"></i><span>ط§ظ„ظ…طµط§ط¯ط±</span></a>
+            </div>
+        </div>
+
+        <div class="sidebar-footer">
+            <div class="version-info">
+                <i class="fas fa-code-branch"></i>
+                <span>v4.0 â€” ط³ط¨طھظ…ط¨ط± 2026</span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <header class="topbar">
+            <button class="mobile-menu-btn" onclick="toggleSidebar()"><i class="fas fa-bars"></i></button>
+            <div class="topbar-title">
+                <div class="topbar-breadcrumb">
+                    <i class="fas fa-home"></i>
+                    <span>ط§ظ„ط±ط¦ظٹط³ظٹط© / ط§ظ„ظ‚ط¯ط±ط§طھ</span>
+                </div>
+                <h1>Multi-Agent Systems</h1>
+            </div>
+            <div class="topbar-actions">
+                <button class="topbar-btn" onclick="scrollToTop()" title="ظ„ظ„ط£ط¹ظ„ظ‰"><i class="fas fa-arrow-up"></i></button>
+                <button class="theme-toggle" onclick="toggleTheme()" title="طھط¨ط¯ظٹظ„ ط§ظ„ظˆط¶ط¹"><i class="fas fa-moon" id="themeIcon"></i></button>
+            </div>
+        </header>
+
+        <div class="content-area">
+            <section class="hero-section animate-fade-in-up">
+                <div class="hero-grid-pattern"></div>
+                <div class="hero-content">
+                    <div class="hero-badge">
+                        <span class="badge-pulse"></span>
+                        <i class="fas fa-users-gear"></i>
+                        ط§ظ„ظ…ط­ط±ظƒط§طھ ظ…طھط¹ط¯ط¯ط© ط§ظ„ط¹ظ…ظ„ط§ط، (Multi-Agent)
+                    </div>
+                    <h2 class="hero-title">
+                        <span class="gradient-text">ظ…ط­ط±ظƒط§طھ ط§ظ„ط£طھظ…طھط© ط§ظ„ظ…طھظ‚ط¯ظ…ط©</span>
+                    </h2>
+                    <p class="hero-description">
+                        طھظ†طھظ‚ظ„ ط£ظ†ط¸ظ…ط© ط§ظ„ظ€ Multi-Agent ط¨ط§ظ„ط°ظƒط§ط، ط§ظ„ط§طµط·ظ†ط§ط¹ظٹ ظ…ظ† ظ…ط³طھظˆظ‰ "ط§ظ„ظ…ط­ط§ط¯ط«ط© ط§ظ„ظپط±ط¯ظٹط©" ط¥ظ„ظ‰ ظ…ط³طھظˆظ‰ <strong class="hero-highlight">ظپط±ظ‚ ط§ظ„ط¹ظ…ظ„ ط§ظ„ط¨ط±ظ…ط¬ظٹط© ط§ظ„ظ…طھظˆط§ط²ظٹط©</strong>.
+                        ظٹظ‚ظˆظ… ظƒظ„ ط¹ظ…ظٹظ„ (Agent) ط¨طھظ†ظپظٹط° ظ…ظ‡ظ…ط© ظ…ط®طµطµط© ظƒط§ظ„ط¨ط­ط« ط£ظˆ ظ…ط±ط§ط¬ط¹ط© ط§ظ„ط£ط®ط·ط§ط، ط£ظˆ ط±ظپط¹ ط§ظ„ظƒظˆط¯ ظˆط§ظ„طھط¹ط§ظˆظ† ط§ظ„طھظ„ظ‚ط§ط¦ظٹ ظ„ظ„ظˆطµظˆظ„ ظ„ظ„ظ‡ط¯ظپ.
+                    </p>
+                </div>
+            </section>
+
+            <!-- Comparison of frameworks -->
+            <section class="section animate-fade-in-up" style="animation-delay: 0.1s">
+                <h3 class="section-title">
+                    <i class="fas fa-cubes-stacked"></i>
+                    ط£ظ‚ظˆظ‰ ط§ظ„ط£ط·ط± ط§ظ„ط¨ط±ظ…ط¬ظٹط© ظ„ط£ظ†ط¸ظ…ط© ط§ظ„ظ€ Multi-Agent (ط³ط¨طھظ…ط¨ط± 2026)
+                    <span class="section-badge">ط¨ظٹط¦ط© ط¨ط§ظٹط«ظˆظ† ظˆ ط¬ط§ظپط§ ط³ظƒط±ط¨طھ</span>
+                </h3>
+                <div class="comparison-table">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>ط§ظ„ط¥ط·ط§ط± ط§ظ„ط¨ط±ظ…ط¬ظٹ</th>
+                                <th>ط§ظ„ظ„ط؛ط©</th>
+                                <th>ظ†ظ…ط· ط§ظ„ط¨ظ†ط§ط، (Architecture)</th>
+                                <th>ط§ظ„ط§ط³طھط®ط¯ط§ظ… ط§ظ„ط£ظ…ط«ظ„</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><strong>CrewAI</strong></td>
+                                <td>Python</td>
+                                <td>ط¥ط¯ط§ط±ط© طھط¹ط§ظ‚ط¨ظٹط© ظˆطھظ‚ط³ظٹظ… ظ…ظ‡ط§ظ… ظ…ط¨ط§ط´ط± (Role-playing)</td>
+                                <td><i class="fas fa-check text-success"></i> ط£ط¨ط­ط§ط« ط§ظ„ط³ظˆظ‚ ط§ظ„ظ…طھظ‚ط¯ظ…ط© ظˆطµظ†ط§ط¹ط© ط§ظ„ظ…ط­طھظˆظ‰ ط§ظ„ط¢ظ„ظٹ</td>
+                            </tr>
+                            <tr>
+                                <td><strong>LangGraph</strong></td>
+                                <td>Python / TS</td>
+                                <td>Graphs ظ…ط¹ظ‚ط¯ط© طھط¯ط¹ظ… ط§ظ„ط­ظ„ظ‚ط§طھ ط§ظ„ط¯ط§ط¦ط±ظٹط© (Cyclic Graphs)</td>
+                                <td><i class="fas fa-check text-success"></i> ط¨ظ†ط§ط، ط¨ظٹط¦ط§طھ ط§ظ„طھط·ظˆظٹط± ط§ظ„طµط§ط±ظ…ط© ط°ط§طھ ط§ظ„طھظ‚ظٹظٹظ… ط§ظ„ظ…ط³طھظ…ط±</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Mastra</strong></td>
+                                <td>TypeScript</td>
+                                <td>ط¨ظ†ط§ط، ط¨ظٹط¦ط§طھ طھط³ظ„ط³ظ„ظٹط© ظ…ط±ظ†ط© ظˆط®ظپظٹظپط© ظ„ظ„ظ€ Node/Bun</td>
+                                <td><i class="fas fa-check text-success"></i> طھط·ط¨ظٹظ‚ط§طھ ط§ظ„ظˆظٹط¨ ط§ظ„ط³ط­ط§ط¨ظٹط© ظˆظ…طµظ…ظ…ظٹ ط¬ط§ظپط§ ط³ظƒط±ط¨طھ</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+
+            <!-- CrewAI Code Boilerplate linked with local Ollama -->
+            <section class="section animate-fade-in-up" style="animation-delay: 0.2s">
+                <h3 class="section-title">
+                    <i class="fab fa-python"></i>
+                    ظ‚ط§ظ„ط¨ ط¨ط§ظٹط«ظˆظ† ظ…طھظƒط§ظ…ظ„ ظ„ط¨ظ†ط§ط، ظپط±ظٹظ‚ ط¹ظ…ظ„ ط°ظƒظٹ ط¹ط¨ط± CrewAI ظˆ Ollama ظ…ط­ظ„ظٹط§ظ‹
+                    <span class="section-badge">ط´ظپط±ط© ط¬ط§ظ‡ط²ط© ظ„ظ„طھظ†ظپظٹط°</span>
+                </h3>
+                <p class="step-description">ظ‡ط°ط§ ط§ظ„ط³ظƒط±ط¨طھ ظٹط±ط¨ط· ظ†ظ…ظˆط°ط¬ <code>qwen3.6:35b-a3b</code> ط§ظ„ظ…ط­ظ„ظٹ ظپظٹ ط¬ظ‡ط§ط²ظƒ ظ„ظٹط¹ظ…ظ„ ظƒظ…ط­ط±ظƒ ظ„ط¹ظ…ظٹظ„ظٹظ† (ط¨ط§ط­ط« ظˆظ…ط­ظ„ظ„ ظ…ط§ظ„ظٹ) ظٹطھط¹ط§ظˆظ†ط§ظ† ط¢ظ„ظٹط§ظ‹:</p>
+                <div class="code-block">
+                    <div class="code-header">
+                        <span>crew_local_engine.py</span>
+                        <button class="copy-btn" onclick="copyCode(this)"><i class="fas fa-copy"></i></button>
+                    </div>
+                    <pre><code>from crewai import Agent, Task, Crew, Process
+from langchain_community.llms import Ollama
+
+# 1. طھط¹ط±ظٹظپ ط§ظ„ظ…ط­ط±ظƒ ط§ظ„ظ…ط­ظ„ظٹ (Ollama) ط¨ط§ط³طھط®ط¯ط§ظ… ط£ظ‚ظˆظ‰ ظ†ظ…ظˆط°ط¬ ط¨ط±ظ…ط¬ظٹ ظ„ط¬ظ‡ط§ط²ظƒ
+local_llm = Ollama(model="qwen3.6:35b-a3b")
+
+# 2. ط¥ظ†ط´ط§ط، ط¹ظ…ظٹظ„ ط£ط¨ط­ط§ط« ط§ظ„ط³ظˆظ‚ ط§ظ„ظ…ط³طھظ‡ط¯ظپ
+research_agent = Agent(
+    role="ظ…ط­ظ„ظ„ ط³ظˆظ‚ ط³ط¹ظˆط¯ظٹ ط®ط¨ظٹط±",
+    goal="ط§ظ„ط¨ط­ط« ظˆط§ظ„طھظ‚طµظٹ ط¹ظ† ط§ظ„ظ…ظ†طھط¬ط§طھ ط§ظ„ط£ظƒط«ط± ط·ظ„ط¨ط§ظ‹ ظپظٹ ط§ظ„ط±ظٹط§ط¶ ظˆط¬ط¯ط© ظ„ط¹ط§ظ… 2026",
+    backstory="ط£ظ†طھ ط¨ط§ط­ط« طھط³ظˆظٹظ‚ظٹ ظ…طھظ…ظƒظ†طŒ طھظ…طھظ„ظƒ ظ†ط¸ط±ط© ط«ط§ظ‚ط¨ط© ظ„طھط±ظ†ط¯ط§طھ ط§ظ„ظ…ط³طھظ‡ظ„ظƒظٹظ† ظپظٹ ط§ظ„ط®ظ„ظٹط¬ ظˆط§ظ„ظ…ظ†طµط§طھ ط§ظ„ظ…ط­ظ„ظٹط© ظ…ط«ظ„ ط³ظ„ط© ظˆط²ط¯.",
+    verbose=True,
+    allow_delegation=False,
+    llm=local_llm
+)
+
+# 3. ط¥ظ†ط´ط§ط، ط¹ظ…ظٹظ„ طµظٹط§ط؛ط© ط®ط·ط© ط§ظ„ط¹ظ…ظ„ ظˆط­ط³ط§ط¨ ط§ظ„ظ‡ظˆط§ظ…ط´ ط§ظ„ط±ط¨ط­ظٹط©
+business_analyst = Agent(
+    role="ظ…ط³طھط´ط§ط± ظ…ط§ظ„ظٹ ظˆط¥ط¯ط§ط±ظٹ",
+    goal="طµظٹط§ط؛ط© ط®ط·ط© طھط³ط¹ظٹط± ط¯ظ‚ظٹظ‚ط© ظˆط­ط³ط§ط¨ ظ‡ظˆط§ظ…ط´ ط§ظ„ط£ط±ط¨ط§ط­ ط§ظ„ط´ط§ظ…ظ„ط© ظ…ط¹VAT 15%",
+    backstory="ظ…ط³طھط´ط§ط± ظ…ط§ظ„ظٹ ظ…طھط®طµطµ ظپظٹ ط§ظ„طھط¬ط§ط±ط© ط§ظ„ط¥ظ„ظƒطھط±ظˆظ†ظٹط© ظˆط³ظ„ط§ط³ظ„ ط§ظ„ط¥ظ…ط¯ط§ط¯طŒ ط¨ط§ط±ط¹ ظپظٹ ط­ط³ط§ط¨ طھظƒط§ظ„ظٹظپ ط§ظ„ط´ط­ظ† ظˆط§ظ„طھط³ظˆظٹظ‚ ط§ظ„ط±ظ‚ظ…ظٹ ظ„طھظپط§ط¯ظٹ ط§ظ„ط®ط³ط§ط¦ط±.",
+    verbose=True,
+    allow_delegation=True,
+    llm=local_llm
+)
+
+# 4. طµظٹط§ط؛ط© ط§ظ„ظ…ظ‡ط§ظ… ظˆطھط­ط¯ظٹط¯ ط§ظ„ظ…ط³ط¤ظˆظ„ظٹط§طھ
+task_research = Task(
+    description="ظ‚ظ… ط¨ط¥ط¹ط¯ط§ط¯ ظ‚ط§ط¦ظ…ط© طھط¶ظ… 3 ظپط¦ط§طھ ظ…ظ† ط§ظ„ظ…ظ†طھط¬ط§طھ ط§ظ„ط±ط§ط¨ط­ط© ظپظٹ ط§ظ„ط³ط¹ظˆط¯ظٹط© ظ…ط¹ طھط­ظ„ظٹظ„ ظ†ظ‚ط§ط· ط§ظ„ظ‚ظˆط© ظˆط§ظ„ط¶ط¹ظپ ظ„ظ„ظ…ظ†ط§ظپط³ظٹظ†.",
+    expected_output="طھظ‚ط±ظٹط± ط£ط¨ط­ط§ط« ط³ظˆظ‚ ظ…ظپطµظ„ ط¨ظ…ظ„ظپ Markdown.",
+    agent=research_agent
+)
+
+task_financial = Task(
+    description="ط¨ظ†ط§ط،ظ‹ ط¹ظ„ظ‰ طھظ‚ط±ظٹط± ط§ظ„ط¨ط­ط«طŒ طµظ…ظ… ظ†ظ…ظˆط°ط¬ طھط³ط¹ظٹط± ط§ظپطھط±ط§ط¶ظٹ ظٹظˆط¶ط­ ط³ط¹ط± ط§ظ„طھظƒظ„ظپط©طŒ ط§ظ„ط´ط­ظ†طŒ ط§ظ„طھط؛ظ„ظٹظپطŒ ظˆط§ظ„ط±ط¨ط­ ط§ظ„طµط§ظپظٹ ط¨ط§ظ„ط±ظٹط§ظ„ ط§ظ„ط³ط¹ظˆط¯ظٹ.",
+    expected_output="ط¬ط¯ظˆظ„ طھط³ط¹ظٹط± ظ…ط§ظ„ظٹ ظˆط§ط¶ط­ ظ…ط¹ طھظˆطµظٹط§طھ ط¥ط¯ط§ط±ظٹط©.",
+    agent=business_analyst
+)
+
+# 5. طھظƒظˆظٹظ† ظˆط¥ط·ظ„ط§ظ‚ ظ…ط³ط§ط± ط§ظ„ط¹ظ…ظ„ (Sequential Process)
+local_crew = Crew(
+    agents=[research_agent, business_analyst],
+    tasks=[task_research, task_financial],
+    process=Process.sequential,
+    verbose=True
+)
+
+Write-Host = local_crew.kickoff()
+print("### ظ†ط§طھط¬ ط¹ظ…ظ„ ط§ظ„ظ…ظ†ط¸ظˆظ…ط© ط§ظ„ظ…ط³طھظ‚ظ„ط©:")
+print(Write-Host)</code></pre>
+                </div>
+            </section>
+
+            <!-- Nav Footer -->
+            <div class="page-nav-footer">
+                <a href="08-skills.html" class="page-nav-btn prev">
+                    <i class="fas fa-arrow-right"></i>
+                    <div>
+                        <span>ط§ظ„ط³ط§ط¨ظ‚</span>
+                        <strong>ط§ظ„ظ…ظ‡ط§ط±ط§طھ ط§ظ„ط¬ط§ظ‡ط²ط© (Skills)</strong>
+                    </div>
+                </a>
+                <a href="09-constitution.html" class="page-nav-btn next">
+                    <div>
+                        <span>ط§ظ„طھط§ظ„ظٹ</span>
+                        <strong>ط§ظ„ط¯ط³طھظˆط± ط§ظ„ط¨ط±ظ…ط¬ظٹ ظˆط§ظ„ط£ظ…ط§ظ†</strong>
+                    </div>
+                    <i class="fas fa-arrow-left"></i>
+                </a>
+            </div>
+        </div>
+    </main>
+
+    <script src="../js/main.js"></script>
+</body>
+</html>

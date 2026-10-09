@@ -1,0 +1,22 @@
+﻿# ============================================
+# AI MASTER PLAN â€” Search Engine Directives
+# September 2026 â€” SEO Optimizations
+# ============================================
+
+User-agent: *
+Allow: /
+Allow: /css/
+Allow: /js/
+Allow: /pages/
+Allow: /assets/
+
+# ط­ط¸ط± طھطµظپط­ ط§ظ„ظ…ظ„ظپط§طھ ط§ظ„ظ…ط¤ظ‚طھط© ظˆط§ظ„ظ…ط³ط§ط±ط§طھ ط§ظ„ط­ط³ط§ط³ط©
+Disallow: /private/
+Disallow: /secrets/
+Disallow: /credentials/
+Disallow: /.git/
+Disallow: /setup-*.ps1
+
+# ط±ط§ط¨ط· ط®ط±ظٹط·ط© ط§ظ„ظ…ظˆظ‚ط¹ ط§ظ„ط±ط³ظ…ظٹط© (ط§ط³طھط¨ط¯ظ„ ط¨ط§ط³ظ… ط§ظ„ظ…ط³طھط®ط¯ظ… ط§ظ„ط®ط§طµ ط¨ظƒ ظ„ط§ط­ظ‚ط§ظ‹)
+Sitemap: https://ALMajd98.github.io/ai-masterplan/sitemap.xml
+

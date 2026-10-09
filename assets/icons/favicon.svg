@@ -1,0 +1,51 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+    <defs>
+        <linearGradient id="brandGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" style="stop-color:#3b82f6"/>
+            <stop offset="50%" style="stop-color:#6366f1"/>
+            <stop offset="100%" style="stop-color:#8b5cf6"/>
+        </linearGradient>
+        <linearGradient id="chipGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" style="stop-color:#ffffff;stop-opacity:0.95"/>
+            <stop offset="100%" style="stop-color:#ffffff;stop-opacity:0.75"/>
+        </linearGradient>
+    </defs>
+    
+    <!-- Background Rounded Square -->
+    <rect x="4" y="4" width="92" height="92" rx="20" ry="20" fill="url(#brandGradient)"/>
+    
+    <!-- Glow Effect -->
+    <rect x="4" y="4" width="92" height="92" rx="20" ry="20" fill="none" 
+          stroke="rgba(255,255,255,0.1)" stroke-width="1"/>
+    
+    <!-- AI Chip Body -->
+    <rect x="26" y="26" width="48" height="48" rx="8" ry="8" 
+          fill="url(#chipGradient)"/>
+    
+    <!-- Inner Core -->
+    <rect x="34" y="34" width="32" height="32" rx="4" ry="4" 
+          fill="url(#brandGradient)" opacity="0.3"/>
+    
+    <!-- Center Dot -->
+    <circle cx="50" cy="50" r="6" fill="url(#brandGradient)"/>
+    
+    <!-- Connection Lines (Top) -->
+    <rect x="36" y="14" width="3" height="12" fill="rgba(255,255,255,0.9)" rx="1"/>
+    <rect x="48" y="14" width="3" height="12" fill="rgba(255,255,255,0.9)" rx="1"/>
+    <rect x="60" y="14" width="3" height="12" fill="rgba(255,255,255,0.9)" rx="1"/>
+    
+    <!-- Connection Lines (Bottom) -->
+    <rect x="36" y="74" width="3" height="12" fill="rgba(255,255,255,0.9)" rx="1"/>
+    <rect x="48" y="74" width="3" height="12" fill="rgba(255,255,255,0.9)" rx="1"/>
+    <rect x="60" y="74" width="3" height="12" fill="rgba(255,255,255,0.9)" rx="1"/>
+    
+    <!-- Connection Lines (Left) -->
+    <rect x="14" y="36" width="12" height="3" fill="rgba(255,255,255,0.9)" rx="1"/>
+    <rect x="14" y="48" width="12" height="3" fill="rgba(255,255,255,0.9)" rx="1"/>
+    <rect x="14" y="60" width="12" height="3" fill="rgba(255,255,255,0.9)" rx="1"/>
+    
+    <!-- Connection Lines (Right) -->
+    <rect x="74" y="36" width="12" height="3" fill="rgba(255,255,255,0.9)" rx="1"/>
+    <rect x="74" y="48" width="12" height="3" fill="rgba(255,255,255,0.9)" rx="1"/>
+    <rect x="74" y="60" width="12" height="3" fill="rgba(255,255,255,0.9)" rx="1"/>
+</svg>

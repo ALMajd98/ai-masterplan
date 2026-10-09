@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>404 — الصفحة غير موجودة | AI Master Plan</title>
+    <meta name="description" content="عذراً، الصفحة التي تبحث عنها غير موجودة.">
+    <link rel="icon" type="image/svg+xml" href="assets/icons/favicon.svg">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        /* === Error Page Specific === */
+        body {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+        }
+
+        .error-container {
+            max-width: 700px;
+            width: 100%;
+            text-align: center;
+            position: relative;
+            z-index: 10;
+        }
+
+        .error-code {
+            font-size: clamp(8rem, 25vw, 15rem);
+            font-weight: 900;
+            line-height: 1;
+            background: var(--gradient-primary);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin-bottom: 20px;
+            letter-spacing: -5px;
+            position: relative;
+            animation: glitch 3s infinite;
+        }
+
+        @keyframes glitch {
+            0%, 100% { transform: translate(0); }
+            20% { transform: translate(-2px, 2px); }
+            40% { transform: translate(-2px, -2px); }
+            60% { transform: translate(2px, 2px); }
+            80% { transform: translate(2px, -2px); }
+        }
+
+        .error-icon {
+            width: 100px;
+            height: 100px;
+            margin: 0 auto 30px;
+            background: var(--gradient-primary);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 3rem;
+            color: white;
+            box-shadow: var(--shadow-glow-lg);
+            animation: pulse-ring 2s infinite;
+        }
+
+        @keyframes pulse-ring {
+            0%, 100% { 
+                box-shadow: 0 0 0 0 rgba(59, 130, 246, 0.4);
+            }
+            50% { 
+                box-shadow: 0 0 0 30px rgba(59, 130, 246, 0);
+            }
+        }
+
+        .error-title {
+            font-size: clamp(1.5rem, 4vw, 2.5rem);
+            font-weight: 700;
+            margin-bottom: 16px;
+            color: var(--text-primary);
+        }
+
+        .error-description {
+            font-size: 1.1rem;
+            color: var(--text-secondary);
+            line-height: 1.8;
+            margin-bottom: 40px;
+            max-width: 500px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .error-actions {
+            display: flex;
+            gap: 16px;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin-bottom: 50px;
+        }
+
+        .error-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 12px;
+            padding: 14px 30px;
+            font-weight: 600;
+            text-decoration: none;
+            border-radius: var(--border-radius);
+            transition: var(--transition);
+            font-size: 0.95rem;
+        }
+
+        .error-btn.primary {
+            background: var(--gradient-primary);
+            color: white;
+            box-shadow: var(--shadow-md), var(--shadow-glow);
+        }
+
+        .error-btn.primary:hover {
+            transform: translateY(-3px);
+            box-shadow: var(--shadow-xl), var(--shadow-glow-lg);
+        }
+
+        .error-btn.secondary {
+            background: var(--bg-tertiary);
+            color: var(--text-primary);
+            border: 1px solid var(--border-color);
+        }
+
+        .error-btn.secondary:hover {
+            border-color: var(--accent-primary);
+            transform: translateY(-3px);
+        }
+
+        .error-suggestions {
+            background: var(--bg-card);
+            border: 1px solid var(--border-color);
+            border-radius: var(--border-radius-lg);
+            padding: 30px;
+            margin-top: 40px;
+        }
+
+        .error-suggestions h3 {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 12px;
+            font-size: 1.1rem;
+            font-weight: 700;
+            margin-bottom: 20px;
+            color: var(--text-primary);
+        }
+
+        .error-suggestions h3 i {
+            color: var(--accent-primary);
+        }
+
+        .suggestions-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 12px;
+        }
+
+        .suggestion-link {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            padding: 14px 16px;
+            background: var(--bg-tertiary);
+            border: 1px solid var(--border-color);
+            border-radius: var(--border-radius-sm);
+            color: var(--text-secondary);
+            text-decoration: none;
+            font-size: 0.9rem;
+            transition: var(--transition);
+        }
+
+        .suggestion-link:hover {
+            background: var(--bg-card-hover);
+            border-color: var(--accent-primary);
+            color: var(--accent-primary);
+            transform: translateX(-4px);
+        }
+
+        .suggestion-link i {
+            color: var(--accent-primary);
+            font-size: 0.9rem;
+            flex-shrink: 0;
+        }
+
+        .error-footer {
+            margin-top: 50px;
+            padding-top: 30px;
+            border-top: 1px solid var(--border-color);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            color: var(--text-muted);
+            font-size: 0.85rem;
+        }
+
+        .error-footer a {
+            color: var(--accent-primary);
+            text-decoration: none;
+            font-weight: 600;
+        }
+
+        .error-footer a:hover {
+            text-decoration: underline;
+        }
+
+        /* Theme Toggle Position */
+        .error-theme-toggle {
+            position: fixed;
+            top: 20px;
+            left: 20px;
+            background: var(--bg-tertiary);
+            border: 1px solid var(--border-color);
+            color: var(--text-secondary);
+            width: 44px;
+            height: 44px;
+            border-radius: var(--border-radius-sm);
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1rem;
+            transition: var(--transition);
+            z-index: 100;
+        }
+
+        .error-theme-toggle:hover {
+            background: var(--accent-warning);
+            color: white;
+            transform: rotate(360deg);
+        }
+
+        /* Mobile Adjustments */
+        @media (max-width: 480px) {
+            .error-actions {
+                flex-direction: column;
+                align-items: stretch;
+            }
+            .error-btn {
+                justify-content: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Animated Background -->
+    <div class="animated-bg">
+        <div class="gradient-orb orb-1"></div>
+        <div class="gradient-orb orb-2"></div>
+        <div class="gradient-orb orb-3"></div>
+    </div>
+
+    <!-- Theme Toggle -->
+    <button class="error-theme-toggle" onclick="toggleTheme()" title="تبديل الوضع">
+        <i class="fas fa-moon" id="themeIcon"></i>
+    </button>
+
+    <!-- Error Container -->
+    <div class="error-container">
+        <!-- Error Icon -->
+        <div class="error-icon">
+            <i class="fas fa-robot"></i>
+        </div>
+
+        <!-- Error Code -->
+        <div class="error-code">404</div>
+
+        <!-- Title -->
+        <h1 class="error-title">عذراً! الصفحة غير موجودة</h1>
+
+        <!-- Description -->
+        <p class="error-description">
+            يبدو أن الصفحة التي تبحث عنها غير موجودة أو تم نقلها.
+            لا تقلق، يمكنك العودة للصفحة الرئيسية أو تصفح المحتوى من الروابط أدناه.
+        </p>
+
+        <!-- Actions -->
+        <div class="error-actions">
+            <a href="index.html" class="error-btn primary">
+                <i class="fas fa-home"></i>
+                <span>الصفحة الرئيسية</span>
+            </a>
+            <a href="javascript:history.back()" class="error-btn secondary">
+                <i class="fas fa-arrow-right"></i>
+                <span>العودة للخلف</span>
+            </a>
+        </div>
+
+        <!-- Suggestions -->
+        <div class="error-suggestions">
+            <h3>
+                <i class="fas fa-compass"></i>
+                <span>ربما تبحث عن:</span>
+            </h3>
+            <div class="suggestions-grid">
+                <a href="pages/01-overview.html" class="suggestion-link">
+                    <i class="fas fa-compass"></i>
+                    <span>نظرة عامة</span>
+                </a>
+                <a href="pages/02-setup.html" class="suggestion-link">
+                    <i class="fas fa-hard-drive"></i>
+                    <span>تجهيز الجهاز</span>
+                </a>
+                <a href="pages/03-ai-local.html" class="suggestion-link">
+                    <i class="fas fa-server"></i>
+                    <span>AI المحلي</span>
+                </a>
+                <a href="pages/04-ai-cloud.html" class="suggestion-link">
+                    <i class="fas fa-cloud"></i>
+                    <span>AI السحابي</span>
+                </a>
+                <a href="pages/06-mcps.html" class="suggestion-link">
+                    <i class="fas fa-plug"></i>
+                    <span>MCPs</span>
+                </a>
+                <a href="pages/12-ecommerce.html" class="suggestion-link">
+                    <i class="fas fa-store"></i>
+                    <span>التجارة السعودية</span>
+                </a>
+            </div>
+        </div>
+
+        <!-- Footer -->
+        <div class="error-footer">
+            <i class="fas fa-code"></i>
+            <span>AI Master Plan v4.0 — سبتمبر 2026 ·</span>
+            <a href="index.html">الرئيسية</a>
+        </div>
+    </div>
+
+    <script src="js/main.js"></script>
+</body>
+</html>

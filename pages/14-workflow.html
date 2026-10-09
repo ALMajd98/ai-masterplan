@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ط®ط·ظˆط§طھ ط§ظ„ط¹ظ…ظ„ ط§ظ„ظٹظˆظ…ظٹط© â€” AI Master Plan (ط³ط¨طھظ…ط¨ط± 2026)</title>
+    <title>خطوات العمل اليومية — AI Master Plan (سبتمبر 2026)</title>
     <link rel="manifest" href="../manifest.json">
     <link rel="icon" type="image/svg+xml" href="../assets/icons/favicon.svg">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -21,7 +21,7 @@
     </div>
 
     <!-- Floating Sidebar Toggle -->
-    <button class="floating-sidebar-toggle" id="floatingToggle" onclick="toggleSidebar()" aria-label="ظپطھط­ ط§ظ„ظ‚ط§ط¦ظ…ط©">
+    <button class="floating-sidebar-toggle" id="floatingToggle" onclick="toggleSidebar()" aria-label="فتح القائمة">
         <i class="fas fa-bars"></i>
     </button>
 
@@ -38,57 +38,57 @@
                     <span class="logo-subtitle">Plan v4.0</span>
                 </div>
             </a>
-            <button class="sidebar-close" onclick="toggleSidebar()" aria-label="ط¥ط؛ظ„ط§ظ‚"><i class="fas fa-xmark"></i></button>
+            <button class="sidebar-close" onclick="toggleSidebar()" aria-label="إغلاق"><i class="fas fa-xmark"></i></button>
         </div>
 
         <div class="sidebar-search">
             <i class="fas fa-magnifying-glass"></i>
-            <input type="text" placeholder="ط¨ط­ط« ط³ط±ظٹط¹..." id="sidebarSearch" oninput="searchNav(this.value)">
+            <input type="text" placeholder="بحث سريع..." id="sidebarSearch" oninput="searchNav(this.value)">
             <kbd>Ctrl+K</kbd>
         </div>
 
         <div class="sidebar-nav" id="sidebarNav">
             <div class="nav-section">
-                <span class="nav-section-title"><i class="fas fa-circle-dot"></i>  ط§ظ„ط¨ط¯ط§ظٹط©</span>
-                <a href="../index.html" class="nav-link"><i class="fas fa-th-large"></i><span>ظ„ظˆط­ط© ط§ظ„طھط­ظƒظ…</span></a>
-                <a href="01-overview.html" class="nav-link"><i class="fas fa-compass"></i><span>ظ†ط¸ط±ط© ط¹ط§ظ…ط©</span></a>
-                <a href="18-ai-timeline.html" class="nav-link"><i class="fas fa-clock-rotate-left"></i><span>ط£ط­ط¯ط§ط« 2025-2026</span><span class="nav-badge new">ط¬ط¯ظٹط¯</span></a>
+                <span class="nav-section-title"><i class="fas fa-circle-dot"></i>  البداية</span>
+                <a href="../index.html" class="nav-link"><i class="fas fa-th-large"></i><span>لوحة التحكم</span></a>
+                <a href="01-overview.html" class="nav-link"><i class="fas fa-compass"></i><span>نظرة عامة</span></a>
+                <a href="18-ai-timeline.html" class="nav-link"><i class="fas fa-clock-rotate-left"></i><span>أحداث 2025-2026</span><span class="nav-badge new">جديد</span></a>
             </div>
             <div class="nav-section">
-                <span class="nav-section-title"><i class="fas fa-rocket"></i>  ط§ظ„طھط£ط³ظٹط³</span>
-                <a href="02-setup.html" class="nav-link"><i class="fas fa-hard-drive"></i><span>طھط¬ظ‡ظٹط² ط§ظ„ط¬ظ‡ط§ط²</span><span class="nav-badge phase">1</span></a>
-                <a href="03-ai-local.html" class="nav-link"><i class="fas fa-server"></i><span>AI ط§ظ„ظ…ط­ظ„ظٹ</span><span class="nav-badge phase">2</span></a>
-                <a href="04-ai-cloud.html" class="nav-link"><i class="fas fa-cloud"></i><span>AI ط§ظ„ط³ط­ط§ط¨ظٹ</span><span class="nav-badge phase">3</span></a>
+                <span class="nav-section-title"><i class="fas fa-rocket"></i>  التأسيس</span>
+                <a href="02-setup.html" class="nav-link"><i class="fas fa-hard-drive"></i><span>تجهيز الجهاز</span><span class="nav-badge phase">1</span></a>
+                <a href="03-ai-local.html" class="nav-link"><i class="fas fa-server"></i><span>AI المحلي</span><span class="nav-badge phase">2</span></a>
+                <a href="04-ai-cloud.html" class="nav-link"><i class="fas fa-cloud"></i><span>AI السحابي</span><span class="nav-badge phase">3</span></a>
                 <a href="05-vscode.html" class="nav-link"><i class="fas fa-code"></i><span>VS Code + Cline</span><span class="nav-badge phase">4</span></a>
-                <a href="19-ai-tools-compare.html" class="nav-link"><i class="fas fa-scale-balanced"></i><span>ظ…ظ‚ط§ط±ظ†ط© ط§ظ„ط£ط¯ظˆط§طھ</span><span class="nav-badge new">ط¬ط¯ظٹط¯</span></a>
+                <a href="19-ai-tools-compare.html" class="nav-link"><i class="fas fa-scale-balanced"></i><span>مقارنة الأدوات</span><span class="nav-badge new">جديد</span></a>
             </div>
             <div class="nav-section">
-                <span class="nav-section-title"><i class="fas fa-wand-magic-sparkles"></i>  ط§ظ„ظ‚ط¯ط±ط§طھ</span>
+                <span class="nav-section-title"><i class="fas fa-wand-magic-sparkles"></i>  القدرات</span>
                 <a href="06-mcps.html" class="nav-link"><i class="fas fa-plug"></i><span>MCPs</span><span class="nav-badge count">10K+</span></a>
-                <a href="17-mcp-security.html" class="nav-link"><i class="fas fa-shield-virus"></i><span>ط£ظ…ط§ظ† MCP</span><span class="nav-badge new">ط¬ط¯ظٹط¯</span></a>
+                <a href="17-mcp-security.html" class="nav-link"><i class="fas fa-shield-virus"></i><span>أمان MCP</span><span class="nav-badge new">جديد</span></a>
                 <a href="07-modes.html" class="nav-link"><i class="fas fa-masks-theater"></i><span>Custom Modes</span></a>
                 <a href="08-skills.html" class="nav-link"><i class="fas fa-graduation-cap"></i><span>Skills</span></a>
-                <a href="16-multi-agent.html" class="nav-link"><i class="fas fa-users-gear"></i><span>Multi-Agent</span><span class="nav-badge new">ط¬ط¯ظٹط¯</span></a>
+                <a href="16-multi-agent.html" class="nav-link"><i class="fas fa-users-gear"></i><span>Multi-Agent</span><span class="nav-badge new">جديد</span></a>
             </div>
             <div class="nav-section">
-                <span class="nav-section-title"><i class="fas fa-shield-halved"></i>  ط§ظ„ظ…ط¹ط§ظٹظٹط±</span>
-                <a href="09-constitution.html" class="nav-link"><i class="fas fa-scroll"></i><span>ط§ظ„ط¯ط³طھظˆط±</span></a>
-                <a href="10-security.html" class="nav-link"><i class="fas fa-shield-halved"></i><span>ط§ظ„ط£ظ…ط§ظ†</span><span class="nav-badge count">60+</span></a>
-                <a href="11-performance.html" class="nav-link"><i class="fas fa-gauge-high"></i><span>ط§ظ„ط£ط¯ط§ط، ظˆط§ظ„طھظˆط³ط¹</span></a>
+                <span class="nav-section-title"><i class="fas fa-shield-halved"></i>  المعايير</span>
+                <a href="09-constitution.html" class="nav-link"><i class="fas fa-scroll"></i><span>الدستور</span></a>
+                <a href="10-security.html" class="nav-link"><i class="fas fa-shield-halved"></i><span>الأمان</span><span class="nav-badge count">60+</span></a>
+                <a href="11-performance.html" class="nav-link"><i class="fas fa-gauge-high"></i><span>الأداء والتوسع</span></a>
             </div>
             <div class="nav-section">
-                <span class="nav-section-title"><i class="fas fa-briefcase"></i>  ط§ظ„طھط®طµطµط§طھ</span>
-                <a href="12-ecommerce.html" class="nav-link"><i class="fas fa-store"></i><span>ط§ظ„طھط¬ط§ط±ط© ط§ظ„ط³ط¹ظˆط¯ظٹط©</span></a>
+                <span class="nav-section-title"><i class="fas fa-briefcase"></i>  التخصصات</span>
+                <a href="12-ecommerce.html" class="nav-link"><i class="fas fa-store"></i><span>التجارة السعودية</span></a>
                 <a href="13-techstack.html" class="nav-link"><i class="fas fa-layer-group"></i><span>Tech Stack</span></a>
-                <a href="14-workflow.html" class="nav-link active"><i class="fas fa-route"></i><span>ط®ط·ظˆط§طھ ط§ظ„ط¹ظ…ظ„</span></a>
-                <a href="15-resources.html" class="nav-link"><i class="fas fa-book-open"></i><span>ط§ظ„ظ…طµط§ط¯ط±</span></a>
+                <a href="14-workflow.html" class="nav-link active"><i class="fas fa-route"></i><span>خطوات العمل</span></a>
+                <a href="15-resources.html" class="nav-link"><i class="fas fa-book-open"></i><span>المصادر</span></a>
             </div>
         </div>
 
         <div class="sidebar-footer">
             <div class="version-info">
                 <i class="fas fa-code-branch"></i>
-                <span>v4.0 â€” ط³ط¨طھظ…ط¨ط± 2026</span>
+                <span>v4.0 — سبتمبر 2026</span>
             </div>
         </div>
     </nav>
@@ -100,13 +100,13 @@
             <div class="topbar-title">
                 <div class="topbar-breadcrumb">
                     <i class="fas fa-home"></i>
-                    <span>ط§ظ„ط±ط¦ظٹط³ظٹط© / ط®ط·ظˆط§طھ ط§ظ„ط¹ظ…ظ„</span>
+                    <span>الرئيسية / خطوات العمل</span>
                 </div>
-                <h1>ط®ط·ظˆط§طھ ط§ظ„ط¹ظ…ظ„ ط§ظ„ظٹظˆظ…ظٹط©</h1>
+                <h1>خطوات العمل اليومية</h1>
             </div>
             <div class="topbar-actions">
-                <button class="topbar-btn" onclick="scrollToTop()" title="ظ„ظ„ط£ط¹ظ„ظ‰"><i class="fas fa-arrow-up"></i></button>
-                <button class="theme-toggle" onclick="toggleTheme()" title="طھط¨ط¯ظٹظ„ ط§ظ„ظˆط¶ط¹"><i class="fas fa-moon" id="themeIcon"></i></button>
+                <button class="topbar-btn" onclick="scrollToTop()" title="للأعلى"><i class="fas fa-arrow-up"></i></button>
+                <button class="theme-toggle" onclick="toggleTheme()" title="تبديل الوضع"><i class="fas fa-moon" id="themeIcon"></i></button>
             </div>
         </header>
 
@@ -117,14 +117,14 @@
                     <div class="hero-badge">
                         <span class="badge-pulse"></span>
                         <i class="fas fa-route"></i>
-                        ط§ظ„ط¥ظ†طھط§ط¬ظٹط© ط§ظ„ظٹظˆظ…ظٹط© ظˆط§ظ„ظ…ط³طھظ…ط±ط©
+                        الإنتاجية اليومية والمستمرة
                     </div>
                     <h2 class="hero-title">
-                        <span class="gradient-text">ط§ظ„ظ€ Workflow ط§ظ„ط§ط­طھط±ط§ظپظٹ</span>
+                        <span class="gradient-text">الـ Workflow الاحترافي</span>
                     </h2>
                     <p class="hero-description">
-                        ظ…ط®ط·ط· ظˆظ…ط³ط§ط± ط§ظ„ط¹ظ…ظ„ ط§ظ„ظٹظˆظ…ظٹ ظ„ط¶ظ…ط§ظ† ط£ط¹ظ„ظ‰ ظ…ط³طھظˆظٹط§طھ ط§ظ„ظپط¹ط§ظ„ظٹط© ظˆط§ظ„ط¥ظ†طھط§ط¬ظٹط© ط¨ط§ط³طھط®ط¯ط§ظ… ظ…ظ†ط¸ظˆظ…طھظƒ ط§ظ„ظ‡ط¬ظٹظ†ط©طŒ
-                        ط¨ط¯ط،ط§ظ‹ ظ…ظ† ط¥ط¯ط§ط±ط© ط§ظ„ط°ط§ظƒط±ط© ط§ظ„ظ…ط­ظ„ظٹط© ظˆط§ظ„طھط­ط¶ظٹط±طŒ ظˆطµظٹط§ط؛ط© ط§ظ„ط£ظ‡ط¯ط§ظپطŒ ظˆطµظˆظ„ط§ظ‹ ظ„ظ„ظ†ط´ط± ط§ظ„طھظ„ظ‚ط§ط¦ظٹ ط§ظ„ط¢ظ…ظ†.
+                        مخطط ومسار العمل اليومي لضمان أعلى مستويات الفعالية والإنتاجية باستخدام منظومتك الهجينة،
+                        بدءاً من إدارة الذاكرة المحلية والتحضير، وصياغة الأهداف، وصولاً للنشر التلقائي الآمن.
                     </p>
                 </div>
             </section>
@@ -133,8 +133,8 @@
             <section class="section animate-fade-in-up" style="animation-delay: 0.1s">
                 <h3 class="section-title">
                     <i class="fas fa-clock"></i>
-                    ظ…ط®ط·ط· ط§ظ„ظٹظˆظ… ط§ظ„ط¨ط±ظ…ط¬ظٹ ط§ظ„ظ†ظ…ظˆط°ط¬ظٹ
-                    <span class="section-badge success">ظ…ط³ط§ط± ظ…ظ†ط¸ظ…</span>
+                    مخطط اليوم البرمجي النموذجي
+                    <span class="section-badge success">مسار منظم</span>
                 </h3>
 
                 <div class="roadmap">
@@ -142,7 +142,7 @@
                         <div class="phase-header">
                             <div class="phase-number"><i class="fas fa-mug-hot"></i></div>
                             <div class="phase-info">
-                                <h4>ط§ظ„ظ…ط±ط­ظ„ط© ط§ظ„ط£ظˆظ„ظ‰: ط§ظ„طھط­ط¶ظٹط± ظˆطھظ‡ظٹط¦ط© ط§ظ„ط¨ظٹط¦ط© (15 ط¯ظ‚ظٹظ‚ط©)</h4>
+                                <h4>المرحلة الأولى: التحضير وتهيئة البيئة (15 دقيقة)</h4>
                                 <span>08:00 - 08:15</span>
                             </div>
                         </div>
@@ -150,17 +150,17 @@
                             <label class="task-item">
                                 <input type="checkbox" onchange="updateProgress()">
                                 <span class="task-check"><i class="fas fa-check"></i></span>
-                                <span class="task-text">طھط´ط؛ظٹظ„ ظ…ط­ط±ظƒ ط§ظ„ط­ط§ظˆظٹط§طھ Docker Desktop ظ„ظ„طھط£ظƒط¯ ظ…ظ† ط¬ط§ظ‡ط²ظٹط© ظ‚ظˆط§ط¹ط¯ ط§ظ„ط¨ظٹط§ظ†ط§طھ ظˆط§ظ„ط®ط¯ظ…ط§طھ ط§ظ„ظ…ط­ظ„ظٹط©.</span>
+                                <span class="task-text">تشغيل محرك الحاويات Docker Desktop للتأكد من جاهزية قواعد البيانات والخدمات المحلية.</span>
                             </label>
                             <label class="task-item">
                                 <input type="checkbox" onchange="updateProgress()">
                                 <span class="task-check"><i class="fas fa-check"></i></span>
-                                <span class="task-text">طھط£ظƒظٹط¯ طھط´ط؛ظٹظ„ ظ…ط­ط±ظƒ Ollama ط¹ط¨ط± ط§ظ„ط£ظ…ط± <code>ollama serve</code> ظپظٹ ط³ط·ط± ط§ظ„ط£ظˆط§ظ…ط±.</span>
+                                <span class="task-text">تأكيد تشغيل محرك Ollama عبر الأمر <code>ollama serve</code> في سطر الأوامر.</span>
                             </label>
                             <label class="task-item">
                                 <input type="checkbox" onchange="updateProgress()">
                                 <span class="task-check"><i class="fas fa-check"></i></span>
-                                <span class="task-text">ط§ظ„طھط­ظ‚ظ‚ ظ…ظ† ط³ط­ط¨ ط£ط­ط¯ط« ظ†ط³ط®ط© ظ…ظ† ط§ظ„ظƒظˆط¯ ط§ظ„ظ…طµط¯ط±ظٹ ط¹ط¨ط± <code>git pull --rebase</code>.</span>
+                                <span class="task-text">التحقق من سحب أحدث نسخة من الكود المصدري عبر <code>git pull --rebase</code>.</span>
                             </label>
                         </div>
                     </div>
@@ -169,7 +169,7 @@
                         <div class="phase-header">
                             <div class="phase-number"><i class="fas fa-pencil"></i></div>
                             <div class="phase-info">
-                                <h4>ط§ظ„ظ…ط±ط­ظ„ط© ط§ظ„ط«ط§ظ†ظٹط©: ط§ظ„طھط®ط·ظٹط· ظˆطµظٹط§ط؛ط© ط§ظ„ظ‡ط¯ظپ ظپظٹ ظˆط¶ط¹ Plan Mode (30 ط¯ظ‚ظٹظ‚ط©)</h4>
+                                <h4>المرحلة الثانية: التخطيط وصياغة الهدف في وضع Plan Mode (30 دقيقة)</h4>
                                 <span>08:15 - 08:45</span>
                             </div>
                         </div>
@@ -177,17 +177,17 @@
                             <label class="task-item">
                                 <input type="checkbox" onchange="updateProgress()">
                                 <span class="task-check"><i class="fas fa-check"></i></span>
-                                <span class="task-text">ط§ظپطھط­ Cline ظˆط¨ط¯ظ‘ظ„ ط¥ظ„ظ‰ ظˆط¶ط¹ ط§ظ„طھط®ط·ظٹط· (Plan Mode) ظ„طھط¹ط±ظٹظپ ط§ظ„ظ‡ظٹظƒظ„ ط§ظ„ط¨ط±ظ…ط¬ظٹ ط§ظ„ظ…ط·ظ„ظˆط¨.</span>
+                                <span class="task-text">افتح Cline وبدّل إلى وضع التخطيط (Plan Mode) لتعريف الهيكل البرمجي المطلوب.</span>
                             </label>
                             <label class="task-item">
                                 <input type="checkbox" onchange="updateProgress()">
                                 <span class="task-check"><i class="fas fa-check"></i></span>
-                                <span class="task-text">ط´ط±ط­ ظˆطھظپطµظٹظ„ ط§ظ„ظ…طھط·ظ„ط¨ط§طھ ط§ظ„ط¨ط±ظ…ط¬ظٹط© ظˆط§ظ„ظ…ط´ظƒظ„ط§طھ ط§ظ„ظ…ط·ظ„ظˆط¨ ظ…ط¹ط§ظ„ط¬طھظ‡ط§ ط¨ط¯ظ‚ط© ظ„ظ„ظ€ AI.</span>
+                                <span class="task-text">شرح وتفصيل المتطلبات البرمجية والمشكلات المطلوب معالجتها بدقة للـ AI.</span>
                             </label>
                             <label class="task-item">
                                 <input type="checkbox" onchange="updateProgress()">
                                 <span class="task-check"><i class="fas fa-check"></i></span>
-                                <span class="task-text">ظ…ط±ط§ط¬ط¹ط© ط§ظ„ط®ط·ط© ط§ظ„ظ…ظ‚طھط±ط­ط© ظˆطھط£ظƒظٹط¯ ط®ظ„ظˆظ‡ط§ ظ…ظ† طھظƒط±ط§ط± ط§ظ„ظƒظˆط¯ ظˆط§ظ„طھظˆط§ظپظ‚ ظ…ط¹ ط¯ط³طھظˆط± ط§ظ„طھط·ظˆظٹط±.</span>
+                                <span class="task-text">مراجعة الخطة المقترحة وتأكيد خلوها من تكرار الكود والتوافق مع دستور التطوير.</span>
                             </label>
                         </div>
                     </div>
@@ -196,7 +196,7 @@
                         <div class="phase-header">
                             <div class="phase-number"><i class="fas fa-laptop-code"></i></div>
                             <div class="phase-info">
-                                <h4>ط§ظ„ظ…ط±ط­ظ„ط© ط§ظ„ط«ط§ظ„ط«ط©: ط§ظ„طھظ†ظپظٹط° ظˆط¨ظ†ط§ط، ط§ظ„ط´ظپط±ط§طھ ظپظٹ ظˆط¶ط¹ Act Mode (4 ط³ط§ط¹ط§طھ)</h4>
+                                <h4>المرحلة الثالثة: التنفيذ وبناء الشفرات في وضع Act Mode (4 ساعات)</h4>
                                 <span>08:45 - 12:45</span>
                             </div>
                         </div>
@@ -204,17 +204,17 @@
                             <label class="task-item">
                                 <input type="checkbox" onchange="updateProgress()">
                                 <span class="task-check"><i class="fas fa-check"></i></span>
-                                <span class="task-text">ط§ظ„طھط­ظˆظٹظ„ ط¥ظ„ظ‰ ظˆط¶ط¹ ط§ظ„ط¹ظ…ظ„ (Act Mode) ظˆط§ط®طھظٹط§ط± ط§ظ„ظ€ Custom Mode ط§ظ„ط£ظ†ط³ط¨ ظ„ظ„ظ…ظ‡ظ…ط© ط§ظ„ط­ط§ظ„ظٹط©.</span>
+                                <span class="task-text">التحويل إلى وضع العمل (Act Mode) واختيار الـ Custom Mode الأنسب للمهمة الحالية.</span>
                             </label>
                             <label class="task-item">
                                 <input type="checkbox" onchange="updateProgress()">
                                 <span class="task-check"><i class="fas fa-check"></i></span>
-                                <span class="task-text">ط§ط³طھط؛ظ„ط§ظ„ ط§ظ„ظ†ظ…ط§ط°ط¬ ط§ظ„ظ…ط­ظ„ظٹط© ظ„ظ„ط¨ط±ظ…ط¬ط© ظˆظƒطھط§ط¨ط© ط§ظ„ظ…ظƒظˆظ†ط§طھ ظˆط§ظ„ظˆط§ط¬ظ‡ط§طھ (Qwen3.6 MoE ط£ظˆ Phi-4).</span>
+                                <span class="task-text">استغلال النماذج المحلية للبرمجة وكتابة المكونات والواجهات (Qwen3.6 MoE أو Phi-4).</span>
                             </label>
                             <label class="task-item">
                                 <input type="checkbox" onchange="updateProgress()">
                                 <span class="task-check"><i class="fas fa-check"></i></span>
-                                <span class="task-text">ظ…ط±ط§ط¬ط¹ط© ط§ظ„ظƒظˆط¯ ط§ظ„ظ…ظƒطھظˆط¨ ط®ط·ظˆط© ط¨ط®ط·ظˆط© ظˆط­ظپط¸ ظ†ظ‚ط§ط· ط§ط³طھط¹ط§ط¯ط© ط§ظ„ظ†ط¸ط§ظ… (Checkpoints) ظ‚ط¨ظ„ ظƒظ„ ط¹ظ…ظ„ظٹط© ط¯ظ…ط¬ ظƒط¨ظٹط±ط©.</span>
+                                <span class="task-text">مراجعة الكود المكتوب خطوة بخطوة وحفظ نقاط استعادة النظام (Checkpoints) قبل كل عملية دمج كبيرة.</span>
                             </label>
                         </div>
                     </div>
@@ -225,37 +225,37 @@
             <section class="section animate-fade-in-up" style="animation-delay: 0.2s">
                 <h3 class="section-title">
                     <i class="fas fa-code-commit"></i>
-                    ط§ظ„ظ…ط¹ط§ظٹظٹط± ط§ظ„ظ…ط¹طھظ…ط¯ط© ظ„ظ„ظ€ Commits ط§ظ„ط¨ط±ظ…ط¬ظٹط© (Conventional Commits)
+                    المعايير المعتمدة للـ Commits البرمجية (Conventional Commits)
                 </h3>
-                <p class="step-description">ظ†ظ„طھط²ظ… ط¨ط§ظ„طµظٹط؛ ط§ظ„ظ…ظˆط­ط¯ط© ظ„ط¶ظ…ط§ظ† ظˆط¶ظˆط­ طھطھط¨ط¹ ط§ظ„طھط§ط±ظٹط® ط§ظ„ط¨ط±ظ…ط¬ظٹ ظ„ظ„ظ…ط´ط§ط±ظٹط¹ ظˆط³ظ‡ظˆظ„ط© ظ…ط±ط§ط¬ط¹ط© ط§ظ„ظپط±ظˆظ‚ ط§ظ„طھظ„ظ‚ط§ط¦ظٹط©:</p>
+                <p class="step-description">نلتزم بالصيغ الموحدة لضمان وضوح تتبع التاريخ البرمجي للمشاريع وسهولة مراجعة الفروق التلقائية:</p>
                 <div class="comparison-table">
                     <table>
                         <thead>
                             <tr>
-                                <th>ظ†ظˆط¹ ط§ظ„ظ€ Commit</th>
-                                <th>ط§ظ„ظˆطµظپ ظˆط§ظ„ط§ط³طھط®ط¯ط§ظ… ط§ظ„ظپظ†ظٹ</th>
-                                <th>ظ…ط«ط§ظ„ ط¹ظ…ظ„ظٹ ظ„ظ„طµظٹط§ط؛ط©</th>
+                                <th>نوع الـ Commit</th>
+                                <th>الوصف والاستخدام الفني</th>
+                                <th>مثال عملي للصياغة</th>
                             </tr>
                         </thead>
                         <tbody>
                             <tr>
                                 <td><strong>feat</strong></td>
-                                <td>ط¥ط¶ط§ظپط© ظ…ظٹط²ط© ط¨ط±ظ…ط¬ظٹط© ط¬ط¯ظٹط¯ط© ط¨ط§ظ„ظƒط§ظ…ظ„ ظ„ظ„ظ…ط´ط±ظˆط¹</td>
+                                <td>إضافة ميزة برمجية جديدة بالكامل للمشروع</td>
                                 <td><code>feat(auth): add local passkeys support via webauthn</code></td>
                             </tr>
                             <tr>
                                 <td><strong>fix</strong></td>
-                                <td>ط¥طµظ„ط§ط­ ظ…ط´ظƒظ„ط© ط£ظˆ ط«ط؛ط±ط© ط¨ط±ظ…ط¬ظٹط© طھظ… ط§ظƒطھط´ط§ظپظ‡ط§</td>
+                                <td>إصلاح مشكلة أو ثغرة برمجية تم اكتشافها</td>
                                 <td><code>fix(database): resolve memory leak on connection pool</code></td>
                             </tr>
                             <tr>
                                 <td><strong>docs</strong></td>
-                                <td>طھط¹ط¯ظٹظ„ ط£ظˆ طµظٹط§ط؛ط© ظ…ظ„ظپط§طھ ط§ظ„طھظˆط«ظٹظ‚ ط§ظ„ط¨ط±ظ…ط¬ظٹ ظˆط§ظ„ظ…ظ„ظپط§طھ ط§ظ„ظˆطµظپظٹط©</td>
+                                <td>تعديل أو صياغة ملفات التوثيق البرمجي والملفات الوصفية</td>
                                 <td><code>docs(constitution): update prompt injection protection rules</code></td>
                             </tr>
                             <tr>
                                 <td><strong>refactor</strong></td>
-                                <td>ط¥ط¹ط§ط¯ط© طھط­ط³ظٹظ† ظˆطھظ†ط¸ظٹظ… ظ‡ظٹظƒظ„ ط§ظ„ظƒظˆط¯ ط¯ظˆظ† طھط؛ظٹظٹط± ط·ط±ظٹظ‚ط© ط¹ظ…ظ„ظ‡</td>
+                                <td>إعادة تحسين وتنظيم هيكل الكود دون تغيير طريقة عمله</td>
                                 <td><code>refactor(api): convert express routes to hono edge routing</code></td>
                             </tr>
                         </tbody>
@@ -268,14 +268,14 @@
                 <a href="13-techstack.html" class="page-nav-btn prev">
                     <i class="fas fa-arrow-right"></i>
                     <div>
-                        <span>ط§ظ„ط³ط§ط¨ظ‚</span>
-                        <strong>ط§ظ„ظ€ Tech Stack ظ„ط¹ط§ظ… 2026</strong>
+                        <span>السابق</span>
+                        <strong>الـ Tech Stack لعام 2026</strong>
                     </div>
                 </a>
                 <a href="15-resources.html" class="page-nav-btn next">
                     <div>
-                        <span>ط§ظ„طھط§ظ„ظٹ</span>
-                        <strong>ظ…ظƒطھط¨ط© ط§ظ„ظ…طµط§ط¯ط± ظˆط§ظ„ظ…ط±ط§ط¬ط¹</strong>
+                        <span>التالي</span>
+                        <strong>مكتبة المصادر والمراجع</strong>
                     </div>
                     <i class="fas fa-arrow-left"></i>
                 </a>

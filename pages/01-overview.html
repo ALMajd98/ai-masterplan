@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ظ†ط¸ط±ط© ط¹ط§ظ…ط© â€” AI Master Plan (ط³ط¨طھظ…ط¨ط± 2026)</title>
+    <title>نظرة عامة — AI Master Plan (سبتمبر 2026)</title>
     <link rel="manifest" href="../manifest.json">
     <link rel="icon" type="image/svg+xml" href="../assets/icons/favicon.svg">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -21,7 +21,7 @@
     </div>
 
     <!-- Floating Sidebar Toggle -->
-    <button class="floating-sidebar-toggle" id="floatingToggle" onclick="toggleSidebar()" aria-label="ظپطھط­ ط§ظ„ظ‚ط§ط¦ظ…ط©">
+    <button class="floating-sidebar-toggle" id="floatingToggle" onclick="toggleSidebar()" aria-label="فتح القائمة">
         <i class="fas fa-bars"></i>
     </button>
 
@@ -38,57 +38,57 @@
                     <span class="logo-subtitle">Plan v4.0</span>
                 </div>
             </a>
-            <button class="sidebar-close" onclick="toggleSidebar()" aria-label="ط¥ط؛ظ„ط§ظ‚"><i class="fas fa-xmark"></i></button>
+            <button class="sidebar-close" onclick="toggleSidebar()" aria-label="إغلاق"><i class="fas fa-xmark"></i></button>
         </div>
 
         <div class="sidebar-search">
             <i class="fas fa-magnifying-glass"></i>
-            <input type="text" placeholder="ط¨ط­ط« ط³ط±ظٹط¹..." id="sidebarSearch" oninput="searchNav(this.value)">
+            <input type="text" placeholder="بحث سريع..." id="sidebarSearch" oninput="searchNav(this.value)">
             <kbd>Ctrl+K</kbd>
         </div>
 
         <div class="sidebar-nav" id="sidebarNav">
             <div class="nav-section">
-                <span class="nav-section-title"><i class="fas fa-circle-dot"></i> ط§ظ„ط¨ط¯ط§ظٹط©</span>
-                <a href="../index.html" class="nav-link"><i class="fas fa-th-large"></i><span>ظ„ظˆط­ط© ط§ظ„طھط­ظƒظ…</span></a>
-                <a href="01-overview.html" class="nav-link active"><i class="fas fa-compass"></i><span>ظ†ط¸ط±ط© ط¹ط§ظ…ط©</span></a>
-                <a href="18-ai-timeline.html" class="nav-link"><i class="fas fa-clock-rotate-left"></i><span>ط£ط­ط¯ط§ط« 2025-2026</span><span class="nav-badge new">ط¬ط¯ظٹط¯</span></a>
+                <span class="nav-section-title"><i class="fas fa-circle-dot"></i> البداية</span>
+                <a href="../index.html" class="nav-link"><i class="fas fa-th-large"></i><span>لوحة التحكم</span></a>
+                <a href="01-overview.html" class="nav-link active"><i class="fas fa-compass"></i><span>نظرة عامة</span></a>
+                <a href="18-ai-timeline.html" class="nav-link"><i class="fas fa-clock-rotate-left"></i><span>أحداث 2025-2026</span><span class="nav-badge new">جديد</span></a>
             </div>
             <div class="nav-section">
-                <span class="nav-section-title"><i class="fas fa-rocket"></i> ط§ظ„طھط£ط³ظٹط³</span>
-                <a href="02-setup.html" class="nav-link"><i class="fas fa-hard-drive"></i><span>طھط¬ظ‡ظٹط² ط§ظ„ط¬ظ‡ط§ط²</span><span class="nav-badge phase">1</span></a>
-                <a href="03-ai-local.html" class="nav-link"><i class="fas fa-server"></i><span>AI ط§ظ„ظ…ط­ظ„ظٹ</span><span class="nav-badge phase">2</span></a>
-                <a href="04-ai-cloud.html" class="nav-link"><i class="fas fa-cloud"></i><span>AI ط§ظ„ط³ط­ط§ط¨ظٹ</span><span class="nav-badge phase">3</span></a>
+                <span class="nav-section-title"><i class="fas fa-rocket"></i> التأسيس</span>
+                <a href="02-setup.html" class="nav-link"><i class="fas fa-hard-drive"></i><span>تجهيز الجهاز</span><span class="nav-badge phase">1</span></a>
+                <a href="03-ai-local.html" class="nav-link"><i class="fas fa-server"></i><span>AI المحلي</span><span class="nav-badge phase">2</span></a>
+                <a href="04-ai-cloud.html" class="nav-link"><i class="fas fa-cloud"></i><span>AI السحابي</span><span class="nav-badge phase">3</span></a>
                 <a href="05-vscode.html" class="nav-link"><i class="fas fa-code"></i><span>VS Code + Cline</span><span class="nav-badge phase">4</span></a>
-                <a href="19-ai-tools-compare.html" class="nav-link"><i class="fas fa-scale-balanced"></i><span>ظ…ظ‚ط§ط±ظ†ط© ط§ظ„ط£ط¯ظˆط§طھ</span><span class="nav-badge new">ط¬ط¯ظٹط¯</span></a>
+                <a href="19-ai-tools-compare.html" class="nav-link"><i class="fas fa-scale-balanced"></i><span>مقارنة الأدوات</span><span class="nav-badge new">جديد</span></a>
             </div>
             <div class="nav-section">
-                <span class="nav-section-title"><i class="fas fa-wand-magic-sparkles"></i> ط§ظ„ظ‚ط¯ط±ط§طھ</span>
+                <span class="nav-section-title"><i class="fas fa-wand-magic-sparkles"></i> القدرات</span>
                 <a href="06-mcps.html" class="nav-link"><i class="fas fa-plug"></i><span>MCPs</span><span class="nav-badge count">10K+</span></a>
-                <a href="17-mcp-security.html" class="nav-link"><i class="fas fa-shield-virus"></i><span>ط£ظ…ط§ظ† MCP</span><span class="nav-badge new">ط¬ط¯ظٹط¯</span></a>
+                <a href="17-mcp-security.html" class="nav-link"><i class="fas fa-shield-virus"></i><span>أمان MCP</span><span class="nav-badge new">جديد</span></a>
                 <a href="07-modes.html" class="nav-link"><i class="fas fa-masks-theater"></i><span>Custom Modes</span></a>
                 <a href="08-skills.html" class="nav-link"><i class="fas fa-graduation-cap"></i><span>Skills</span></a>
-                <a href="16-multi-agent.html" class="nav-link"><i class="fas fa-users-gear"></i><span>Multi-Agent</span><span class="nav-badge new">ط¬ط¯ظٹط¯</span></a>
+                <a href="16-multi-agent.html" class="nav-link"><i class="fas fa-users-gear"></i><span>Multi-Agent</span><span class="nav-badge new">جديد</span></a>
             </div>
             <div class="nav-section">
-                <span class="nav-section-title"><i class="fas fa-shield-halved"></i> ط§ظ„ظ…ط¹ط§ظٹظٹط±</span>
-                <a href="09-constitution.html" class="nav-link"><i class="fas fa-scroll"></i><span>ط§ظ„ط¯ط³طھظˆط±</span></a>
-                <a href="10-security.html" class="nav-link"><i class="fas fa-shield-halved"></i><span>ط§ظ„ط£ظ…ط§ظ†</span><span class="nav-badge count">60+</span></a>
-                <a href="11-performance.html" class="nav-link"><i class="fas fa-gauge-high"></i><span>ط§ظ„ط£ط¯ط§ط، ظˆط§ظ„طھظˆط³ط¹</span></a>
+                <span class="nav-section-title"><i class="fas fa-shield-halved"></i> المعايير</span>
+                <a href="09-constitution.html" class="nav-link"><i class="fas fa-scroll"></i><span>الدستور</span></a>
+                <a href="10-security.html" class="nav-link"><i class="fas fa-shield-halved"></i><span>الأمان</span><span class="nav-badge count">60+</span></a>
+                <a href="11-performance.html" class="nav-link"><i class="fas fa-gauge-high"></i><span>الأداء والتوسع</span></a>
             </div>
             <div class="nav-section">
-                <span class="nav-section-title"><i class="fas fa-briefcase"></i> ط§ظ„طھط®طµطµط§طھ</span>
-                <a href="12-ecommerce.html" class="nav-link"><i class="fas fa-store"></i><span>ط§ظ„طھط¬ط§ط±ط© ط§ظ„ط³ط¹ظˆط¯ظٹط©</span></a>
+                <span class="nav-section-title"><i class="fas fa-briefcase"></i> التخصصات</span>
+                <a href="12-ecommerce.html" class="nav-link"><i class="fas fa-store"></i><span>التجارة السعودية</span></a>
                 <a href="13-techstack.html" class="nav-link"><i class="fas fa-layer-group"></i><span>Tech Stack</span></a>
-                <a href="14-workflow.html" class="nav-link"><i class="fas fa-route"></i><span>ط®ط·ظˆط§طھ ط§ظ„ط¹ظ…ظ„</span></a>
-                <a href="15-resources.html" class="nav-link"><i class="fas fa-book-open"></i><span>ط§ظ„ظ…طµط§ط¯ط±</span></a>
+                <a href="14-workflow.html" class="nav-link"><i class="fas fa-route"></i><span>خطوات العمل</span></a>
+                <a href="15-resources.html" class="nav-link"><i class="fas fa-book-open"></i><span>المصادر</span></a>
             </div>
         </div>
 
         <div class="sidebar-footer">
             <div class="version-info">
                 <i class="fas fa-code-branch"></i>
-                <span>v4.0 â€” ط³ط¨طھظ…ط¨ط± 2026</span>
+                <span>v4.0 — سبتمبر 2026</span>
             </div>
         </div>
     </nav>
@@ -96,19 +96,19 @@
     <!-- Main Content -->
     <main class="main-content">
         <header class="topbar">
-            <button class="mobile-menu-btn" onclick="toggleSidebar()" aria-label="ظپطھط­ ط§ظ„ظ‚ط§ط¦ظ…ط©">
+            <button class="mobile-menu-btn" onclick="toggleSidebar()" aria-label="فتح القائمة">
                 <i class="fas fa-bars"></i>
             </button>
             <div class="topbar-title">
                 <div class="topbar-breadcrumb">
                     <i class="fas fa-home"></i>
-                    <span>ط§ظ„ط±ط¦ظٹط³ظٹط© / ظ†ط¸ط±ط© ط¹ط§ظ…ط©</span>
+                    <span>الرئيسية / نظرة عامة</span>
                 </div>
-                <h1>ظ†ط¸ط±ط© ط¹ط§ظ…ط© ط¹ظ„ظ‰ ط§ظ„ظ…ظ†ط¸ظˆظ…ط©</h1>
+                <h1>نظرة عامة على المنظومة</h1>
             </div>
             <div class="topbar-actions">
-                <button class="topbar-btn" onclick="scrollToTop()" title="ظ„ظ„ط£ط¹ظ„ظ‰"><i class="fas fa-arrow-up"></i></button>
-                <button class="theme-toggle" onclick="toggleTheme()" title="طھط¨ط¯ظٹظ„ ط§ظ„ظˆط¶ط¹"><i class="fas fa-moon" id="themeIcon"></i></button>
+                <button class="topbar-btn" onclick="scrollToTop()" title="للأعلى"><i class="fas fa-arrow-up"></i></button>
+                <button class="theme-toggle" onclick="toggleTheme()" title="تبديل الوضع"><i class="fas fa-moon" id="themeIcon"></i></button>
             </div>
         </header>
 
@@ -120,15 +120,15 @@
                     <div class="hero-badge">
                         <span class="badge-pulse"></span>
                         <i class="fas fa-compass"></i>
-                        ظپظ„ط³ظپط© ط§ظ„طھطµظ…ظٹظ… ظˆط§ظ„ظ…ط¹ظ…ط§ط±ظٹط©
+                        فلسفة التصميم والمعمارية
                     </div>
                     <h2 class="hero-title">
-                        <span class="gradient-text">ط§ظ„ظ…ط¹ظ…ط§ط±ظٹط© ط§ظ„ظ‡ط¬ظٹظ†ط©</span>
+                        <span class="gradient-text">المعمارية الهجينة</span>
                     </h2>
                     <p class="hero-description">
-                        طھظ… طھطµظ…ظٹظ… ظ‡ط°ظ‡ ط§ظ„ظ…ظ†ط¸ظˆظ…ط© ظ„طھظ…ظƒظٹظ† ط§ظ„ظ…ط·ظˆط± ط§ظ„ظ…ط³طھظ‚ظ„ ظ…ظ† ط§ظ…طھظ„ط§ظƒ ظ‚ظˆط© ط­ظˆط³ط¨ظٹط© ظˆظ…ط¹ط±ظپظٹط© طھظˆط§ط²ظٹ ط¹ظ…ظ„ ظپط±ظٹظ‚ طھط·ظˆظٹط± ظƒط§ظ…ظ„طŒ
-                        ظ…ظ† ط®ظ„ط§ظ„ ط§ظ„ط¬ظ…ط¹ ط¨ظٹظ† <strong class="hero-highlight">ط§ظ„ط§ط³طھظ‚ظ„ط§ظ„ظٹط© ط§ظ„ظ…ط­ظ„ظٹط©</strong> ظ„ظ„ظ†ظ…ط§ط°ط¬ ط§ظ„ظ…ظپطھظˆط­ط© ط§ظ„ظ…طµط¯ط±
-                        ظˆ <strong class="hero-highlight">ط§ظ„ظ‚ط¯ط±ط§طھ ط§ظ„طھط­ظ„ظٹظ„ظٹط©</strong> ظ„ظ„ظ…ط²ظˆط¯ظٹظ† ط§ظ„ط³ط­ط§ط¨ظٹظٹظ† ط§ظ„ظ…ط¹طھظ…ط¯ظٹظ†.
+                        تم تصميم هذه المنظومة لتمكين المطور المستقل من امتلاك قوة حوسبية ومعرفية توازي عمل فريق تطوير كامل،
+                        من خلال الجمع بين <strong class="hero-highlight">الاستقلالية المحلية</strong> للنماذج المفتوحة المصدر
+                        و <strong class="hero-highlight">القدرات التحليلية</strong> للمزودين السحابيين المعتمدين.
                     </p>
                 </div>
             </section>
@@ -137,29 +137,29 @@
             <section class="section animate-fade-in-up" style="animation-delay: 0.1s">
                 <h3 class="section-title">
                     <i class="fas fa-cube"></i>
-                    ط§ظ„ط±ظƒط§ط¦ط² ط§ظ„ظ‡ظ†ط¯ط³ظٹط© ط§ظ„ط£ط±ط¨ط¹ط©
-                    <span class="section-badge">ط§ظ„ط£ط³ط§ط³</span>
+                    الركائز الهندسية الأربعة
+                    <span class="section-badge">الأساس</span>
                 </h3>
                 <div class="philosophy-grid">
                     <div class="philosophy-card">
                         <div class="philosophy-icon"><i class="fas fa-shield-halved"></i></div>
-                        <h4>1. ط§ظ„ط³ظٹط§ط¯ط© ظˆط§ظ„ط®طµظˆطµظٹط© ط§ظ„ظ…ط­ظ„ظٹط©</h4>
-                        <p>طھط´ط؛ظٹظ„ ط§ظ„ظ†ظ…ط§ط°ط¬ ط§ظ„ط£ط³ط§ط³ظٹط© (Phi-4 ظˆ Qwen3 ظˆ DeepSeek-R1) ظ…ط­ظ„ظٹط§ظ‹ ط¹ط¨ط± Ollama. ظƒظˆط¯ ط§ظ„ظ…ط´ط§ط±ظٹط¹طŒ ظ…ظپط§طھظٹط­ ط§ظ„طھط´ظپظٹط±طŒ ظˆظ‚ظˆط§ط¹ط¯ ط§ظ„ط¨ظٹط§ظ†ط§طھ ظ„ط§ طھط®ط±ط¬ ظ…ظ† ط­ط¯ظˆط¯ ط¬ظ‡ط§ط²ظƒ.</p>
+                        <h4>1. السيادة والخصوصية المحلية</h4>
+                        <p>تشغيل النماذج الأساسية (Phi-4 و Qwen3 و DeepSeek-R1) محلياً عبر Ollama. كود المشاريع، مفاتيح التشفير، وقواعد البيانات لا تخرج من حدود جهازك.</p>
                     </div>
                     <div class="philosophy-card">
                         <div class="philosophy-icon"><i class="fas fa-network-wired"></i></div>
-                        <h4>2. ط§ظ„طھظˆط¬ظٹظ‡ ط§ظ„ط°ظƒظٹ ظ…طھط¹ط¯ط¯ ط§ظ„ظ…طµط§ط¯ط±</h4>
-                        <p>طھظˆط²ظٹط¹ ط§ظ„ظ…ظ‡ط§ظ… ط¨ط°ظƒط§ط،: ط§ظ„ظƒظˆط¯ ط§ظ„ط³ط±ظٹط¹ ظ„ظ„ظ†ظ…ط§ط°ط¬ ط§ظ„ظ…ط­ظ„ظٹط©طŒ ظˆط§ظ„ظ…ظ‡ط§ظ… ط§ظ„ظ…ط¹ظ‚ط¯ط© ط°ط§طھ ط§ظ„ط³ظٹط§ظ‚ ط§ظ„ظ…ظ„ظٹظˆظ†ظٹ ظ„ظ€ Gemini 3 Flash ظˆ DeepSeek V4 ط§ظ„ط³ط­ط§ط¨ظٹ.</p>
+                        <h4>2. التوجيه الذكي متعدد المصادر</h4>
+                        <p>توزيع المهام بذكاء: الكود السريع للنماذج المحلية، والمهام المعقدة ذات السياق المليوني لـ Gemini 3 Flash و DeepSeek V4 السحابي.</p>
                     </div>
                     <div class="philosophy-card">
                         <div class="philosophy-icon"><i class="fas fa-plug-circle-check"></i></div>
-                        <h4>3. ط§ظ„طھظˆط³ط¹ ط¹ط¨ط± ط¨ط±ظˆطھظˆظƒظˆظ„ MCP</h4>
-                        <p>ط§ظ„ط§ط¹طھظ…ط§ط¯ ط§ظ„ظƒط§ظ…ظ„ ط¹ظ„ظ‰ ظ…ط¹ظٹط§ط± Model Context Protocol ط§ظ„ظ…ط¹طھط±ظپ ط¨ظ‡ ظ…ظ† Linux FoundationطŒ ظ„ط±ط¨ط· ط§ظ„ط°ظƒط§ط، ط§ظ„ط§طµط·ظ†ط§ط¹ظٹ ط¨ط£ظ†ط¸ظ…ط© ط§ظ„ظ…ظ„ظپط§طھ ظˆظ‚ظˆط§ط¹ط¯ ط§ظ„ط¨ظٹط§ظ†ط§طھ ظˆظ…ط­ط±ظƒط§طھ ط§ظ„ط¨ط­ط«.</p>
+                        <h4>3. التوسع عبر بروتوكول MCP</h4>
+                        <p>الاعتماد الكامل على معيار Model Context Protocol المعترف به من Linux Foundation، لربط الذكاء الاصطناعي بأنظمة الملفات وقواعد البيانات ومحركات البحث.</p>
                     </div>
                     <div class="philosophy-card">
                         <div class="philosophy-icon"><i class="fas fa-hand-holding-dollar"></i></div>
-                        <h4>4. ط§ظ„طھظƒظ„ظپط© ط§ظ„ظ…طھظˆط§ط²ظ†ط©</h4>
-                        <p>ط¨ظ†ط§ط، ظ…ظ†ط¸ظˆظ…ط© ط¥ظ†طھط§ط¬ظٹط© ظƒط§ظ…ظ„ط© ط¨ظ…ظٹط²ط§ظ†ظٹط© طھط¨ط¯ط£ ظ…ظ† 0$ ظˆطھطµظ„ ط¨ط­ط¯ ط£ظ‚طµظ‰ ط¥ظ„ظ‰ 10-20$ ط´ظ‡ط±ظٹط§ظ‹طŒ ظ…ط¹ ط§ط³طھط؛ظ„ط§ظ„ ط§ظ„ظ…ظ†ط­ ط§ظ„ظ…ط¬ط§ظ†ظٹط© ط§ظ„ط±ط³ظ…ظٹط© ظˆطھط¬ظ†ط¨ ط§ظ„ظˆط³ط·ط§ط، ط؛ظٹط± ط§ظ„ظ…ظˆط«ظˆظ‚ظٹظ†.</p>
+                        <h4>4. التكلفة المتوازنة</h4>
+                        <p>بناء منظومة إنتاجية كاملة بميزانية تبدأ من 0$ وتصل بحد أقصى إلى 10-20$ شهرياً، مع استغلال المنح المجانية الرسمية وتجنب الوسطاء غير الموثوقين.</p>
                     </div>
                 </div>
             </section>
@@ -168,43 +168,43 @@
             <section class="section animate-fade-in-up" style="animation-delay: 0.2s">
                 <h3 class="section-title">
                     <i class="fas fa-scale-balanced"></i>
-                    ط§ظ„ظ…ظ‚ط§ط±ظ†ط© ظ…ط¹ ط§ظ„ط­ظ„ظˆظ„ ط§ظ„طھظ‚ظ„ظٹط¯ظٹط©
-                    <span class="section-badge success">طھظپظˆظ‚ ظˆط§ط¶ط­</span>
+                    المقارنة مع الحلول التقليدية
+                    <span class="section-badge success">تفوق واضح</span>
                 </h3>
                 <div class="comparison-table">
                     <table>
                         <thead>
                             <tr>
-                                <th>ط§ظ„ظ…ط¹ظٹط§ط±</th>
-                                <th>ط§ظ„ط­ظ„ظˆظ„ ط§ظ„ط³ط­ط§ط¨ظٹط© ط§ظ„طھظ‚ظ„ظٹط¯ظٹط©</th>
-                                <th>ظ…ظ†ط¸ظˆظ…ط© AI Master Plan</th>
+                                <th>المعيار</th>
+                                <th>الحلول السحابية التقليدية</th>
+                                <th>منظومة AI Master Plan</th>
                             </tr>
                         </thead>
                         <tbody>
                             <tr>
-                                <td><strong>ط®طµظˆطµظٹط© ط§ظ„ظƒظˆط¯ ظˆط§ظ„ط¨ظٹط§ظ†ط§طھ</strong></td>
-                                <td><i class="fas fa-circle-xmark text-danger"></i> طھظڈط±ط³ظ„ ظ„ط®ظˆط§ط¯ظ… ط®ط§ط±ط¬ظٹط©</td>
-                                <td><i class="fas fa-circle-check text-success"></i> ظ…ط­ظ„ظٹط© ط¨ط§ظ„ظƒط§ظ…ظ„</td>
+                                <td><strong>خصوصية الكود والبيانات</strong></td>
+                                <td><i class="fas fa-circle-xmark text-danger"></i> تُرسل لخوادم خارجية</td>
+                                <td><i class="fas fa-circle-check text-success"></i> محلية بالكامل</td>
                             </tr>
                             <tr>
-                                <td><strong>ط§ظ„ط§ط¹طھظ…ط§ط¯ ط¹ظ„ظ‰ ط§ظ„ط¥ظ†طھط±ظ†طھ</strong></td>
-                                <td><i class="fas fa-circle-xmark text-danger"></i> طھطھظˆظ‚ظپ ط¹ظ†ط¯ ط§ظ„ط§ظ†ظ‚ط·ط§ط¹</td>
-                                <td><i class="fas fa-circle-check text-success"></i> طھط¹ظ…ظ„ Offline</td>
+                                <td><strong>الاعتماد على الإنترنت</strong></td>
+                                <td><i class="fas fa-circle-xmark text-danger"></i> تتوقف عند الانقطاع</td>
+                                <td><i class="fas fa-circle-check text-success"></i> تعمل Offline</td>
                             </tr>
                             <tr>
-                                <td><strong>ط§ظ„طھط­ظƒظ… ظپظٹ ط§ظ„ط£ط¯ظˆط§طھ</strong></td>
-                                <td><i class="fas fa-circle-xmark text-danger"></i> ظ…ط­ط¯ظˆط¯ ط¨ط§ظ„ظ…ظ†طµط©</td>
+                                <td><strong>التحكم في الأدوات</strong></td>
+                                <td><i class="fas fa-circle-xmark text-danger"></i> محدود بالمنصة</td>
                                 <td><i class="fas fa-circle-check text-success"></i> 10,000+ MCP</td>
                             </tr>
                             <tr>
-                                <td><strong>ط§ظ„طھظƒظ„ظپط© ط§ظ„ط´ظ‡ط±ظٹط©</strong></td>
-                                <td><i class="fas fa-circle-xmark text-danger"></i> $20-100/ط´ظ‡ط±</td>
-                                <td><i class="fas fa-circle-check text-success"></i> $0-20/ط´ظ‡ط±</td>
+                                <td><strong>التكلفة الشهرية</strong></td>
+                                <td><i class="fas fa-circle-xmark text-danger"></i> $20-100/شهر</td>
+                                <td><i class="fas fa-circle-check text-success"></i> $0-20/شهر</td>
                             </tr>
                             <tr>
-                                <td><strong>ط§ظ„طھظˆط§ظپظ‚ ظ…ط¹ ط§ظ„ط³ظˆظ‚ ط§ظ„ظ…ط­ظ„ظٹ</strong></td>
-                                <td><i class="fas fa-circle-xmark text-danger"></i> ظ„ظٹط³ ظ…ط®طµطµط§ظ‹</td>
-                                <td><i class="fas fa-circle-check text-success"></i> ZATCA + PDPL + ط¹ط±ط¨ظٹ</td>
+                                <td><strong>التوافق مع السوق المحلي</strong></td>
+                                <td><i class="fas fa-circle-xmark text-danger"></i> ليس مخصصاً</td>
+                                <td><i class="fas fa-circle-check text-success"></i> ZATCA + PDPL + عربي</td>
                             </tr>
                         </tbody>
                     </table>
@@ -215,8 +215,8 @@
             <section class="section animate-fade-in-up" style="animation-delay: 0.3s">
                 <h3 class="section-title">
                     <i class="fas fa-lightbulb"></i>
-                    ط§ظ„ظ…ظپط§ظ‡ظٹظ… ط§ظ„ط£ط³ط§ط³ظٹط© ط§ظ„طھظٹ ط³طھطھظ‚ظ†ظ‡ط§
-                    <span class="section-badge">6 ظ…ظپط§ظ‡ظٹظ…</span>
+                    المفاهيم الأساسية التي ستتقنها
+                    <span class="section-badge">6 مفاهيم</span>
                 </h3>
                 <div class="concepts-grid">
                     <div class="concept-card">
@@ -224,7 +224,7 @@
                             <i class="fas fa-server"></i>
                             <h4>Local AI</h4>
                         </div>
-                        <p>ظ†ظ…ط§ط°ط¬ ط°ظƒط§ط، ط§طµط·ظ†ط§ط¹ظٹ طھط¹ظ…ظ„ ط¹ظ„ظ‰ ط¬ظ‡ط§ط²ظƒ ظ…ط¨ط§ط´ط±ط© ط¹ط¨ط± Ollama. ظ„ط§ ط§ظ†طھط±ظ†طھطŒ ظ„ط§ ط­ط¯ظˆط¯طŒ ط®طµظˆطµظٹط© ظƒط§ظ…ظ„ط©.</p>
+                        <p>نماذج ذكاء اصطناعي تعمل على جهازك مباشرة عبر Ollama. لا انترنت، لا حدود، خصوصية كاملة.</p>
                         <div class="concept-tags">
                             <span class="tag">Ollama</span>
                             <span class="tag">Qwen3</span>
@@ -236,7 +236,7 @@
                             <i class="fas fa-cloud"></i>
                             <h4>Cloud AI</h4>
                         </div>
-                        <p>ظ†ظ…ط§ط°ط¬ ظ‚ظˆظٹط© ظ…ظ† Google ظˆ Groq ظƒظ…ظƒظ…ظ„ ظ„ظ„ظ†ظ…ط§ط°ط¬ ط§ظ„ظ…ط­ظ„ظٹط©. ظ…ط¬ط§ظ†ظٹ ط±ط³ظ…ظٹ ط¨ط­ط¯ظˆط¯ ظٹظˆظ…ظٹط©.</p>
+                        <p>نماذج قوية من Google و Groq كمكمل للنماذج المحلية. مجاني رسمي بحدود يومية.</p>
                         <div class="concept-tags">
                             <span class="tag">Gemini 3</span>
                             <span class="tag">Groq</span>
@@ -248,7 +248,7 @@
                             <i class="fas fa-plug"></i>
                             <h4>MCP Protocol</h4>
                         </div>
-                        <p>ط¨ط±ظˆطھظˆظƒظˆظ„ ظ…ظˆط­ظ‘ط¯ ظٹط®ظ„ظٹ AI ظٹطھطµظ„ ط¨ط£ظٹ ط£ط¯ط§ط© ط®ط§ط±ط¬ظٹط©. "USB ظ„ظ„ط°ظƒط§ط، ط§ظ„ط§طµط·ظ†ط§ط¹ظٹ".</p>
+                        <p>بروتوكول موحّد يخلي AI يتصل بأي أداة خارجية. "USB للذكاء الاصطناعي".</p>
                         <div class="concept-tags">
                             <span class="tag">GitHub</span>
                             <span class="tag">Filesystem</span>
@@ -260,7 +260,7 @@
                             <i class="fas fa-masks-theater"></i>
                             <h4>Custom Modes</h4>
                         </div>
-                        <p>ط´ط®طµظٹط§طھ ظ…طھط®طµطµط© ظ„ظ„ظ€ AI. ظ„ظƒظ„ ظ…ظ‡ظ…ط© mode ظ…ط®طھظ„ظپ: ظ…ط·ظˆط±طŒ ظ…ط­ظ„ظ„ ط£ظ…ظ†ظٹطŒ ط®ط¨ظٹط± طھط¬ط§ط±ط©.</p>
+                        <p>شخصيات متخصصة للـ AI. لكل مهمة mode مختلف: مطور، محلل أمني، خبير تجارة.</p>
                         <div class="concept-tags">
                             <span class="tag">Cline</span>
                             <span class="tag">Roo Code</span>
@@ -272,7 +272,7 @@
                             <i class="fas fa-graduation-cap"></i>
                             <h4>Skills Library</h4>
                         </div>
-                        <p>ظ‚ط¯ط±ط§طھ ط¬ط§ظ‡ط²ط© ظ…ظ† GitHub ظٹظ…ظƒظ† ظ„ظ„ظ€ AI طھط­ظ…ظٹظ„ظ‡ط§ ظ„ط£ط¯ط§ط، ظ…ظ‡ط§ظ… ظ…ط¹ظٹظ†ط©. ظ…ط¦ط§طھ ط§ظ„ظ…ظ‡ط§ط±ط§طھ.</p>
+                        <p>قدرات جاهزة من GitHub يمكن للـ AI تحميلها لأداء مهام معينة. مئات المهارات.</p>
                         <div class="concept-tags">
                             <span class="tag">PDF</span>
                             <span class="tag">Excel</span>
@@ -284,7 +284,7 @@
                             <i class="fas fa-scroll"></i>
                             <h4>Constitution</h4>
                         </div>
-                        <p>ظ…ظ„ظپ "ط¯ط³طھظˆط±" ظٹط¹ظ„ظ‘ظ… AI ظ…ط¹ط§ظٹظٹط±ظƒ ط§ظ„ط§ط­طھط±ط§ظپظٹط©. ظٹط·ط¨ظ‘ظ‚ظ‡ط§ ظپظٹ ظƒظ„ ظ…ط´ط±ظˆط¹ طھظ„ظ‚ط§ط¦ظٹط§ظ‹.</p>
+                        <p>ملف "دستور" يعلّم AI معاييرك الاحترافية. يطبّقها في كل مشروع تلقائياً.</p>
                         <div class="concept-tags">
                             <span class="tag">Rules</span>
                             <span class="tag">Standards</span>
@@ -298,51 +298,51 @@
             <section class="section animate-fade-in-up" style="animation-delay: 0.4s">
                 <h3 class="section-title">
                     <i class="fas fa-map-signs"></i>
-                    ط±ط­ظ„طھظƒ ظ…ظ† ط§ظ„طµظپط± ط¥ظ„ظ‰ ط§ظ„ط§ط­طھط±ط§ظپ
-                    <span class="section-badge">4 ط£ط³ط§ط¨ظٹط¹</span>
+                    رحلتك من الصفر إلى الاحتراف
+                    <span class="section-badge">4 أسابيع</span>
                 </h3>
                 <div class="journey-timeline">
                     <div class="journey-step">
                         <div class="step-marker">01</div>
                         <div class="step-content">
-                            <h4>ط§ظ„ط£ط³ط¨ظˆط¹ 1: ط§ظ„طھط£ط³ظٹط³</h4>
-                            <p>ظپظˆط±ظ…ط§طھ ط§ظ„ط¬ظ‡ط§ط²طŒ طھط«ط¨ظٹطھ Windows ظ†ط¸ظٹظپطŒ ط§ظ„ط£ط¯ظˆط§طھ ط§ظ„ط£ط³ط§ط³ظٹط©طŒ OllamaطŒ ط§ظ„ظ†ظ…ط§ط°ط¬ ط§ظ„ظ…ط­ظ„ظٹط©.</p>
+                            <h4>الأسبوع 1: التأسيس</h4>
+                            <p>فورمات الجهاز، تثبيت Windows نظيف، الأدوات الأساسية، Ollama، النماذج المحلية.</p>
                             <div class="step-outcome">
                                 <i class="fas fa-trophy"></i>
-                                <span>ط§ظ„ظ†طھظٹط¬ط©: ط¬ظ‡ط§ط² ظ…ط­طھط±ظپ ط¬ط§ظ‡ط² ظ„ظ„ط¹ظ…ظ„</span>
+                                <span>النتيجة: جهاز محترف جاهز للعمل</span>
                             </div>
                         </div>
                     </div>
                     <div class="journey-step">
                         <div class="step-marker">02</div>
                         <div class="step-content">
-                            <h4>ط§ظ„ط£ط³ط¨ظˆط¹ 2: ط§ظ„ظ‚ط¯ط±ط§طھ</h4>
-                            <p>VS Code + ClineطŒ ط§ظ„ظ…ظپط§طھظٹط­ ط§ظ„ط³ط­ط§ط¨ظٹط©طŒ MCPsطŒ ط§ظ„ط£ط¯ظˆط§طھ ط§ظ„ظ…ط³ط§ط¹ط¯ط© (n8n, Open WebUI, Docker).</p>
+                            <h4>الأسبوع 2: القدرات</h4>
+                            <p>VS Code + Cline، المفاتيح السحابية، MCPs، الأدوات المساعدة (n8n, Open WebUI, Docker).</p>
                             <div class="step-outcome">
                                 <i class="fas fa-trophy"></i>
-                                <span>ط§ظ„ظ†طھظٹط¬ط©: ظ…ظ†ط¸ظˆظ…ط© AI ظ…طھظƒط§ظ…ظ„ط© طھط¹ظ…ظ„</span>
+                                <span>النتيجة: منظومة AI متكاملة تعمل</span>
                             </div>
                         </div>
                     </div>
                     <div class="journey-step">
                         <div class="step-marker">03</div>
                         <div class="step-content">
-                            <h4>ط§ظ„ط£ط³ط¨ظˆط¹ 3: ط§ظ„ط§ط­طھط±ط§ظپظٹط©</h4>
-                            <p>ط§ظ„ط¯ط³طھظˆط±طŒ ظ…ط¹ط§ظٹظٹط± ط§ظ„ط£ظ…ط§ظ†طŒ Custom ModesطŒ Skills ظ…ظ† GitHubطŒ ط£ظˆظ„ ظ…ط´ط±ظˆط¹ طھط¬ط±ظٹط¨ظٹ.</p>
+                            <h4>الأسبوع 3: الاحترافية</h4>
+                            <p>الدستور، معايير الأمان، Custom Modes، Skills من GitHub، أول مشروع تجريبي.</p>
                             <div class="step-outcome">
                                 <i class="fas fa-trophy"></i>
-                                <span>ط§ظ„ظ†طھظٹط¬ط©: ظ…ظ†ط¸ظˆظ…ط© ط¨ظ…ط³طھظˆظ‰ Enterprise</span>
+                                <span>النتيجة: منظومة بمستوى Enterprise</span>
                             </div>
                         </div>
                     </div>
                     <div class="journey-step">
                         <div class="step-marker">04</div>
                         <div class="step-content">
-                            <h4>ط§ظ„ط£ط³ط¨ظˆط¹ 4+: ط§ظ„ط¥ظ†طھط§ط¬</h4>
-                            <p>ط£ظˆظ„ ظ…ط´ط±ظˆط¹ ط­ظ‚ظٹظ‚ظٹطŒ ظ…طھط¬ط± ط¥ظ„ظƒطھط±ظˆظ†ظٹطŒ طھط·ط¨ظٹظ‚ ظ…ظˆط¨ط§ظٹظ„طŒ automation workflowsطŒ طھظˆط³ط¹ ظ…ط³طھظ…ط±.</p>
+                            <h4>الأسبوع 4+: الإنتاج</h4>
+                            <p>أول مشروع حقيقي، متجر إلكتروني، تطبيق موبايل، automation workflows، توسع مستمر.</p>
                             <div class="step-outcome">
                                 <i class="fas fa-trophy"></i>
-                                <span>ط§ظ„ظ†طھظٹط¬ط©: ظ…ظ†طھط¬ط§طھ ط­ظ‚ظٹظ‚ظٹط© ط¬ط§ظ‡ط²ط© ظ„ظ„ط¹ظ…ظ„ط§ط،</span>
+                                <span>النتيجة: منتجات حقيقية جاهزة للعملاء</span>
                             </div>
                         </div>
                     </div>
@@ -352,11 +352,11 @@
             <!-- CTA -->
             <section class="section cta-section animate-fade-in-up" style="animation-delay: 0.5s">
                 <div class="cta-content">
-                    <h3>ط¬ط§ظ‡ط² ظ„ظ„ط¨ط¯ط،طں</h3>
-                    <p>ط§ظ„ط±ط­ظ„ط© طھط¨ط¯ط£ ط¨ط®ط·ظˆط© ظˆط§ط­ط¯ط©: طھط¬ظ‡ظٹط² ط§ظ„ط¬ظ‡ط§ط² ط¨ط´ظƒظ„ ط§ط­طھط±ط§ظپظٹ ظ…ظ† ط§ظ„طµظپط±</p>
+                    <h3>جاهز للبدء؟</h3>
+                    <p>الرحلة تبدأ بخطوة واحدة: تجهيز الجهاز بشكل احترافي من الصفر</p>
                     <a href="02-setup.html" class="cta-primary">
                         <i class="fas fa-rocket"></i>
-                        <span>ط§ط¨ط¯ط£ ط§ظ„ظ…ط±ط­ظ„ط© ط§ظ„ط£ظˆظ„ظ‰</span>
+                        <span>ابدأ المرحلة الأولى</span>
                     </a>
                 </div>
             </section>
@@ -366,14 +366,14 @@
                 <a href="../index.html" class="page-nav-btn prev">
                     <i class="fas fa-arrow-right"></i>
                     <div>
-                        <span>ط§ظ„ط³ط§ط¨ظ‚</span>
-                        <strong>ظ„ظˆط­ط© ط§ظ„طھط­ظƒظ…</strong>
+                        <span>السابق</span>
+                        <strong>لوحة التحكم</strong>
                     </div>
                 </a>
                 <a href="02-setup.html" class="page-nav-btn next">
                     <div>
-                        <span>ط§ظ„طھط§ظ„ظٹ</span>
-                        <strong>ط§ظ„ظ…ط±ط­ظ„ط© 1: طھط¬ظ‡ظٹط² ط§ظ„ط¬ظ‡ط§ط²</strong>
+                        <span>التالي</span>
+                        <strong>المرحلة 1: تجهيز الجهاز</strong>
                     </div>
                     <i class="fas fa-arrow-left"></i>
                 </a>

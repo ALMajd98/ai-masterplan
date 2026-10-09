@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ظ‚ط§ط¦ظ…ط© ظپط­طµ ط§ظ„ط£ظ…ط§ظ† ط§ظ„ط´ط§ظ…ظ„ط© (60+ ظپط­طµ) â€” AI Master Plan</title>
+    <title>قائمة فحص الأمان الشاملة (60+ فحص) — AI Master Plan</title>
     <link rel="manifest" href="../manifest.json">
     <link rel="icon" type="image/svg+xml" href="../assets/icons/favicon.svg">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -20,7 +20,7 @@
     </div>
 
     <!-- Floating Sidebar Toggle -->
-    <button class="floating-sidebar-toggle" id="floatingToggle" onclick="toggleSidebar()" aria-label="ظپطھط­ ط§ظ„ظ‚ط§ط¦ظ…ط©">
+    <button class="floating-sidebar-toggle" id="floatingToggle" onclick="toggleSidebar()" aria-label="فتح القائمة">
         <i class="fas fa-bars"></i>
     </button>
 
@@ -37,57 +37,57 @@
                     <span class="logo-subtitle">Plan v4.0</span>
                 </div>
             </a>
-            <button class="sidebar-close" onclick="toggleSidebar()" aria-label="ط¥ط؛ظ„ط§ظ‚"><i class="fas fa-xmark"></i></button>
+            <button class="sidebar-close" onclick="toggleSidebar()" aria-label="إغلاق"><i class="fas fa-xmark"></i></button>
         </div>
 
         <div class="sidebar-search">
             <i class="fas fa-magnifying-glass"></i>
-            <input type="text" placeholder="ط¨ط­ط« ط³ط±ظٹط¹..." id="sidebarSearch" oninput="searchNav(this.value)">
+            <input type="text" placeholder="بحث سريع..." id="sidebarSearch" oninput="searchNav(this.value)">
             <kbd>Ctrl+K</kbd>
         </div>
 
         <div class="sidebar-nav" id="sidebarNav">
             <div class="nav-section">
-                <span class="nav-section-title"><i class="fas fa-circle-dot"></i>  ط§ظ„ط¨ط¯ط§ظٹط©</span>
-                <a href="../index.html" class="nav-link"><i class="fas fa-th-large"></i><span>ظ„ظˆط­ط© ط§ظ„طھط­ظƒظ…</span></a>
-                <a href="01-overview.html" class="nav-link"><i class="fas fa-compass"></i><span>ظ†ط¸ط±ط© ط¹ط§ظ…ط©</span></a>
-                <a href="18-ai-timeline.html" class="nav-link"><i class="fas fa-clock-rotate-left"></i><span>ط£ط­ط¯ط§ط« 2025-2026</span><span class="nav-badge new">ط¬ط¯ظٹط¯</span></a>
+                <span class="nav-section-title"><i class="fas fa-circle-dot"></i>  البداية</span>
+                <a href="../index.html" class="nav-link"><i class="fas fa-th-large"></i><span>لوحة التحكم</span></a>
+                <a href="01-overview.html" class="nav-link"><i class="fas fa-compass"></i><span>نظرة عامة</span></a>
+                <a href="18-ai-timeline.html" class="nav-link"><i class="fas fa-clock-rotate-left"></i><span>أحداث 2025-2026</span><span class="nav-badge new">جديد</span></a>
             </div>
             <div class="nav-section">
-                <span class="nav-section-title"><i class="fas fa-rocket"></i>  ط§ظ„طھط£ط³ظٹط³</span>
-                <a href="02-setup.html" class="nav-link"><i class="fas fa-hard-drive"></i><span>طھط¬ظ‡ظٹط² ط§ظ„ط¬ظ‡ط§ط²</span><span class="nav-badge phase">1</span></a>
-                <a href="03-ai-local.html" class="nav-link"><i class="fas fa-server"></i><span>AI ط§ظ„ظ…ط­ظ„ظٹ</span><span class="nav-badge phase">2</span></a>
-                <a href="04-ai-cloud.html" class="nav-link"><i class="fas fa-cloud"></i><span>AI ط§ظ„ط³ط­ط§ط¨ظٹ</span><span class="nav-badge phase">3</span></a>
+                <span class="nav-section-title"><i class="fas fa-rocket"></i>  التأسيس</span>
+                <a href="02-setup.html" class="nav-link"><i class="fas fa-hard-drive"></i><span>تجهيز الجهاز</span><span class="nav-badge phase">1</span></a>
+                <a href="03-ai-local.html" class="nav-link"><i class="fas fa-server"></i><span>AI المحلي</span><span class="nav-badge phase">2</span></a>
+                <a href="04-ai-cloud.html" class="nav-link"><i class="fas fa-cloud"></i><span>AI السحابي</span><span class="nav-badge phase">3</span></a>
                 <a href="05-vscode.html" class="nav-link"><i class="fas fa-code"></i><span>VS Code + Cline</span><span class="nav-badge phase">4</span></a>
-                <a href="19-ai-tools-compare.html" class="nav-link"><i class="fas fa-scale-balanced"></i><span>ظ…ظ‚ط§ط±ظ†ط© ط§ظ„ط£ط¯ظˆط§طھ</span><span class="nav-badge new">ط¬ط¯ظٹط¯</span></a>
+                <a href="19-ai-tools-compare.html" class="nav-link"><i class="fas fa-scale-balanced"></i><span>مقارنة الأدوات</span><span class="nav-badge new">جديد</span></a>
             </div>
             <div class="nav-section">
-                <span class="nav-section-title"><i class="fas fa-wand-magic-sparkles"></i>  ط§ظ„ظ‚ط¯ط±ط§طھ</span>
+                <span class="nav-section-title"><i class="fas fa-wand-magic-sparkles"></i>  القدرات</span>
                 <a href="06-mcps.html" class="nav-link"><i class="fas fa-plug"></i><span>MCPs</span><span class="nav-badge count">10K+</span></a>
-                <a href="17-mcp-security.html" class="nav-link"><i class="fas fa-shield-virus"></i><span>ط£ظ…ط§ظ† MCP</span><span class="nav-badge new">ط¬ط¯ظٹط¯</span></a>
+                <a href="17-mcp-security.html" class="nav-link"><i class="fas fa-shield-virus"></i><span>أمان MCP</span><span class="nav-badge new">جديد</span></a>
                 <a href="07-modes.html" class="nav-link"><i class="fas fa-masks-theater"></i><span>Custom Modes</span></a>
                 <a href="08-skills.html" class="nav-link"><i class="fas fa-graduation-cap"></i><span>Skills</span></a>
-                <a href="16-multi-agent.html" class="nav-link"><i class="fas fa-users-gear"></i><span>Multi-Agent</span><span class="nav-badge new">ط¬ط¯ظٹط¯</span></a>
+                <a href="16-multi-agent.html" class="nav-link"><i class="fas fa-users-gear"></i><span>Multi-Agent</span><span class="nav-badge new">جديد</span></a>
             </div>
             <div class="nav-section">
-                <span class="nav-section-title"><i class="fas fa-shield-halved"></i>  ط§ظ„ظ…ط¹ط§ظٹظٹط±</span>
-                <a href="09-constitution.html" class="nav-link"><i class="fas fa-scroll"></i><span>ط§ظ„ط¯ط³طھظˆط±</span></a>
-                <a href="10-security.html" class="nav-link active"><i class="fas fa-shield-halved"></i><span>ط§ظ„ط£ظ…ط§ظ†</span><span class="nav-badge count">60+</span></a>
-                <a href="11-performance.html" class="nav-link"><i class="fas fa-gauge-high"></i><span>ط§ظ„ط£ط¯ط§ط، ظˆط§ظ„طھظˆط³ط¹</span></a>
+                <span class="nav-section-title"><i class="fas fa-shield-halved"></i>  المعايير</span>
+                <a href="09-constitution.html" class="nav-link"><i class="fas fa-scroll"></i><span>الدستور</span></a>
+                <a href="10-security.html" class="nav-link active"><i class="fas fa-shield-halved"></i><span>الأمان</span><span class="nav-badge count">60+</span></a>
+                <a href="11-performance.html" class="nav-link"><i class="fas fa-gauge-high"></i><span>الأداء والتوسع</span></a>
             </div>
             <div class="nav-section">
-                <span class="nav-section-title"><i class="fas fa-briefcase"></i>  ط§ظ„طھط®طµطµط§طھ</span>
-                <a href="12-ecommerce.html" class="nav-link"><i class="fas fa-store"></i><span>ط§ظ„طھط¬ط§ط±ط© ط§ظ„ط³ط¹ظˆط¯ظٹط©</span></a>
+                <span class="nav-section-title"><i class="fas fa-briefcase"></i>  التخصصات</span>
+                <a href="12-ecommerce.html" class="nav-link"><i class="fas fa-store"></i><span>التجارة السعودية</span></a>
                 <a href="13-techstack.html" class="nav-link"><i class="fas fa-layer-group"></i><span>Tech Stack</span></a>
-                <a href="14-workflow.html" class="nav-link"><i class="fas fa-route"></i><span>ط®ط·ظˆط§طھ ط§ظ„ط¹ظ…ظ„</span></a>
-                <a href="15-resources.html" class="nav-link"><i class="fas fa-book-open"></i><span>ط§ظ„ظ…طµط§ط¯ط±</span></a>
+                <a href="14-workflow.html" class="nav-link"><i class="fas fa-route"></i><span>خطوات العمل</span></a>
+                <a href="15-resources.html" class="nav-link"><i class="fas fa-book-open"></i><span>المصادر</span></a>
             </div>
         </div>
 
         <div class="sidebar-footer">
             <div class="version-info">
                 <i class="fas fa-code-branch"></i>
-                <span>v4.0 â€” ط³ط¨طھظ…ط¨ط± 2026</span>
+                <span>v4.0 — سبتمبر 2026</span>
             </div>
         </div>
     </nav>
@@ -99,13 +99,13 @@
             <div class="topbar-title">
                 <div class="topbar-breadcrumb">
                     <i class="fas fa-home"></i>
-                    <span>ط§ظ„ط±ط¦ظٹط³ظٹط© / ط§ظ„ظ…ط¹ط§ظٹظٹط± / ط§ظ„ط£ظ…ط§ظ†</span>
+                    <span>الرئيسية / المعايير / الأمان</span>
                 </div>
-                <h1>ظ‚ط§ط¦ظ…ط© ظپط­طµ ط§ظ„ط£ظ…ط§ظ† (60+)</h1>
+                <h1>قائمة فحص الأمان (60+)</h1>
             </div>
             <div class="topbar-actions">
-                <button class="topbar-btn" onclick="scrollToTop()" title="ظ„ظ„ط£ط¹ظ„ظ‰"><i class="fas fa-arrow-up"></i></button>
-                <button class="theme-toggle" onclick="toggleTheme()" title="طھط¨ط¯ظٹظ„ ط§ظ„ظˆط¶ط¹"><i class="fas fa-moon" id="themeIcon"></i></button>
+                <button class="topbar-btn" onclick="scrollToTop()" title="للأعلى"><i class="fas fa-arrow-up"></i></button>
+                <button class="theme-toggle" onclick="toggleTheme()" title="تبديل الوضع"><i class="fas fa-moon" id="themeIcon"></i></button>
             </div>
         </header>
 
@@ -119,11 +119,11 @@
                         OWASP 2025 + Saudi Compliance
                     </div>
                     <h2 class="hero-title">
-                        <span class="gradient-text">ط§ظ„ط­ظ…ط§ظٹط© ظˆط§ظ„طھط¯ظ‚ظٹظ‚ ط§ظ„ط£ظ…ظ†ظٹ</span>
+                        <span class="gradient-text">الحماية والتدقيق الأمني</span>
                     </h2>
                     <p class="hero-description">
-                        ظپط­طµ ط§ظ„ظƒظˆط¯ ظˆط§ظ„طھط­ظ‚ظ‚ ظ…ظ† ط³ظ„ط§ظ…ط© ط§ظ„ط¨ظ†ظٹط© ط§ظ„طھط­طھظٹط© ط§ظ„ط¨ط±ظ…ط¬ظٹط© ط¶ط¯ ط«ط؛ط±ط§طھ <strong class="hero-highlight">OWASP Top 10 (2025)</strong>طŒ
-                        ط¨ظ…ط§ ظٹط´ظ…ظ„ ط¨ط±ظˆطھظˆظƒظˆظ„ط§طھ ط­ظ…ط§ظٹط© ط£ط³ط±ط§ط± ط§ظ„ط®ط§ط¯ظ…طŒ ط­ط¸ط± ظ‡ط¬ظ…ط§طھ ط§ظ„ط­ظ‚ظ†طŒ ظˆطھط·ط¨ظٹظ‚ ظ…ط¹ط§ظٹظٹط± طھط´ظپظٹط± ط¯ظپط¹ ط§ظ„طھط¬ط§ط±ط© ط§ظ„ط¥ظ„ظƒطھط±ظˆظ†ظٹط© ط§ظ„ط³ط¹ظˆط¯ظٹط©.
+                        فحص الكود والتحقق من سلامة البنية التحتية البرمجية ضد ثغرات <strong class="hero-highlight">OWASP Top 10 (2025)</strong>،
+                        بما يشمل بروتوكولات حماية أسرار الخادم، حظر هجمات الحقن، وتطبيق معايير تشفير دفع التجارة الإلكترونية السعودية.
                     </p>
                 </div>
             </section>
@@ -132,8 +132,8 @@
             <div class="alert alert-info animate-fade-in-up" style="animation-delay: 0.1s">
                 <i class="fas fa-circle-info"></i>
                 <div>
-                    <h4>طھظˆط¬ظٹظ‡ ط§ظ„ط­ظپط¸ ظˆط§ظ„ط­ط¸ط± ط§ظ„ط£ظ…ظ†ظٹ</h4>
-                    <p>ظ‚ظ… ط¨ط­ظپط¸ ظ‡ط°ط§ ط§ظ„ظ…ظ„ظپ ظ„ظٹظƒظˆظ† ظ…ط±ط¬ط¹ط§ظ‹ طµط§ط±ظ…ط§ظ‹ ظ„ظ„ظ€ AI ظپظٹ ط§ظ„ظ…ط³ط§ط± ط§ظ„طھط§ظ„ظٹ: <code>D:\Projects\AI-Workspace\.clinerules\standards\security-checklist.md</code></p>
+                    <h4>توجيه الحفظ والحظر الأمني</h4>
+                    <p>قم بحفظ هذا الملف ليكون مرجعاً صارماً للـ AI في المسار التالي: <code>D:\Projects\AI-Workspace\.clinerules\standards\security-checklist.md</code></p>
                 </div>
             </div>
 
@@ -141,49 +141,49 @@
             <section class="section animate-fade-in-up" style="animation-delay: 0.2s">
                 <h3 class="section-title">
                     <i class="fas fa-fingerprint"></i>
-                    1. ط§ظ„ظ…طµط§ط¯ظ‚ط© ظˆطھط£ظ…ظٹظ† ط§ظ„ط­ط³ط§ط¨ط§طھ (Authentication & Access)
-                    <span class="section-badge">12 ظپط­طµط§ظ‹</span>
+                    1. المصادقة وتأمين الحسابات (Authentication & Access)
+                    <span class="section-badge">12 فحصاً</span>
                 </h3>
                 <div class="checklist">
                     <label class="check-item">
                         <input type="checkbox">
                         <span class="task-check"><i class="fas fa-check"></i></span>
-                        <span class="task-text">طھط´ظپظٹط± ظƒظ„ظ…ط§طھ ط§ظ„ظ…ط±ظˆط± ط¥ط¬ط¨ط§ط±ظٹط§ظ‹ ط¨ط§ط³طھط®ط¯ط§ظ… Argon2 ط£ظˆ bcrypt ظ…ط¹ salt ط¨ظ€ 12 ط¯ظˆط±ط© ط¹ظ„ظ‰ ط§ظ„ط£ظ‚ظ„.</span>
+                        <span class="task-text">تشفير كلمات المرور إجبارياً باستخدام Argon2 أو bcrypt مع salt بـ 12 دورة على الأقل.</span>
                     </label>
                     <label class="check-item">
                         <input type="checkbox">
                         <span class="task-check"><i class="fas fa-check"></i></span>
-                        <span class="task-text">ظپط±ط¶ ط´ط±ظˆط· طµط§ط±ظ…ط© ظ„ظƒظ„ظ…ط§طھ ط§ظ„ظ…ط±ظˆط± (ط­ط±ظˆظپ ظƒط¨ظٹط±ط© ظˆطµط؛ظٹط±ط©طŒ ط£ط±ظ‚ط§ظ…طŒ ط±ظ…ظˆط²طŒ ظ„ط§ طھظ‚ظ„ ط¹ظ† 12 ط®ط§ظ†ط©).</span>
+                        <span class="task-text">فرض شروط صارمة لكلمات المرور (حروف كبيرة وصغيرة، أرقام، رموز، لا تقل عن 12 خانة).</span>
                     </label>
                     <label class="check-item">
                         <input type="checkbox">
                         <span class="task-check"><i class="fas fa-check"></i></span>
-                        <span class="task-text">ط¥ط¬ط¨ط§ط± ط§ظ„ظ…ط³طھط®ط¯ظ… ط¹ظ„ظ‰ طھظپط¹ظٹظ„ ط§ظ„ط­ط³ط§ط¨ ظˆط§ظ„طھط­ظ‚ظ‚ ظ…ظ† ط¨ط±ظٹط¯ظ‡ ط§ظ„ط¥ظ„ظƒطھط±ظˆظ†ظٹ (Email Verification) ظ‚ط¨ظ„ ظ…ظ†ط­ظ‡ ظˆطµظˆظ„ط§ظ‹ ظ„ظ„ظ…ظ„ظپط§طھ.</span>
+                        <span class="task-text">إجبار المستخدم على تفعيل الحساب والتحقق من بريده الإلكتروني (Email Verification) قبل منحه وصولاً للملفات.</span>
                     </label>
                     <label class="check-item">
                         <input type="checkbox">
                         <span class="task-check"><i class="fas fa-check"></i></span>
-                        <span class="task-text">ط­ط¸ط± ط§ظ„ط­ط³ط§ط¨ ظ…ط¤ظ‚طھط§ظ‹ (Lockout) ظ„ظ…ط¯ط© 15 ط¯ظ‚ظٹظ‚ط© ط¨ط¹ط¯ طھط³ط¬ظٹظ„ 5 ظ…ط­ط§ظˆظ„ط§طھ ط¯ط®ظˆظ„ ط®ط§ط·ط¦ط© ظ…طھطھط§ظ„ظٹط© ظ…ظ† ظ†ظپط³ ط§ظ„ط¹ظ†ظˆط§ظ†.</span>
+                        <span class="task-text">حظر الحساب مؤقتاً (Lockout) لمدة 15 دقيقة بعد تسجيل 5 محاولات دخول خاطئة متتالية من نفس العنوان.</span>
                     </label>
                     <label class="check-item">
                         <input type="checkbox">
                         <span class="task-check"><i class="fas fa-check"></i></span>
-                        <span class="task-text">ظپط±ط¶ ط§ظ„طھط­ظ‚ظ‚ ط¨ط®ط·ظˆطھظٹظ† (2FA / MFA) ظƒط®ظٹط§ط± طھط£ظ…ظٹظ†ظٹ ط£ط³ط§ط³ظٹ ظپظٹ ظ„ظˆط­ط© ط§ظ„ظ…ط³طھط®ط¯ظ….</span>
+                        <span class="task-text">فرض التحقق بخطوتين (2FA / MFA) كخيار تأميني أساسي في لوحة المستخدم.</span>
                     </label>
                     <label class="check-item">
                         <input type="checkbox">
                         <span class="task-check"><i class="fas fa-check"></i></span>
-                        <span class="task-text">طھط£ظ…ظٹظ† ط±ظˆط§ط¨ط· ط§ط³طھط¹ط§ط¯ط© ظƒظ„ظ…ط© ط§ظ„ظ…ط±ظˆط± ط¨ط±ظ…ط² ط³ط±ظٹ ط°ظˆ طµظ„ط§ط­ظٹط© ظ‚طµظٹط±ط© ط¬ط¯ط§ظ‹ (ظ„ط§ طھطھط¬ط§ظˆط² 15 ط¯ظ‚ظٹظ‚ط©) ظˆطھظڈط³طھط®ط¯ظ… ظ„ظ…ط±ط© ظˆط§ط­ط¯ط© ظپظ‚ط·.</span>
+                        <span class="task-text">تأمين روابط استعادة كلمة المرور برمز سري ذو صلاحية قصيرة جداً (لا تتجاوز 15 دقيقة) وتُستخدم لمرة واحدة فقط.</span>
                     </label>
                     <label class="check-item">
                         <input type="checkbox">
                         <span class="task-check"><i class="fas fa-check"></i></span>
-                        <span class="task-text">ط¥ظ„ط؛ط§ط، ظˆطھط¯ظ…ظٹط± ظƒط§ظپط© ط¬ظ„ط³ط§طھ ط§ظ„ط§طھطµط§ظ„ ط§ظ„ظ†ط´ط·ط© ظپظˆط± ظ‚ظٹط§ظ… ط§ظ„ظ…ط³طھط®ط¯ظ… ط¨طھط؛ظٹظٹط± ظƒظ„ظ…ط© ط§ظ„ظ…ط±ظˆط± ط§ظ„ط®ط§طµط© ط¨ظ‡.</span>
+                        <span class="task-text">إلغاء وتدمير كافة جلسات الاتصال النشطة فور قيام المستخدم بتغيير كلمة المرور الخاصة به.</span>
                     </label>
                     <label class="check-item">
                         <input type="checkbox">
                         <span class="task-check"><i class="fas fa-check"></i></span>
-                        <span class="task-text">ط¯ط¹ظ… طھط³ط¬ظٹظ„ ط§ظ„ط¯ط®ظˆظ„ ط§ظ„ظ„ط§ط±ظ‚ظ…ظٹ ط§ظ„ط­ط¯ظٹط« (Passkeys / WebAuthn) ظ„طھط¹ط²ظٹط² طھط¬ط±ط¨ط© ط§ظ„ظ…ط³طھط®ط¯ظ… ظˆط£ظ…ظ† ط§ظ„ط£ط¬ظ‡ط²ط©.</span>
+                        <span class="task-text">دعم تسجيل الدخول اللارقمي الحديث (Passkeys / WebAuthn) لتعزيز تجربة المستخدم وأمن الأجهزة.</span>
                     </label>
                 </div>
             </section>
@@ -192,34 +192,34 @@
             <section class="section animate-fade-in-up" style="animation-delay: 0.3s">
                 <h3 class="section-title">
                     <i class="fas fa-key"></i>
-                    2. طھط£ظ…ظٹظ† ط§ظ„ط¬ظ„ط³ط§طھ ظˆطھط¯ط§ظˆظ„ ط§ظ„ط±ظ…ظˆط² (Session Management)
-                    <span class="section-badge">10 ظپط­ظˆطµط§طھ</span>
+                    2. تأمين الجلسات وتداول الرموز (Session Management)
+                    <span class="section-badge">10 فحوصات</span>
                 </h3>
                 <div class="checklist">
                     <label class="check-item">
                         <input type="checkbox">
                         <span class="task-check"><i class="fas fa-check"></i></span>
-                        <span class="task-text">ط­ط¸ط± طھط®ط²ظٹظ† ط±ظ…ظˆط² ط§ظ„ظˆطµظˆظ„ ط§ظ„ط­ط³ط§ط³ط© (Access Tokens / JWT) ظپظٹ LocalStorage ظ†ظ‡ط§ط¦ظٹط§ظ‹.</span>
+                        <span class="task-text">حظر تخزين رموز الوصول الحساسة (Access Tokens / JWT) في LocalStorage نهائياً.</span>
                     </label>
                     <label class="check-item">
                         <input type="checkbox">
                         <span class="task-check"><i class="fas fa-check"></i></span>
-                        <span class="task-text">ط­ظپط¸ ط±ظ…ظˆط² ط§ظ„ط¬ظ„ط³ط§طھ ظپظٹ ظ…ظ„ظپط§طھ طھط¹ط±ظٹظپ ط§ط±طھط¨ط§ط· (httpOnly Cookies) طھظ…ظ†ط¹ ظ‚ط±ط§ط،طھظ‡ط§ ط¨ط±ظ…ط¬ظٹط§ظ‹ ظ…ظ† ط§ظ„ظپط±ظˆظ†طھ ط¥ظ†ط¯.</span>
+                        <span class="task-text">حفظ رموز الجلسات في ملفات تعريف ارتباط (httpOnly Cookies) تمنع قراءتها برمجياً من الفرونت إند.</span>
                     </label>
                     <label class="check-item">
                         <input type="checkbox">
                         <span class="task-check"><i class="fas fa-check"></i></span>
-                        <span class="task-text">طھظپط¹ظٹظ„ ط³ظ…ط© `Secure` ظ„ظ…ظ„ظپط§طھ طھط¹ط±ظٹظپ ط§ظ„ط§ط±طھط¨ط§ط· ظ„ط¶ظ…ط§ظ† ظ†ظ‚ظ„ظ‡ط§ ظ…ط´ظپط±ط© ط­طµط±ط§ظ‹ ط¹ط¨ط± ط¨ط±ظˆطھظˆظƒظˆظ„ HTTPS.</span>
+                        <span class="task-text">تفعيل سمة `Secure` لملفات تعريف الارتباط لضمان نقلها مشفرة حصراً عبر بروتوكول HTTPS.</span>
                     </label>
                     <label class="check-item">
                         <input type="checkbox">
                         <span class="task-check"><i class="fas fa-check"></i></span>
-                        <span class="task-text">طھط·ط¨ظٹظ‚ ظ‚ظٹظˆط¯ `SameSite=Strict` ظ„طµط¯ ظ‡ط¬ظ…ط§طھ طھط²ظˆظٹط± ط§ظ„ط·ظ„ط¨ط§طھ ط¹ط¨ط± ط§ظ„ظ…ظˆط§ظ‚ط¹ (CSRF).</span>
+                        <span class="task-text">تطبيق قيود `SameSite=Strict` لصد هجمات تزوير الطلبات عبر المواقع (CSRF).</span>
                     </label>
                     <label class="check-item">
                         <input type="checkbox">
                         <span class="task-check"><i class="fas fa-check"></i></span>
-                        <span class="task-text">طھط­ط¯ظٹط¯ طµظ„ط§ط­ظٹط© ط±ظ…ظˆط² ط§ظ„ط¬ظ„ط³ط§طھ ط¨ط­ط¯ ط£ظ‚طµظ‰ 15 ط¯ظ‚ظٹظ‚ط©طŒ ظˆط§ط³طھط®ط¯ط§ظ… Refresh Tokens ظٹطھظ… طھط¬ط¯ظٹط¯ظ‡ط§ ظپظٹ ظƒظ„ ط¹ظ…ظ„ظٹط© طھط­ظ‚ظ‚.</span>
+                        <span class="task-text">تحديد صلاحية رموز الجلسات بحد أقصى 15 دقيقة، واستخدام Refresh Tokens يتم تجديدها في كل عملية تحقق.</span>
                     </label>
                 </div>
             </section>
@@ -228,29 +228,29 @@
             <section class="section animate-fade-in-up" style="animation-delay: 0.4s">
                 <h3 class="section-title">
                     <i class="fas fa-filter"></i>
-                    3. طµط¯ ظ‡ط¬ظ…ط§طھ ط§ظ„ط­ظ‚ظ† ظˆط­ظ‚ظ† ط§ظ„ط£ظˆط§ظ…ط± (Injection & Validation)
+                    3. صد هجمات الحقن وحقن الأوامر (Injection & Validation)
                     <span class="section-badge font-mono">OWASP A03</span>
                 </h3>
                 <div class="checklist">
                     <label class="check-item">
                         <input type="checkbox">
                         <span class="task-check"><i class="fas fa-check"></i></span>
-                        <span class="task-text">ط­ط¸ط± ط¯ظ…ط¬ ط§ظ„ظ†طµظˆطµ ط§ظ„ظ…ط¨ط§ط´ط± ظ„ط¨ظ†ط§ط، ط§ط³طھط¹ظ„ط§ظ…ط§طھ SQLط› ط§ظ„ط§ط¹طھظ…ط§ط¯ ط§ظ„ظ…ط·ظ„ظ‚ ط¹ظ„ظ‰ Parameterized Queries.</span>
+                        <span class="task-text">حظر دمج النصوص المباشر لبناء استعلامات SQL؛ الاعتماد المطلق على Parameterized Queries.</span>
                     </label>
                     <label class="check-item">
                         <input type="checkbox">
                         <span class="task-check"><i class="fas fa-check"></i></span>
-                        <span class="task-text">ظپظ„طھط±ط© ظˆطھط·ظ‡ظٹط± ظƒط§ظپط© ظ…ط¯ط®ظ„ط§طھ ط§ظ„ظ…ط³طھط®ط¯ظ… ظ‚ط¨ظ„ ظ…ط¹ط§ظ„ط¬طھظ‡ط§ (Sanitization using DOMPurify).</span>
+                        <span class="task-text">فلترة وتطهير كافة مدخلات المستخدم قبل معالجتها (Sanitization using DOMPurify).</span>
                     </label>
                     <label class="check-item">
                         <input type="checkbox">
                         <span class="task-check"><i class="fas fa-check"></i></span>
-                        <span class="task-text">ط§ظ„طھط­ظ‚ظ‚ ط§ظ„ظ‡ظٹظƒظ„ظٹ ظ…ظ† طµط­ط© ط§ظ„ط¨ظٹط§ظ†ط§طھ ط¨ط§ط³طھط®ط¯ط§ظ… ظ…ط®ط·ط·ط§طھ طµط§ط±ظ…ط© ظ…ط«ظ„ (Zod Schema Validation) ظپظٹ ط·ط¨ظ‚ط© ط§ظ„ط®ط§ط¯ظ….</span>
+                        <span class="task-text">التحقق الهيكلي من صحة البيانات باستخدام مخططات صارمة مثل (Zod Schema Validation) في طبقة الخادم.</span>
                     </label>
                     <label class="check-item">
                         <input type="checkbox">
                         <span class="task-check"><i class="fas fa-check"></i></span>
-                        <span class="task-text">ظ…ظ†ط¹ طھظ…ط±ظٹط± ط¨ظٹط§ظ†ط§طھ ط§ظ„ظ…ط³طھط®ط¯ظ…ظٹظ† ظ…ط¨ط§ط´ط±ط© ظ„ط£ظˆط§ظ…ط± ظ†ط¸ط§ظ… ط§ظ„طھط´ط؛ظٹظ„ (OS Command Injection Prevention).</span>
+                        <span class="task-text">منع تمرير بيانات المستخدمين مباشرة لأوامر نظام التشغيل (OS Command Injection Prevention).</span>
                     </label>
                 </div>
             </section>
@@ -259,24 +259,24 @@
             <section class="section animate-fade-in-up" style="animation-delay: 0.5s">
                 <h3 class="section-title">
                     <i class="fas fa-robot"></i>
-                    4. ط£ظ…ط§ظ† ط§ظ„طھط·ط¨ظٹظ‚ط§طھ ط§ظ„ظ…ط¯ط¹ظˆظ…ط© ط¨ط§ظ„ط°ظƒط§ط، ط§ظ„ط§طµط·ظ†ط§ط¹ظٹ (Prompt Injection Shield)
-                    <span class="section-badge new">ط­ط¯ظٹط« 2026</span>
+                    4. أمان التطبيقات المدعومة بالذكاء الاصطناعي (Prompt Injection Shield)
+                    <span class="section-badge new">حديث 2026</span>
                 </h3>
                 <div class="checklist">
                     <label class="check-item">
                         <input type="checkbox">
                         <span class="task-check"><i class="fas fa-check"></i></span>
-                        <span class="task-text">طھط·ظ‡ظٹط± ظ…ط¯ط®ظ„ط§طھ ط§ظ„ظ…ط³طھط®ط¯ظ…ظٹظ† (Prompts) ظ„ظ…ظ†ط¹ طھط¯ط§ط®ظ„ ظˆظپطµظ„ ط§ظ„ط£ظˆط§ظ…ط± ط§ظ„طھط´ط؛ظٹظ„ظٹط© ط¹ظ† ظ…ط¯ط®ظ„ط§طھ ط§ظ„ط¨ظٹط§ظ†ط§طھ (Indirect Prompt Injection).</span>
+                        <span class="task-text">تطهير مدخلات المستخدمين (Prompts) لمنع تداخل وفصل الأوامر التشغيلية عن مدخلات البيانات (Indirect Prompt Injection).</span>
                     </label>
                     <label class="check-item">
                         <input type="checkbox">
                         <span class="task-check"><i class="fas fa-check"></i></span>
-                        <span class="task-text">ط­ط¸ط± ط¥طھط§ط­ط© طµظ„ط§ط­ظٹط§طھ ط§ظ„ظ†ط¸ط§ظ… ط§ظ„ظ…ظپطھظˆط­ط© ظ„ظ„ظ€ LLMط› طھظ‚ظٹظٹط¯ طھظˆط§طµظ„ ط§ظ„ظ†ظ…ط§ط°ط¬ ط¨ظ‚ظˆط§ط¹ط¯ ط¨ظٹط§ظ†ط§طھ ظˆظ‚ظ†ظˆط§طھ ظ…ط­ط¯ظˆط¯ط© ط¬ط¯ط§ظ‹.</span>
+                        <span class="task-text">حظر إتاحة صلاحيات النظام المفتوحة للـ LLM؛ تقييد تواصل النماذج بقواعد بيانات وقنوات محدودة جداً.</span>
                     </label>
                     <label class="check-item">
                         <input type="checkbox">
                         <span class="task-check"><i class="fas fa-check"></i></span>
-                        <span class="task-text">طھظپط¹ظٹظ„ ط§ظ„ط±ظ‚ط§ط¨ط© ط§ظ„ط«ظ†ط§ط¦ظٹط© (Dual-LLM Guardrail) ظ„ظ…ط±ط§ط¬ط¹ط© ظ…ط®ط±ط¬ط§طھ ط§ظ„ظ†ظ…ظˆط°ط¬ ظˆط§ظ„طھط£ظƒط¯ ظ…ظ† ط®ظ„ظˆظ‡ط§ ظ…ظ† ط§ظ„ط£ظˆط§ظ…ط± ظˆط§ظ„ط¨ظٹط§ظ†ط§طھ ط§ظ„ط¶ط§ط±ط©.</span>
+                        <span class="task-text">تفعيل الرقابة الثنائية (Dual-LLM Guardrail) لمراجعة مخرجات النموذج والتأكد من خلوها من الأوامر والبيانات الضارة.</span>
                     </label>
                 </div>
             </section>
@@ -286,14 +286,14 @@
                 <a href="09-constitution.html" class="page-nav-btn prev">
                     <i class="fas fa-arrow-right"></i>
                     <div>
-                        <span>ط§ظ„ط³ط§ط¨ظ‚</span>
-                        <strong>ط§ظ„ط¯ط³طھظˆط± ط§ظ„ط¨ط±ظ…ط¬ظٹ</strong>
+                        <span>السابق</span>
+                        <strong>الدستور البرمجي</strong>
                     </div>
                 </a>
                 <a href="17-mcp-security.html" class="page-nav-btn next">
                     <div>
-                        <span>ط§ظ„طھط§ظ„ظٹ</span>
-                        <strong>ط£ظ…ط§ظ† ط¨ط±ظˆطھظˆظƒظˆظ„ ط§ظ„ظ€ MCP</strong>
+                        <span>التالي</span>
+                        <strong>أمان بروتوكول الـ MCP</strong>
                     </div>
                     <i class="fas fa-arrow-left"></i>
                 </a>

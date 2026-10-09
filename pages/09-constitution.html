@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ط§ظ„ط¯ط³طھظˆط± ط§ظ„ط¨ط±ظ…ط¬ظٹ â€” AI Master Plan</title>
+    <title>الدستور البرمجي — AI Master Plan</title>
     <link rel="manifest" href="../manifest.json">
     <link rel="icon" type="image/svg+xml" href="../assets/icons/favicon.svg">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -21,7 +21,7 @@
     </div>
 
     <!-- Floating Sidebar Toggle -->
-    <button class="floating-sidebar-toggle" id="floatingToggle" onclick="toggleSidebar()" aria-label="ظپطھط­ ط§ظ„ظ‚ط§ط¦ظ…ط©">
+    <button class="floating-sidebar-toggle" id="floatingToggle" onclick="toggleSidebar()" aria-label="فتح القائمة">
         <i class="fas fa-bars"></i>
     </button>
 
@@ -38,57 +38,57 @@
                     <span class="logo-subtitle">Plan v4.0</span>
                 </div>
             </a>
-            <button class="sidebar-close" onclick="toggleSidebar()" aria-label="ط¥ط؛ظ„ط§ظ‚"><i class="fas fa-xmark"></i></button>
+            <button class="sidebar-close" onclick="toggleSidebar()" aria-label="إغلاق"><i class="fas fa-xmark"></i></button>
         </div>
 
         <div class="sidebar-search">
             <i class="fas fa-magnifying-glass"></i>
-            <input type="text" placeholder="ط¨ط­ط« ط³ط±ظٹط¹..." id="sidebarSearch" oninput="searchNav(this.value)">
+            <input type="text" placeholder="بحث سريع..." id="sidebarSearch" oninput="searchNav(this.value)">
             <kbd>Ctrl+K</kbd>
         </div>
 
         <div class="sidebar-nav" id="sidebarNav">
             <div class="nav-section">
-                <span class="nav-section-title"><i class="fas fa-circle-dot"></i>  ط§ظ„ط¨ط¯ط§ظٹط©</span>
-                <a href="../index.html" class="nav-link"><i class="fas fa-th-large"></i><span>ظ„ظˆط­ط© ط§ظ„طھط­ظƒظ…</span></a>
-                <a href="01-overview.html" class="nav-link"><i class="fas fa-compass"></i><span>ظ†ط¸ط±ط© ط¹ط§ظ…ط©</span></a>
-                <a href="18-ai-timeline.html" class="nav-link"><i class="fas fa-clock-rotate-left"></i><span>ط£ط­ط¯ط§ط« 2025-2026</span><span class="nav-badge new">ط¬ط¯ظٹط¯</span></a>
+                <span class="nav-section-title"><i class="fas fa-circle-dot"></i>  البداية</span>
+                <a href="../index.html" class="nav-link"><i class="fas fa-th-large"></i><span>لوحة التحكم</span></a>
+                <a href="01-overview.html" class="nav-link"><i class="fas fa-compass"></i><span>نظرة عامة</span></a>
+                <a href="18-ai-timeline.html" class="nav-link"><i class="fas fa-clock-rotate-left"></i><span>أحداث 2025-2026</span><span class="nav-badge new">جديد</span></a>
             </div>
             <div class="nav-section">
-                <span class="nav-section-title"><i class="fas fa-rocket"></i>  ط§ظ„طھط£ط³ظٹط³</span>
-                <a href="02-setup.html" class="nav-link"><i class="fas fa-hard-drive"></i><span>طھط¬ظ‡ظٹط² ط§ظ„ط¬ظ‡ط§ط²</span><span class="nav-badge phase">1</span></a>
-                <a href="03-ai-local.html" class="nav-link"><i class="fas fa-server"></i><span>AI ط§ظ„ظ…ط­ظ„ظٹ</span><span class="nav-badge phase">2</span></a>
-                <a href="04-ai-cloud.html" class="nav-link"><i class="fas fa-cloud"></i><span>AI ط§ظ„ط³ط­ط§ط¨ظٹ</span><span class="nav-badge phase">3</span></a>
+                <span class="nav-section-title"><i class="fas fa-rocket"></i>  التأسيس</span>
+                <a href="02-setup.html" class="nav-link"><i class="fas fa-hard-drive"></i><span>تجهيز الجهاز</span><span class="nav-badge phase">1</span></a>
+                <a href="03-ai-local.html" class="nav-link"><i class="fas fa-server"></i><span>AI المحلي</span><span class="nav-badge phase">2</span></a>
+                <a href="04-ai-cloud.html" class="nav-link"><i class="fas fa-cloud"></i><span>AI السحابي</span><span class="nav-badge phase">3</span></a>
                 <a href="05-vscode.html" class="nav-link"><i class="fas fa-code"></i><span>VS Code + Cline</span><span class="nav-badge phase">4</span></a>
-                <a href="19-ai-tools-compare.html" class="nav-link"><i class="fas fa-scale-balanced"></i><span>ظ…ظ‚ط§ط±ظ†ط© ط§ظ„ط£ط¯ظˆط§طھ</span><span class="nav-badge new">ط¬ط¯ظٹط¯</span></a>
+                <a href="19-ai-tools-compare.html" class="nav-link"><i class="fas fa-scale-balanced"></i><span>مقارنة الأدوات</span><span class="nav-badge new">جديد</span></a>
             </div>
             <div class="nav-section">
-                <span class="nav-section-title"><i class="fas fa-wand-magic-sparkles"></i>  ط§ظ„ظ‚ط¯ط±ط§طھ</span>
+                <span class="nav-section-title"><i class="fas fa-wand-magic-sparkles"></i>  القدرات</span>
                 <a href="06-mcps.html" class="nav-link"><i class="fas fa-plug"></i><span>MCPs</span><span class="nav-badge count">10K+</span></a>
-                <a href="17-mcp-security.html" class="nav-link"><i class="fas fa-shield-virus"></i><span>ط£ظ…ط§ظ† MCP</span><span class="nav-badge new">ط¬ط¯ظٹط¯</span></a>
+                <a href="17-mcp-security.html" class="nav-link"><i class="fas fa-shield-virus"></i><span>أمان MCP</span><span class="nav-badge new">جديد</span></a>
                 <a href="07-modes.html" class="nav-link"><i class="fas fa-masks-theater"></i><span>Custom Modes</span></a>
                 <a href="08-skills.html" class="nav-link"><i class="fas fa-graduation-cap"></i><span>Skills</span></a>
-                <a href="16-multi-agent.html" class="nav-link"><i class="fas fa-users-gear"></i><span>Multi-Agent</span><span class="nav-badge new">ط¬ط¯ظٹط¯</span></a>
+                <a href="16-multi-agent.html" class="nav-link"><i class="fas fa-users-gear"></i><span>Multi-Agent</span><span class="nav-badge new">جديد</span></a>
             </div>
             <div class="nav-section">
-                <span class="nav-section-title"><i class="fas fa-shield-halved"></i>  ط§ظ„ظ…ط¹ط§ظٹظٹط±</span>
-                <a href="09-constitution.html" class="nav-link active"><i class="fas fa-scroll"></i><span>ط§ظ„ط¯ط³طھظˆط±</span></a>
-                <a href="10-security.html" class="nav-link"><i class="fas fa-shield-halved"></i><span>ط§ظ„ط£ظ…ط§ظ†</span><span class="nav-badge count">60+</span></a>
-                <a href="11-performance.html" class="nav-link"><i class="fas fa-gauge-high"></i><span>ط§ظ„ط£ط¯ط§ط، ظˆط§ظ„طھظˆط³ط¹</span></a>
+                <span class="nav-section-title"><i class="fas fa-shield-halved"></i>  المعايير</span>
+                <a href="09-constitution.html" class="nav-link active"><i class="fas fa-scroll"></i><span>الدستور</span></a>
+                <a href="10-security.html" class="nav-link"><i class="fas fa-shield-halved"></i><span>الأمان</span><span class="nav-badge count">60+</span></a>
+                <a href="11-performance.html" class="nav-link"><i class="fas fa-gauge-high"></i><span>الأداء والتوسع</span></a>
             </div>
             <div class="nav-section">
-                <span class="nav-section-title"><i class="fas fa-briefcase"></i>  ط§ظ„طھط®طµطµط§طھ</span>
-                <a href="12-ecommerce.html" class="nav-link"><i class="fas fa-store"></i><span>ط§ظ„طھط¬ط§ط±ط© ط§ظ„ط³ط¹ظˆط¯ظٹط©</span></a>
+                <span class="nav-section-title"><i class="fas fa-briefcase"></i>  التخصصات</span>
+                <a href="12-ecommerce.html" class="nav-link"><i class="fas fa-store"></i><span>التجارة السعودية</span></a>
                 <a href="13-techstack.html" class="nav-link"><i class="fas fa-layer-group"></i><span>Tech Stack</span></a>
-                <a href="14-workflow.html" class="nav-link"><i class="fas fa-route"></i><span>ط®ط·ظˆط§طھ ط§ظ„ط¹ظ…ظ„</span></a>
-                <a href="15-resources.html" class="nav-link"><i class="fas fa-book-open"></i><span>ط§ظ„ظ…طµط§ط¯ط±</span></a>
+                <a href="14-workflow.html" class="nav-link"><i class="fas fa-route"></i><span>خطوات العمل</span></a>
+                <a href="15-resources.html" class="nav-link"><i class="fas fa-book-open"></i><span>المصادر</span></a>
             </div>
         </div>
 
         <div class="sidebar-footer">
             <div class="version-info">
                 <i class="fas fa-code-branch"></i>
-                <span>v4.0 â€” ط³ط¨طھظ…ط¨ط± 2026</span>
+                <span>v4.0 — سبتمبر 2026</span>
             </div>
         </div>
     </nav>
@@ -100,13 +100,13 @@
             <div class="topbar-title">
                 <div class="topbar-breadcrumb">
                     <i class="fas fa-home"></i>
-                    <span>ط§ظ„ط±ط¦ظٹط³ظٹط© / ط§ظ„ظ…ط¹ط§ظٹظٹط± ط§ظ„ط§ط­طھط±ط§ظپظٹط©</span>
+                    <span>الرئيسية / المعايير الاحترافية</span>
                 </div>
-                <h1>ط§ظ„ط¯ط³طھظˆط± ط§ظ„ط¨ط±ظ…ط¬ظٹ (Constitution)</h1>
+                <h1>الدستور البرمجي (Constitution)</h1>
             </div>
             <div class="topbar-actions">
-                <button class="topbar-btn" onclick="scrollToTop()" title="ظ„ظ„ط£ط¹ظ„ظ‰"><i class="fas fa-arrow-up"></i></button>
-                <button class="theme-toggle" onclick="toggleTheme()" title="طھط¨ط¯ظٹظ„ ط§ظ„ظˆط¶ط¹"><i class="fas fa-moon" id="themeIcon"></i></button>
+                <button class="topbar-btn" onclick="scrollToTop()" title="للأعلى"><i class="fas fa-arrow-up"></i></button>
+                <button class="theme-toggle" onclick="toggleTheme()" title="تبديل الوضع"><i class="fas fa-moon" id="themeIcon"></i></button>
             </div>
         </header>
 
@@ -120,10 +120,10 @@
                         00-CONSTITUTION.md
                     </div>
                     <h2 class="hero-title">
-                        <span class="gradient-text">ظ…ط¹ط§ظٹظٹط± ط§ظ„ط¯ط³طھظˆط± ط§ظ„طµط§ط±ظ…</span>
+                        <span class="gradient-text">معايير الدستور الصارم</span>
                     </h2>
                     <p class="hero-description">
-                        ط¯ط³طھظˆط± ط§ظ„طھط·ظˆظٹط± ط§ظ„ط¨ط±ظ…ط¬ظٹ ظٹظ…ط«ظ„ <strong class="hero-highlight">ظ…ط¬ظ…ظˆط¹ط© ط§ظ„ظ‚ظˆط§ط¹ط¯ ظˆط§ظ„ظ‚ظٹظˆط¯ ط§ظ„ظ…ط¹ط±ظپظٹط©</strong> ط§ظ„طھظٹ ظٹظڈط¬ط¨ط± ظ…ط­ط±ظƒ ط§ظ„ط°ظƒط§ط، ط§ظ„ط§طµط·ظ†ط§ط¹ظٹ ط¹ظ„ظ‰ ظ‚ط±ط§ط،طھظ‡ط§ ظˆطھط·ط¨ظٹظ‚ظ‡ط§ ظ‚ط¨ظ„ طµظٹط§ط؛ط© ط£ظˆ طھط¹ط¯ظٹظ„ ط£ظٹ ط´ظپط±ط© ط¨ط±ظ…ط¬ظٹط© ظ„ط¶ظ…ط§ظ† طھظˆط§ظپظ‚ظ‡ط§ ظ…ط¹ ط¨ظٹط¦ط© ط§ظ„ط¥ظ†طھط§ط¬ ط§ظ„ط¢ظ…ظ†ط©.
+                        دستور التطوير البرمجي يمثل <strong class="hero-highlight">مجموعة القواعد والقيود المعرفية</strong> التي يُجبر محرك الذكاء الاصطناعي على قراءتها وتطبيقها قبل صياغة أو تعديل أي شفرة برمجية لضمان توافقها مع بيئة الإنتاج الآمنة.
                     </p>
                 </div>
             </section>
@@ -132,68 +132,68 @@
             <section class="section animate-fade-in-up" style="animation-delay: 0.1s">
                 <h3 class="section-title">
                     <i class="fas fa-file-contract"></i>
-                    ظ…ط­طھظˆظ‰ ظ…ظ„ظپ ط§ظ„ط¯ط³طھظˆط± ط§ظ„ط¨ط±ظ…ط¬ظٹ ط§ظ„ط´ط§ظ…ظ„
-                    <span class="section-badge success">ط¬ط§ظ‡ط² ظ„ظ„ط­ظپط¸</span>
+                    محتوى ملف الدستور البرمجي الشامل
+                    <span class="section-badge success">جاهز للحفظ</span>
                 </h3>
-                <p class="step-description">ظ‚ظ… ط¨ط¥ظ†ط´ط§ط، ظˆط­ظپط¸ ظ‡ط°ط§ ط§ظ„ظ…ظ„ظپ ط§ظ„ط¨ط±ظ…ط¬ظٹ ط¨ط§ظ„ظƒط§ظ…ظ„ ظپظٹ ط§ظ„ظ…ط³ط§ط± ط§ظ„طھط§ظ„ظٹ: <code>D:\Projects\AI-Workspace\.clinerules\00-CONSTITUTION.md</code></p>
+                <p class="step-description">قم بإنشاء وحفظ هذا الملف البرمجي بالكامل في المسار التالي: <code>D:\Projects\AI-Workspace\.clinerules\00-CONSTITUTION.md</code></p>
                 <div class="code-block">
                     <div class="code-header">
                         <span>00-CONSTITUTION.md</span>
                         <button class="copy-btn" onclick="copyCode(this)"><i class="fas fa-copy"></i></button>
                     </div>
-                    <pre><code># ًںڈ›ï¸ڈ AI DEVELOPMENT CONSTITUTION (SEPTEMBER 2026)
+                    <pre><code># 🏛️ AI DEVELOPMENT CONSTITUTION (SEPTEMBER 2026)
 
-## âڑ ï¸ڈ CRITICAL RULES (ط£ظˆظ„ظˆظٹط© ظ‚طµظˆظ‰)
-- ظٹظ…ظ†ط¹ ظ…ظ†ط¹ط§ظ‹ ط¨ط§طھط§ظ‹ طµظٹط§ط؛ط© ط£ظٹ ط´ظپط±ط© ط¨ط±ظ…ط¬ظٹط© ظ„ط§ طھطھظˆط§ظپظ‚ ظ…ط¹ ظ‡ط°ظ‡ ط§ظ„ظ…ط¹ط§ظٹظٹط±.
-- ط§ظ„ط£ظ…ط§ظ† ظˆط§ظ„ط£ط¯ط§ط، ظ…ظ‚ط¯ظ…ط§ظ† ط¯ط§ط¦ظ…ط§ظ‹ ط¹ظ„ظ‰ ط³ط±ط¹ط© ط§ظ„ط¥ط·ظ„ط§ظ‚.
+## ⚠️ CRITICAL RULES (أولوية قصوى)
+- يمنع منعاً باتاً صياغة أي شفرة برمجية لا تتوافق مع هذه المعايير.
+- الأمان والأداء مقدمان دائماً على سرعة الإطلاق.
 
 ---
 
-## ًں”’ ط±ظƒط§ط¦ط² ط§ظ„ط£ظ…ط§ظ† (Security Principles)
+## 🔒 ركائز الأمان (Security Principles)
 
 ### 1. Zero-Trust Input
-- ظ„ط§ طھط«ظ‚ ط£ط¨ط¯ط§ظ‹ ط¨ط¨ظٹط§ظ†ط§طھ ط§ظ„ط¹ظ…ظٹظ„ (Client-side Data).
-- ط§ظ„طھط­ظ‚ظ‚ ظ…ظ† ظ†ظˆط¹ ط§ظ„ط¨ظٹط§ظ†ط§طھ ظˆظ‡ظٹظƒظ„ظ‡ط§ (Schema Validation via Zod) ط¥ظ„ط²ط§ظ…ظٹ ظپظٹ ط§ظ„ط®ط§ط¯ظ… ظˆط§ظ„ط¨ط§ظƒ ط¥ظ†ط¯ ط¯ط§ط¦ظ…ط§ظ‹.
+- لا تثق أبداً ببيانات العميل (Client-side Data).
+- التحقق من نوع البيانات وهيكلها (Schema Validation via Zod) إلزامي في الخادم والباك إند دائماً.
 
 ### 2. Secure Sessions
-- ظٹظ…ظ†ط¹ طھط®ط²ظٹظ† ط§ظ„ط±ظ…ظˆط² ظˆط§ظ„ظ€ JWTs ظپظٹ LocalStorage ظ†ظ‡ط§ط¦ظٹط§ظ‹.
-- ط§ظ„ط·ط±ظٹظ‚ط© ط§ظ„ظˆط­ظٹط¯ط© ط§ظ„ظ…ظ‚ط¨ظˆظ„ط© ظ„طھط¯ط§ظˆظ„ ط§ظ„ط¬ظ„ط³ط§طھ ظ‡ظٹ ظ…ظ„ظپط§طھ طھط¹ط±ظٹظپ ط§ظ„ط§ط±طھط¨ط§ط· ط§ظ„ط¢ظ…ظ†ط© (httpOnly, Secure, SameSite=Strict Cookies).
+- يمنع تخزين الرموز والـ JWTs في LocalStorage نهائياً.
+- الطريقة الوحيدة المقبولة لتداول الجلسات هي ملفات تعريف الارتباط الآمنة (httpOnly, Secure, SameSite=Strict Cookies).
 
 ### 3. Database Integrity
-- طھظپط¹ظٹظ„ Row-Level Security (RLS) ظپظٹ Supabase/PostgreSQL ط¥ظ„ط²ط§ظ…ظٹ ظ„ظƒظ„ ط¬ط¯ظˆظ„ ظٹط­طھظˆظٹ ط¨ظٹط§ظ†ط§طھ ظ…ط³طھط®ط¯ظ…ظٹظ†.
-- ظٹظ…ظ†ط¹ ط§ط³طھط®ط¯ط§ظ… ط§ظ„ط§ط³طھط¹ظ„ط§ظ…ط§طھ ط§ظ„ظ†طµظٹط© ط§ظ„ظ…ط¨ط§ط´ط±ط© (SQL Injection Protection). ظٹط¬ط¨ ط§ط³طھط®ط¯ط§ظ… Parameterized Queries ط­طµط±ط§ظ‹.
+- تفعيل Row-Level Security (RLS) في Supabase/PostgreSQL إلزامي لكل جدول يحتوي بيانات مستخدمين.
+- يمنع استخدام الاستعلامات النصية المباشرة (SQL Injection Protection). يجب استخدام Parameterized Queries حصراً.
 
 ---
 
-## âڑ، ط±ظƒط§ط¦ط² ط§ظ„ط£ط¯ط§ط، ظˆط§ظ„طھظˆط³ط¹ (Performance & Scalability)
+## ⚡ ركائز الأداء والتوسع (Performance & Scalability)
 
 ### 1. Database Query Optimization
-- ظٹظ…ظ†ط¹ ط§ط³طھط®ط¯ط§ظ… ط§ط³طھط¹ظ„ط§ظ… `SELECT *` ظپظٹ ط¨ظٹط¦ط© ط§ظ„ط¥ظ†طھط§ط¬ط› ط­ط¯ط¯ ط§ظ„ط£ط¹ظ…ط¯ط© ط¨ط¯ظ‚ط©.
-- طھظپط¹ظٹظ„ ط§ظ„ظپظ‡ط§ط±ط³ (Indexes) ط¥ظ„ط²ط§ظ…ظٹ ظ„ط¬ظ…ظٹط¹ ط£ط¹ظ…ط¯ط© ط§ظ„ط±ط¨ط· ظˆط§ظ„طھطµظپظٹط© (WHERE, JOIN, ORDER BY).
+- يمنع استخدام استعلام `SELECT *` في بيئة الإنتاج؛ حدد الأعمدة بدقة.
+- تفعيل الفهارس (Indexes) إلزامي لجميع أعمدة الربط والتصفية (WHERE, JOIN, ORDER BY).
 
 ### 2. Asynchronous Job Queues
-- ط£ظٹ ظ…ظ‡ظ…ط© ط«ظ‚ظٹظ„ط© (ط¥ط±ط³ط§ظ„ ط¨ط±ظٹط¯طŒ طھظˆظ„ظٹط¯ PDFطŒ ظ…ط¹ط§ظ„ط¬ط© طµظˆط±طŒ AI Call) ظٹط¬ط¨ ط£ظ„ط§ طھط¹ط·ظ„ ط§ظ„ظ…ط³طھط®ط¯ظ….
-- ظ†ظ‚ظ„ ط§ظ„ظ…ظ‡ط§ظ… ط§ظ„ط®ظ„ظپظٹط© ط¥ظ„ظ‰ ظ‚ظˆط§ط¦ظ… ط§ظ„ظ…ط¹ط§ظ„ط¬ط© (BullMQ ط£ظˆ Trigger.dev) ط¥ظ„ط²ط§ظ…ظٹ ط¨ط§ظ„ظƒط§ظ…ظ„.
+- أي مهمة ثقيلة (إرسال بريد، توليد PDF، معالجة صور، AI Call) يجب ألا تعطل المستخدم.
+- نقل المهام الخلفية إلى قوائم المعالجة (BullMQ أو Trigger.dev) إلزامي بالكامل.
 
 ### 3. Serverless Edge Caching
-- ط¯ظ…ط¬ ط§ظ„طھط®ط²ظٹظ† ط§ظ„ظ…ط¤ظ‚طھ (Redis via Upstash / Vercel KV) ظ„ظ„ط¨ظٹط§ظ†ط§طھ ط§ظ„ط³ط§ط®ظ†ط© ظ„طھظ‚ظ„ظٹظ„ ط§ظ„ط¶ط؛ط· ط¹ظ„ظ‰ ظ‚ط§ط¹ط¯ط© ط§ظ„ط¨ظٹط§ظ†ط§طھ.
+- دمج التخزين المؤقت (Redis via Upstash / Vercel KV) للبيانات الساخنة لتقليل الضغط على قاعدة البيانات.
 
 ---
 
-## ًں›‘ ظ…ط­ط¸ظˆط±ط§طھ ط¨ط±ظ…ط¬ظٹط© (FORBIDDEN - NEVER DO)
-- ظ„ط§ طھظ‚ظ… ط¨طھط¶ظ…ظٹظ† ط§ظ„ط£ط³ط±ط§ط± ظˆط§ظ„ظ…ظپط§طھظٹط­ (API Keys) ظپظٹ ط´ظپط±ط© ط§ظ„ظ…طµط¯ط±ط› ط§ط³طھط®ط¯ظ… `.env` ط¯ط§ط¦ظ…ط§ظ‹.
-- ظ„ط§ طھط±ظپط¹ ظ…ظ„ظپط§طھ `.env` ط¥ظ„ظ‰ ظ…ط³طھظˆط¯ط¹ GitHubط› ط£ط¶ظپظ‡ط§ ظپظˆط±ط§ظ‹ ط¥ظ„ظ‰ `.gitignore`.
-- ظ„ط§ طھط¹ط±ط¶ طھظپط§طµظٹظ„ ط§ظ„ط®ط·ط£ ط§ظ„ط¨ط±ظ…ط¬ظٹ ظ„ظ„ظ€ Stack Trace ظ„ظ„ظ…ط³طھط®ط¯ظ… ط§ظ„ظ†ظ‡ط§ط¦ظٹط› ط§ط¹ط±ط¶ ط±ط³ط§ط¦ظ„ ط¹ط§ظ…ط© ظˆط³ط¬ظ„ ط§ظ„ط£ط®ط·ط§ط، ط¯ط§ط®ظ„ظٹط§ظ‹ ظپظٹ Sentry.
-- ظ„ط§ طھظ…ظ†ط­ طµظ„ط§ط­ظٹط§طھ ط§ظ„ط¥ط¯ط§ط±ط© (Admin Privilege) ط¨ط´ظƒظ„ ط§ظپطھط±ط§ط¶ظٹط› ط·ط¨ظ‚ ظ…ط¨ط¯ط£ ط§ظ„طµظ„ط§ط­ظٹط§طھ ط§ظ„ط£ظ‚ظ„ (Least Privilege).
-- ظ„ط§ طھط«ط¨طھ ط£ظٹ ط®ط§ط¯ظ… MCP ط¬ط¯ظٹط¯ ط¯ظˆظ† ظ…ط±ط§ط¬ط¹ط© ظ…طµط¯ط±ظ‡ ظˆط§ظ„طھط­ظ‚ظ‚ ظ…ظ† ط³ظ„ط§ظ…طھظ‡ ط§ظ„ط¨ط±ظ…ط¬ظٹط©.
+## 🛑 محظورات برمجية (FORBIDDEN - NEVER DO)
+- لا تقم بتضمين الأسرار والمفاتيح (API Keys) في شفرة المصدر؛ استخدم `.env` دائماً.
+- لا ترفع ملفات `.env` إلى مستودع GitHub؛ أضفها فوراً إلى `.gitignore`.
+- لا تعرض تفاصيل الخطأ البرمجي للـ Stack Trace للمستخدم النهائي؛ اعرض رسائل عامة وسجل الأخطاء داخلياً في Sentry.
+- لا تمنح صلاحيات الإدارة (Admin Privilege) بشكل افتراضي؛ طبق مبدأ الصلاحيات الأقل (Least Privilege).
+- لا تثبت أي خادم MCP جديد دون مراجعة مصدره والتحقق من سلامته البرمجية.
 
 ---
 
-## âœ… ظ…ط¨ط§ط¯ط¦ ظ…ط¹طھظ…ط¯ط© (MANDATORY - ALWAYS DO)
-- طھظپط¹ظٹظ„ TypeScript Strict Mode ظپظٹ ظƒظ„ ظ…ظ„ظپط§طھ ط§ظ„ظ…ط´ط±ظˆط¹.
-- ظ…ط¹ط§ظ„ط¬ط© ط§ظ„ط£ط®ط·ط§ط، (Error Handling) ط§ظ„ط´ط§ظ…ظ„ط© ط¨ط§ط³طھط®ط¯ط§ظ… try-catch ظˆ Error Boundaries.
-- طھظ†ط³ظٹظ‚ ط§ظ„ط´ظپط±ط© ط§ظ„ط¨ط±ظ…ط¬ظٹط© ط§ظ„طھظ„ظ‚ط§ط¦ظٹ ط¹ط¨ط± Prettier ظˆ ESLint ظ‚ط¨ظ„ ط¹ظ…ظ„ظٹط§طھ ط§ظ„ظ€ Commit.
-- طھط·ط¨ظٹظ‚ Conventional Commits ظ„ظ„طھظˆط«ظٹظ‚ ط§ظ„ظˆط§ط¶ط­ ظ„ظپط±ظˆظ‚ ط§ظ„ظƒظˆط¯.</code></pre>
+## ✅ مبادئ معتمدة (MANDATORY - ALWAYS DO)
+- تفعيل TypeScript Strict Mode في كل ملفات المشروع.
+- معالجة الأخطاء (Error Handling) الشاملة باستخدام try-catch و Error Boundaries.
+- تنسيق الشفرة البرمجية التلقائي عبر Prettier و ESLint قبل عمليات الـ Commit.
+- تطبيق Conventional Commits للتوثيق الواضح لفروق الكود.</code></pre>
                 </div>
             </section>
 
@@ -201,28 +201,28 @@
             <section class="section animate-fade-in-up" style="animation-delay: 0.2s">
                 <h3 class="section-title">
                     <i class="fas fa-folder-tree"></i>
-                    ط§ظ„ط£ظˆط§ظ…ط± ط§ظ„طھظ†ظپظٹط°ظٹط© ظ„ط¨ظ†ط§ط، ظ‡ظٹظƒظ„ ط§ظ„ظ…ط¹ط§ظٹظٹط± ط¹ظ„ظ‰ ط§ظ„ظ‚ط±طµ D
+                    الأوامر التنفيذية لبناء هيكل المعايير على القرص D
                 </h3>
                 <div class="code-block">
                     <div class="code-header">
                         <span>PowerShell</span>
                         <button class="copy-btn" onclick="copyCode(this)"><i class="fas fa-copy"></i></button>
                     </div>
-                    <pre><code># ط§ظ„ط§ظ†طھظ‚ط§ظ„ ظ„ظ…ط¬ظ„ط¯ ط¨ظٹط¦ط© ط§ظ„ط¹ظ…ظ„
+                    <pre><code># الانتقال لمجلد بيئة العمل
 cd "D:\Projects\AI-Workspace"
 
-# ط¥ظ†ط´ط§ط، ظ‡ظٹظƒظ„ ظ…ط¬ظ„ط¯ط§طھ ط§ظ„ظ‚ظˆط§ط¹ط¯ ظˆط§ظ„ظ…ط¹ط§ظٹظٹط± ط§ظ„طµط§ط±ظ…ط©
+# إنشاء هيكل مجلدات القواعد والمعايير الصارمة
 New-Item -ItemType Directory -Force -Path ".clinerules\modes"
 New-Item -ItemType Directory -Force -Path ".clinerules\standards"
 New-Item -ItemType Directory -Force -Path ".clinerules\skills"
 
-# طھظˆظ„ظٹط¯ ط§ظ„ظ…ظ„ظپط§طھ ط§ظ„ظ…ط¹ظٹط§ط±ظٹط© ظپط§ط±ط؛ط© طھظ…ظ‡ظٹط¯ط§ظ‹ ظ„ط­ظپط¸ظ‡ط§
+# توليد الملفات المعيارية فارغة تمهيداً لحفظها
 New-Item -ItemType File -Force -Path ".clinerules\00-CONSTITUTION.md"
 New-Item -ItemType File -Force -Path ".clinerules\standards\security-checklist.md"
 New-Item -ItemType File -Force -Path ".clinerules\standards\performance-checklist.md"
 New-Item -ItemType File -Force -Path ".clinerules\standards\scalability-rules.md"
 
-Write-Host "âœ… طھظ… ط¨ظ†ط§ط، ظ‡ظٹظƒظ„ ط§ظ„ط¯ط³طھظˆط± ط§ظ„ط¨ط±ظ…ط¬ظٹ ظˆظ…ط¬ظ„ط¯ط§طھ ط§ظ„ظ…ط¹ط§ظٹظٹط± ط¨ظ†ط¬ط§ط­!" -ForegroundColor Green</code></pre>
+Write-Host "✅ تم بناء هيكل الدستور البرمجي ومجلدات المعايير بنجاح!" -ForegroundColor Green</code></pre>
                 </div>
             </section>
 
@@ -231,14 +231,14 @@ Write-Host "âœ… طھظ… ط¨ظ†ط§ط، ظ‡ظٹظƒظ„ ط§ظ„ط¯
                 <a href="16-multi-agent.html" class="page-nav-btn prev">
                     <i class="fas fa-arrow-right"></i>
                     <div>
-                        <span>ط§ظ„ط³ط§ط¨ظ‚</span>
+                        <span>السابق</span>
                         <strong>Multi-Agent</strong>
                     </div>
                 </a>
                 <a href="10-security.html" class="page-nav-btn next">
                     <div>
-                        <span>ط§ظ„طھط§ظ„ظٹ</span>
-                        <strong>ظ‚ط§ط¦ظ…ط© ظپط­طµ ط§ظ„ط£ظ…ط§ظ† (60+)</strong>
+                        <span>التالي</span>
+                        <strong>قائمة فحص الأمان (60+)</strong>
                     </div>
                     <i class="fas fa-arrow-left"></i>
                 </a>

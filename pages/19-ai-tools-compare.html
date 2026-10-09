@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ظ…ظ‚ط§ط±ظ†ط© ظ…ط­ط±ظƒط§طھ ط§ظ„طھط·ظˆظٹط± ط§ظ„ط°ظƒظٹط© â€” AI Master Plan</title>
+    <title>مقارنة محركات التطوير الذكية — AI Master Plan</title>
     <link rel="manifest" href="../manifest.json">
     <link rel="icon" type="image/svg+xml" href="../assets/icons/favicon.svg">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -21,7 +21,7 @@
     </div>
 
     <!-- Floating Sidebar Toggle -->
-    <button class="floating-sidebar-toggle" id="floatingToggle" onclick="toggleSidebar()" aria-label="ظپطھط­ ط§ظ„ظ‚ط§ط¦ظ…ط©">
+    <button class="floating-sidebar-toggle" id="floatingToggle" onclick="toggleSidebar()" aria-label="فتح القائمة">
         <i class="fas fa-bars"></i>
     </button>
 
@@ -38,57 +38,57 @@
                     <span class="logo-subtitle">Plan v4.0</span>
                 </div>
             </a>
-            <button class="sidebar-close" onclick="toggleSidebar()" aria-label="ط¥ط؛ظ„ط§ظ‚"><i class="fas fa-xmark"></i></button>
+            <button class="sidebar-close" onclick="toggleSidebar()" aria-label="إغلاق"><i class="fas fa-xmark"></i></button>
         </div>
 
         <div class="sidebar-search">
             <i class="fas fa-magnifying-glass"></i>
-            <input type="text" placeholder="ط¨ط­ط« ط³ط±ظٹط¹..." id="sidebarSearch" oninput="searchNav(this.value)">
+            <input type="text" placeholder="بحث سريع..." id="sidebarSearch" oninput="searchNav(this.value)">
             <kbd>Ctrl+K</kbd>
         </div>
 
         <div class="sidebar-nav" id="sidebarNav">
             <div class="nav-section">
-                <span class="nav-section-title"><i class="fas fa-circle-dot"></i>  ط§ظ„ط¨ط¯ط§ظٹط©</span>
-                <a href="../index.html" class="nav-link"><i class="fas fa-th-large"></i><span>ظ„ظˆط­ط© ط§ظ„طھط­ظƒظ…</span></a>
-                <a href="01-overview.html" class="nav-link"><i class="fas fa-compass"></i><span>ظ†ط¸ط±ط© ط¹ط§ظ…ط©</span></a>
-                <a href="18-ai-timeline.html" class="nav-link"><i class="fas fa-clock-rotate-left"></i><span>ط£ط­ط¯ط§ط« 2025-2026</span><span class="nav-badge new">ط¬ط¯ظٹط¯</span></a>
+                <span class="nav-section-title"><i class="fas fa-circle-dot"></i>  البداية</span>
+                <a href="../index.html" class="nav-link"><i class="fas fa-th-large"></i><span>لوحة التحكم</span></a>
+                <a href="01-overview.html" class="nav-link"><i class="fas fa-compass"></i><span>نظرة عامة</span></a>
+                <a href="18-ai-timeline.html" class="nav-link"><i class="fas fa-clock-rotate-left"></i><span>أحداث 2025-2026</span><span class="nav-badge new">جديد</span></a>
             </div>
             <div class="nav-section">
-                <span class="nav-section-title"><i class="fas fa-rocket"></i>  ط§ظ„طھط£ط³ظٹط³</span>
-                <a href="02-setup.html" class="nav-link"><i class="fas fa-hard-drive"></i><span>طھط¬ظ‡ظٹط² ط§ظ„ط¬ظ‡ط§ط²</span><span class="nav-badge phase">1</span></a>
-                <a href="03-ai-local.html" class="nav-link"><i class="fas fa-server"></i><span>AI ط§ظ„ظ…ط­ظ„ظٹ</span><span class="nav-badge phase">2</span></a>
-                <a href="04-ai-cloud.html" class="nav-link"><i class="fas fa-cloud"></i><span>AI ط§ظ„ط³ط­ط§ط¨ظٹ</span><span class="nav-badge phase">3</span></a>
+                <span class="nav-section-title"><i class="fas fa-rocket"></i>  التأسيس</span>
+                <a href="02-setup.html" class="nav-link"><i class="fas fa-hard-drive"></i><span>تجهيز الجهاز</span><span class="nav-badge phase">1</span></a>
+                <a href="03-ai-local.html" class="nav-link"><i class="fas fa-server"></i><span>AI المحلي</span><span class="nav-badge phase">2</span></a>
+                <a href="04-ai-cloud.html" class="nav-link"><i class="fas fa-cloud"></i><span>AI السحابي</span><span class="nav-badge phase">3</span></a>
                 <a href="05-vscode.html" class="nav-link"><i class="fas fa-code"></i><span>VS Code + Cline</span><span class="nav-badge phase">4</span></a>
-                <a href="19-ai-tools-compare.html" class="nav-link active"><i class="fas fa-scale-balanced"></i><span>ظ…ظ‚ط§ط±ظ†ط© ط§ظ„ط£ط¯ظˆط§طھ</span><span class="nav-badge new">ط¬ط¯ظٹط¯</span></a>
+                <a href="19-ai-tools-compare.html" class="nav-link active"><i class="fas fa-scale-balanced"></i><span>مقارنة الأدوات</span><span class="nav-badge new">جديد</span></a>
             </div>
             <div class="nav-section">
-                <span class="nav-section-title"><i class="fas fa-wand-magic-sparkles"></i>  ط§ظ„ظ‚ط¯ط±ط§طھ</span>
+                <span class="nav-section-title"><i class="fas fa-wand-magic-sparkles"></i>  القدرات</span>
                 <a href="06-mcps.html" class="nav-link"><i class="fas fa-plug"></i><span>MCPs</span><span class="nav-badge count">10K+</span></a>
-                <a href="17-mcp-security.html" class="nav-link"><i class="fas fa-shield-virus"></i><span>ط£ظ…ط§ظ† MCP</span><span class="nav-badge new">ط¬ط¯ظٹط¯</span></a>
+                <a href="17-mcp-security.html" class="nav-link"><i class="fas fa-shield-virus"></i><span>أمان MCP</span><span class="nav-badge new">جديد</span></a>
                 <a href="07-modes.html" class="nav-link"><i class="fas fa-masks-theater"></i><span>Custom Modes</span></a>
                 <a href="08-skills.html" class="nav-link"><i class="fas fa-graduation-cap"></i><span>Skills</span></a>
-                <a href="16-multi-agent.html" class="nav-link"><i class="fas fa-users-gear"></i><span>Multi-Agent</span><span class="nav-badge new">ط¬ط¯ظٹط¯</span></a>
+                <a href="16-multi-agent.html" class="nav-link"><i class="fas fa-users-gear"></i><span>Multi-Agent</span><span class="nav-badge new">جديد</span></a>
             </div>
             <div class="nav-section">
-                <span class="nav-section-title"><i class="fas fa-shield-halved"></i>  ط§ظ„ظ…ط¹ط§ظٹظٹط±</span>
-                <a href="09-constitution.html" class="nav-link"><i class="fas fa-scroll"></i><span>ط§ظ„ط¯ط³طھظˆط±</span></a>
-                <a href="10-security.html" class="nav-link"><i class="fas fa-shield-halved"></i><span>ط§ظ„ط£ظ…ط§ظ†</span><span class="nav-badge count">60+</span></a>
-                <a href="11-performance.html" class="nav-link"><i class="fas fa-gauge-high"></i><span>ط§ظ„ط£ط¯ط§ط، ظˆط§ظ„طھظˆط³ط¹</span></a>
+                <span class="nav-section-title"><i class="fas fa-shield-halved"></i>  المعايير</span>
+                <a href="09-constitution.html" class="nav-link"><i class="fas fa-scroll"></i><span>الدستور</span></a>
+                <a href="10-security.html" class="nav-link"><i class="fas fa-shield-halved"></i><span>الأمان</span><span class="nav-badge count">60+</span></a>
+                <a href="11-performance.html" class="nav-link"><i class="fas fa-gauge-high"></i><span>الأداء والتوسع</span></a>
             </div>
             <div class="nav-section">
-                <span class="nav-section-title"><i class="fas fa-briefcase"></i>  ط§ظ„طھط®طµطµط§طھ</span>
-                <a href="12-ecommerce.html" class="nav-link"><i class="fas fa-store"></i><span>ط§ظ„طھط¬ط§ط±ط© ط§ظ„ط³ط¹ظˆط¯ظٹط©</span></a>
+                <span class="nav-section-title"><i class="fas fa-briefcase"></i>  التخصصات</span>
+                <a href="12-ecommerce.html" class="nav-link"><i class="fas fa-store"></i><span>التجارة السعودية</span></a>
                 <a href="13-techstack.html" class="nav-link"><i class="fas fa-layer-group"></i><span>Tech Stack</span></a>
-                <a href="14-workflow.html" class="nav-link"><i class="fas fa-route"></i><span>ط®ط·ظˆط§طھ ط§ظ„ط¹ظ…ظ„</span></a>
-                <a href="15-resources.html" class="nav-link"><i class="fas fa-book-open"></i><span>ط§ظ„ظ…طµط§ط¯ط±</span></a>
+                <a href="14-workflow.html" class="nav-link"><i class="fas fa-route"></i><span>خطوات العمل</span></a>
+                <a href="15-resources.html" class="nav-link"><i class="fas fa-book-open"></i><span>المصادر</span></a>
             </div>
         </div>
 
         <div class="sidebar-footer">
             <div class="version-info">
                 <i class="fas fa-code-branch"></i>
-                <span>v4.0 â€” ط³ط¨طھظ…ط¨ط± 2026</span>
+                <span>v4.0 — سبتمبر 2026</span>
             </div>
         </div>
     </nav>
@@ -100,13 +100,13 @@
             <div class="topbar-title">
                 <div class="topbar-breadcrumb">
                     <i class="fas fa-home"></i>
-                    <span>ط§ظ„ط±ط¦ظٹط³ظٹط© / ط§ظ„طھط£ط³ظٹط³ / ظ…ظ‚ط§ط±ظ†ط© ط§ظ„ط£ط¯ظˆط§طھ</span>
+                    <span>الرئيسية / التأسيس / مقارنة الأدوات</span>
                 </div>
-                <h1>ظ…ظ‚ط§ط±ظ†ط© ظ…ط­ط±ظƒط§طھ ط§ظ„طھط·ظˆظٹط± ط§ظ„ط°ظƒظٹط©</h1>
+                <h1>مقارنة محركات التطوير الذكية</h1>
             </div>
             <div class="topbar-actions">
-                <button class="topbar-btn" onclick="scrollToTop()" title="ظ„ظ„ط£ط¹ظ„ظ‰"><i class="fas fa-arrow-up"></i></button>
-                <button class="theme-toggle" onclick="toggleTheme()" title="طھط¨ط¯ظٹظ„ ط§ظ„ظˆط¶ط¹"><i class="fas fa-moon" id="themeIcon"></i></button>
+                <button class="topbar-btn" onclick="scrollToTop()" title="للأعلى"><i class="fas fa-arrow-up"></i></button>
+                <button class="theme-toggle" onclick="toggleTheme()" title="تبديل الوضع"><i class="fas fa-moon" id="themeIcon"></i></button>
             </div>
         </header>
 
@@ -120,11 +120,11 @@
                         Cline vs Cursor vs Windsurf
                     </div>
                     <h2 class="hero-title">
-                        <span class="gradient-text">ظ…ظ‚ط§ط±ظ†ط© ظˆط§ط®طھظٹط§ط± ط§ظ„ط£ط¯ظˆط§طھ</span>
+                        <span class="gradient-text">مقارنة واختيار الأدوات</span>
                     </h2>
                     <p class="hero-description">
-                        ظ…ظ‚ط§ط±ظ†ط© ظپظ†ظٹط© ظ…ط­ط§ظٹط¯ط© ظ„ط¨ظٹط¦ط§طھ ط§ظ„طھط·ظˆظٹط± ط§ظ„ظ…ط¯ظ…ط¬ط© ط¨ط§ظ„ط°ظƒط§ط، ط§ظ„ط§طµط·ظ†ط§ط¹ظٹ ظ„ط¹ط§ظ… 2026طŒ ظ„ظ…ط³ط§ط¹ط¯طھظƒ ط¹ظ„ظ‰ ط§ط®طھظٹط§ط±
-                        ط§ظ„ظ…ط­ط±ظƒ ط§ظ„ط£ظ†ط³ط¨ ظ„ط·ط¨ظٹط¹ط© ط¹ظ…ظ„ظƒ ط§ظ„ظپط±ط¯ظٹط© ظˆظ…ط³طھظˆظٹط§طھ ط§ظ„ط®طµظˆطµظٹط© ظˆط§ظ„طھظƒظ„ظپط© ط§ظ„ظ…ط·ظ„ظˆط¨ط©.
+                        مقارنة فنية محايدة لبيئات التطوير المدمجة بالذكاء الاصطناعي لعام 2026، لمساعدتك على اختيار
+                        المحرك الأنسب لطبيعة عملك الفردية ومستويات الخصوصية والتكلفة المطلوبة.
                     </p>
                 </div>
             </section>
@@ -133,41 +133,41 @@
             <section class="section animate-fade-in-up" style="animation-delay: 0.1s">
                 <h3 class="section-title">
                     <i class="fas fa-table"></i>
-                    ط¬ط¯ظˆظ„ ط§ظ„ظ…ظ‚ط§ط±ظ†ط© ط§ظ„ط¨ط±ظ…ط¬ظٹط© ط§ظ„ط´ط§ظ…ظ„ط©
-                    <span class="section-badge success">ظ…ظ‚ط§ط±ظ†ط© ظپظ†ظٹط©</span>
+                    جدول المقارنة البرمجية الشاملة
+                    <span class="section-badge success">مقارنة فنية</span>
                 </h3>
                 <div class="comparison-table">
                     <table>
                         <thead>
                             <tr>
-                                <th>ط§ظ„ط£ط¯ط§ط© / ط§ظ„ظ…ط­ط±ظƒ</th>
-                                <th>ط·ط¨ظٹط¹ط© ط§ظ„ط¨ظٹط¦ط©</th>
-                                <th>ط¯ط¹ظ… ط§ظ„طھط´ط؛ظٹظ„ ط§ظ„ظ…ط­ظ„ظٹ (Ollama)</th>
-                                <th>ط¯ط¹ظ… ط¨ط±ظˆطھظˆظƒظˆظ„ ط§ظ„ظ€ MCP</th>
-                                <th>ط§ظ„طھظƒظ„ظپط© ط§ظ„ط´ظ‡ط±ظٹط©</th>
+                                <th>الأداة / المحرك</th>
+                                <th>طبيعة البيئة</th>
+                                <th>دعم التشغيل المحلي (Ollama)</th>
+                                <th>دعم بروتوكول الـ MCP</th>
+                                <th>التكلفة الشهرية</th>
                             </tr>
                         </thead>
                         <tbody>
                             <tr>
                                 <td><strong>Cline</strong></td>
-                                <td>ط¥ط¶ط§ظپط© ظ„ظ€ VS Code (ظ…ظپطھظˆط­ ط§ظ„ظ…طµط¯ط±)</td>
-                                <td><i class="fas fa-circle-check text-success"></i> ط¯ط¹ظ… ظƒط§ظ…ظ„ ظˆظ…ط¨ط§ط´ط± ظˆظ…ط¬ط§ظ†ظٹ</td>
-                                <td><i class="fas fa-circle-check text-success"></i> طھظƒطھظ…ظ„ ط¨ظ€ Marketplace ظ…ط¯ظ…ط¬</td>
-                                <td><span class="status-badge free">ظ…ط¬ط§ظ†ظٹ ط¨ط§ظ„ظƒط§ظ…ظ„</span></td>
+                                <td>إضافة لـ VS Code (مفتوح المصدر)</td>
+                                <td><i class="fas fa-circle-check text-success"></i> دعم كامل ومباشر ومجاني</td>
+                                <td><i class="fas fa-circle-check text-success"></i> تكتمل بـ Marketplace مدمج</td>
+                                <td><span class="status-badge free">مجاني بالكامل</span></td>
                             </tr>
                             <tr>
                                 <td><strong>Cursor</strong></td>
-                                <td>ط¨ظٹط¦ط© طھط·ظˆظٹط± ظ…ط³طھظ‚ظ„ط© (ظ…ط؛ظ„ظ‚ ط§ظ„ظ…طµط¯ط±)</td>
-                                <td><i class="fas fa-circle-xmark text-danger"></i> ظٹط­طھط§ط¬ ط®ظˆط§ط¯ظ… ظˆط³ظٹط·ط© ظ…ط¹ظ‚ط¯ط©</td>
-                                <td><i class="fas fa-circle-check text-success"></i> ط¯ط¹ظ… ظƒط§ظ…ظ„ ط¹ط¨ط± ط§ظ„ط¥ط¹ط¯ط§ط¯ط§طھ</td>
-                                <td><span class="status-badge optional">$20 / ط´ظ‡ط±</span></td>
+                                <td>بيئة تطوير مستقلة (مغلق المصدر)</td>
+                                <td><i class="fas fa-circle-xmark text-danger"></i> يحتاج خوادم وسيطة معقدة</td>
+                                <td><i class="fas fa-circle-check text-success"></i> دعم كامل عبر الإعدادات</td>
+                                <td><span class="status-badge optional">$20 / شهر</span></td>
                             </tr>
                             <tr>
                                 <td><strong>Windsurf</strong></td>
-                                <td>ط¨ظٹط¦ط© طھط·ظˆظٹط± ظ…ط³طھظ‚ظ„ط© (ظ…ط؛ظ„ظ‚ ط§ظ„ظ…طµط¯ط±)</td>
-                                <td><i class="fas fa-circle-xmark text-danger"></i> ط؛ظٹط± ظ…ط¯ط¹ظˆظ… ظ…ط¨ط§ط´ط±ط©</td>
-                                <td><i class="fas fa-circle-check text-success"></i> ظ…ط¯ظ…ط¬</td>
-                                <td><span class="status-badge free">ط®ط·ط© ظ…ط¬ط§ظ†ظٹط© ظ…ط­ط¯ظˆط¯ط©</span></td>
+                                <td>بيئة تطوير مستقلة (مغلق المصدر)</td>
+                                <td><i class="fas fa-circle-xmark text-danger"></i> غير مدعوم مباشرة</td>
+                                <td><i class="fas fa-circle-check text-success"></i> مدمج</td>
+                                <td><span class="status-badge free">خطة مجانية محدودة</span></td>
                             </tr>
                         </tbody>
                     </table>
@@ -178,16 +178,16 @@
             <section class="section animate-fade-in-up" style="animation-delay: 0.2s">
                 <h3 class="section-title">
                     <i class="fas fa-trophy"></i>
-                    ط§ظ„طھظˆطµظٹط© ط§ظ„ظ†ظ‡ط§ط¦ظٹط© ظ„ط¨ظٹط¦طھظƒ ط§ظ„ط¨ط±ظ…ط¬ظٹط© ط§ظ„ط­ط§ظ„ظٹط©
+                    التوصية النهائية لبيئتك البرمجية الحالية
                 </h3>
                 <div class="alert alert-success" style="margin: 0;">
                     <i class="fas fa-crown"></i>
                     <div>
-                        <h4>ط£ظپط¶ظ„ طھط±ظƒظٹط¨ط© ط¨ط±ظ…ط¬ظٹط© ظ„ط¬ظ‡ط§ط²ظƒ ظˆظ…ظٹط²ط§ظ†ظٹطھظƒ:</h4>
+                        <h4>أفضل تركيبة برمجية لجهازك وميزانيتك:</h4>
                         <p>
-                            ط§ظ„ط§ط¹طھظ…ط§ط¯ ط¹ظ„ظ‰ **VS Code + Cline v3.81** ظƒط¨ظٹط¦ط© ط£ط³ط§ط³ظٹط©طŒ ظˆط±ط¨ط·ظ‡ط§ ط¨ظ€ **Ollama** ظ…ط­ظ„ظٹط§ظ‹ ظ„طھط´ط؛ظٹظ„ ط§ظ„ظ†ظ…ط§ط°ط¬ ط§ظ„ظپط§ط¦ظ‚ط© ظ…ط¬ط§ظ†ط§ظ‹طŒ
-                            ظ…ط¹ طھظپط¹ظٹظ„ ط§ظ„ظ€ APIs ط§ظ„ظ…ط¬ط§ظ†ظٹط© ط§ظ„ط±ط³ظ…ظٹط© ظ„ظ„ظ€ ط³ط­ط§ط¨ط© (Gemini 3 Flash ظˆ Groq) ظٹظ…ظ†ط­ظƒ ظ…ظ†ط¸ظˆظ…ط© ط¹ظ…ظ„ ظ…طھظƒط§ظ…ظ„ط©طŒ ط¢ظ…ظ†ط©طŒ ظˆظ…ط¬ط§ظ†ظٹط© 100%
-                            طھظˆط§ط²ظٹ ظپظٹ ظ‚ظˆطھظ‡ط§ ظˆط§ط¬ظ‡ط§طھ Cursor ط§ظ„ظ…ط¯ظپظˆط¹ط©.
+                            الاعتماد على **VS Code + Cline v3.81** كبيئة أساسية، وربطها بـ **Ollama** محلياً لتشغيل النماذج الفائقة مجاناً،
+                            مع تفعيل الـ APIs المجانية الرسمية للـ سحابة (Gemini 3 Flash و Groq) يمنحك منظومة عمل متكاملة، آمنة، ومجانية 100%
+                            توازي في قوتها واجهات Cursor المدفوعة.
                         </p>
                     </div>
                 </div>
@@ -198,14 +198,14 @@
                 <a href="18-ai-timeline.html" class="page-nav-btn prev">
                     <i class="fas fa-arrow-right"></i>
                     <div>
-                        <span>ط§ظ„ط³ط§ط¨ظ‚</span>
-                        <strong>ط®ط· ط§ظ„ط³ظٹط± ط§ظ„ط²ظ…ظ†ظٹ 2025-2026</strong>
+                        <span>السابق</span>
+                        <strong>خط السير الزمني 2025-2026</strong>
                     </div>
                 </a>
                 <a href="../index.html" class="page-nav-btn next">
                     <div>
-                        <span>ط§ظ„ط¹ظˆط¯ط©</span>
-                        <strong>ظ„ظˆط­ط© ط§ظ„طھط­ظƒظ… ط§ظ„ط±ط¦ظٹط³ظٹط©</strong>
+                        <span>العودة</span>
+                        <strong>لوحة التحكم الرئيسية</strong>
                     </div>
                     <i class="fas fa-home"></i>
                 </a>

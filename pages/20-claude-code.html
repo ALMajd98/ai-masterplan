@@ -1,0 +1,539 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Claude Code — AI Master Plan</title>
+    <link rel="icon" type="image/svg+xml" href="../assets/icons/favicon.svg">
+    <link rel="manifest" href="../manifest.json">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+    <div class="animated-bg">
+        <div class="gradient-orb orb-1"></div>
+        <div class="gradient-orb orb-2"></div>
+        <div class="gradient-orb orb-3"></div>
+    </div>
+
+    <div class="sidebar-overlay" id="sidebarOverlay" onclick="toggleSidebar()"></div>
+
+    <nav class="sidebar" id="sidebar">
+        <div class="sidebar-header">
+            <a href="../index.html" class="logo">
+                <div class="logo-icon"><i class="fas fa-microchip"></i></div>
+                <div class="logo-text">
+                    <span class="logo-title">AI Master</span>
+                    <span class="logo-subtitle">Plan v4.0</span>
+                </div>
+            </a>
+            <button class="sidebar-close" onclick="toggleSidebar()"><i class="fas fa-xmark"></i></button>
+        </div>
+
+        <div class="sidebar-search">
+            <i class="fas fa-magnifying-glass"></i>
+            <input type="text" placeholder="بحث سريع..." id="sidebarSearch" oninput="searchNav(this.value)">
+            <kbd>Ctrl+K</kbd>
+        </div>
+
+        <div class="sidebar-nav" id="sidebarNav">
+            <div class="nav-section">
+                <span class="nav-section-title"><i class="fas fa-circle-dot"></i> البداية</span>
+                <a href="../index.html" class="nav-link"><i class="fas fa-th-large"></i><span>لوحة التحكم</span></a>
+                <a href="01-overview.html" class="nav-link"><i class="fas fa-compass"></i><span>نظرة عامة</span></a>
+                <a href="18-ai-timeline.html" class="nav-link"><i class="fas fa-clock-rotate-left"></i><span>أحداث 2025-2026</span></a>
+            </div>
+            <div class="nav-section">
+                <span class="nav-section-title"><i class="fas fa-rocket"></i> التأسيس</span>
+                <a href="02-setup.html" class="nav-link"><i class="fas fa-hard-drive"></i><span>تجهيز الجهاز</span></a>
+                <a href="03-ai-local.html" class="nav-link"><i class="fas fa-server"></i><span>AI المحلي</span></a>
+                <a href="04-ai-cloud.html" class="nav-link"><i class="fas fa-cloud"></i><span>AI السحابي</span></a>
+                <a href="05-vscode.html" class="nav-link"><i class="fas fa-code"></i><span>VS Code + Cline</span></a>
+                <a href="20-claude-code.html" class="nav-link active"><i class="fas fa-terminal"></i><span>Claude Code</span><span class="nav-badge new">جديد</span></a>
+                <a href="21-openrouter-bridge.html" class="nav-link"><i class="fas fa-bridge"></i><span>OpenRouter Bridge</span><span class="nav-badge new">جديد</span></a>
+                <a href="19-ai-tools-compare.html" class="nav-link"><i class="fas fa-scale-balanced"></i><span>مقارنة الأدوات</span></a>
+            </div>
+            <div class="nav-section">
+                <span class="nav-section-title"><i class="fas fa-wand-magic-sparkles"></i> القدرات</span>
+                <a href="06-mcps.html" class="nav-link"><i class="fas fa-plug"></i><span>MCPs</span></a>
+                <a href="17-mcp-security.html" class="nav-link"><i class="fas fa-shield-virus"></i><span>أمان MCP</span></a>
+                <a href="07-modes.html" class="nav-link"><i class="fas fa-masks-theater"></i><span>Custom Modes</span></a>
+                <a href="08-skills.html" class="nav-link"><i class="fas fa-graduation-cap"></i><span>Skills</span></a>
+                <a href="16-multi-agent.html" class="nav-link"><i class="fas fa-users-gear"></i><span>Multi-Agent</span></a>
+                <a href="22-multi-tool-workflow.html" class="nav-link"><i class="fas fa-arrows-split-up-and-left"></i><span>Multi-Tool Workflow</span><span class="nav-badge new">جديد</span></a>
+            </div>
+            <div class="nav-section">
+                <span class="nav-section-title"><i class="fas fa-shield-halved"></i> المعايير</span>
+                <a href="09-constitution.html" class="nav-link"><i class="fas fa-scroll"></i><span>الدستور</span></a>
+                <a href="10-security.html" class="nav-link"><i class="fas fa-shield-halved"></i><span>الأمان</span></a>
+                <a href="11-performance.html" class="nav-link"><i class="fas fa-gauge-high"></i><span>الأداء والتوسع</span></a>
+            </div>
+            <div class="nav-section">
+                <span class="nav-section-title"><i class="fas fa-briefcase"></i> التخصصات</span>
+                <a href="12-ecommerce.html" class="nav-link"><i class="fas fa-store"></i><span>التجارة السعودية</span></a>
+                <a href="13-techstack.html" class="nav-link"><i class="fas fa-layer-group"></i><span>Tech Stack</span></a>
+                <a href="14-workflow.html" class="nav-link"><i class="fas fa-route"></i><span>خطوات العمل</span></a>
+                <a href="15-resources.html" class="nav-link"><i class="fas fa-book-open"></i><span>المصادر</span></a>
+            </div>
+        </div>
+
+        <div class="sidebar-footer">
+            <div class="version-info">
+                <i class="fas fa-code-branch"></i>
+                <span>v4.0 — سبتمبر 2026</span>
+            </div>
+        </div>
+    </nav>
+
+    <main class="main-content">
+        <header class="topbar">
+            <button class="sidebar-toggle-btn" onclick="toggleSidebar()"><i class="fas fa-bars"></i></button>
+            <div class="topbar-title">
+                <div class="topbar-breadcrumb">
+                    <i class="fas fa-home"></i>
+                    <span>الرئيسية / Claude Code</span>
+                </div>
+                <h1>Claude Code — المحرك الفائق</h1>
+            </div>
+            <div class="topbar-actions">
+                <button class="topbar-btn" onclick="scrollToTop()" title="للأعلى"><i class="fas fa-arrow-up"></i></button>
+                <button class="theme-toggle" onclick="toggleTheme()" title="تبديل الوضع"><i class="fas fa-moon" id="themeIcon"></i></button>
+            </div>
+        </header>
+
+        <div class="content-area">
+            <section class="hero-section animate-fade-in-up">
+                <div class="hero-grid-pattern"></div>
+                <div class="hero-content">
+                    <div class="hero-badge">
+                        <span class="badge-pulse"></span>
+                        <i class="fas fa-terminal"></i>
+                        المحرك الأقوى من Anthropic
+                    </div>
+                    <h2 class="hero-title">
+                        <span class="gradient-text">Claude Code</span>
+                    </h2>
+                    <p class="hero-description">
+                        أداة سطر الأوامر (CLI) الرسمية من <strong class="hero-highlight">Anthropic</strong>،
+                        تستخدم نماذج <strong class="hero-highlight">Claude Opus 4 & Sonnet 4.5</strong> — أذكى نماذج AI في العالم.
+                        مثالية للمهام المعقدة والمراجعات الاحترافية، تتكامل بسلاسة مع Cline لتشكيل منظومة متكاملة.
+                    </p>
+                </div>
+            </section>
+
+            <!-- Why Claude Code? -->
+            <section class="section animate-fade-in-up" style="animation-delay: 0.1s">
+                <h3 class="section-title">
+                    <i class="fas fa-circle-question"></i>
+                    لماذا نضيف Claude Code مع Cline؟
+                    <span class="section-badge">تكامل قوي</span>
+                </h3>
+                <div class="philosophy-grid">
+                    <div class="philosophy-card">
+                        <div class="philosophy-icon"><i class="fas fa-brain"></i></div>
+                        <h4>ذكاء استثنائي</h4>
+                        <p>نماذج Claude Opus 4 و Sonnet 4.5 هي الأقوى في العالم للبرمجة المعقدة والمراجعات العميقة.</p>
+                    </div>
+                    <div class="philosophy-card">
+                        <div class="philosophy-icon"><i class="fas fa-infinity"></i></div>
+                        <h4>Context ضخم</h4>
+                        <p>يدعم أكثر من 1 مليون token في المحادثة الواحدة — يستوعب مشاريع كاملة.</p>
+                    </div>
+                    <div class="philosophy-card">
+                        <div class="philosophy-icon"><i class="fas fa-handshake"></i></div>
+                        <h4>تكامل مع Cline</h4>
+                        <p>Cline للبرمجة اليومية (مجاناً)، Claude Code للمهام الحرجة. تعاون مثالي.</p>
+                    </div>
+                    <div class="philosophy-card">
+                        <div class="philosophy-icon"><i class="fas fa-money-bill-wave"></i></div>
+                        <h4>تكلفة ذكية</h4>
+                        <p>عبر OpenRouter: $10 واحدة تكفيك لشهور باستخدام ذكي + النماذج المجانية.</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Comparison -->
+            <section class="section animate-fade-in-up" style="animation-delay: 0.2s">
+                <h3 class="section-title">
+                    <i class="fas fa-scale-balanced"></i>
+                    Claude Code مقابل Cline
+                    <span class="section-badge success">متكاملان</span>
+                </h3>
+                <div class="comparison-table">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>الميزة</th>
+                                <th>Cline v3.81</th>
+                                <th>Claude Code</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><strong>البيئة</strong></td>
+                                <td>Extension داخل VS Code</td>
+                                <td>CLI في Terminal</td>
+                            </tr>
+                            <tr>
+                                <td><strong>النموذج الافتراضي</strong></td>
+                                <td>أي نموذج (Ollama, Gemini, Groq...)</td>
+                                <td>Claude Opus 4 / Sonnet 4.5</td>
+                            </tr>
+                            <tr>
+                                <td><strong>التكلفة</strong></td>
+                                <td>$0 مع Ollama</td>
+                                <td>$0.01-$0.50 لكل مهمة</td>
+                            </tr>
+                            <tr>
+                                <td><strong>السرعة</strong></td>
+                                <td>سريع (محلي)</td>
+                                <td>سريع جداً (سحابي)</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Context Window</strong></td>
+                                <td>حسب النموذج</td>
+                                <td><i class="fas fa-check text-success"></i> 1M+ token</td>
+                            </tr>
+                            <tr>
+                                <td><strong>الذكاء البرمجي</strong></td>
+                                <td>⭐⭐⭐⭐ (Qwen3.6)</td>
+                                <td>⭐⭐⭐⭐⭐ (Opus 4)</td>
+                            </tr>
+                            <tr>
+                                <td><strong>MCP Support</strong></td>
+                                <td><i class="fas fa-check text-success"></i></td>
+                                <td><i class="fas fa-check text-success"></i></td>
+                            </tr>
+                            <tr>
+                                <td><strong>Checkpoints</strong></td>
+                                <td><i class="fas fa-check text-success"></i></td>
+                                <td><i class="fas fa-xmark text-danger"></i></td>
+                            </tr>
+                            <tr>
+                                <td><strong>Multi-File Editing</strong></td>
+                                <td><i class="fas fa-check text-success"></i></td>
+                                <td><i class="fas fa-check text-success"></i> متفوق</td>
+                            </tr>
+                            <tr>
+                                <td><strong>الاستخدام الأمثل</strong></td>
+                                <td>البرمجة اليومية (80%)</td>
+                                <td>المهام الحرجة (20%)</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+
+            <!-- Installation -->
+            <section class="section animate-fade-in-up" style="animation-delay: 0.3s">
+                <div class="step-header">
+                    <div class="step-number">01</div>
+                    <div>
+                        <h3 class="step-title">تثبيت Claude Code CLI</h3>
+                        <span class="step-time"><i class="fas fa-clock"></i> 5 دقائق</span>
+                    </div>
+                </div>
+                <p class="step-description">
+                    Claude Code يعمل كأداة سطر أوامر مستقلة. التثبيت عبر npm (الطريقة الرسمية والأسهل):
+                </p>
+                <div class="code-block">
+                    <div class="code-header">
+                        <span><i class="fas fa-terminal"></i> PowerShell (Administrator)</span>
+                        <button class="copy-btn" onclick="copyCode(this)"><i class="fas fa-copy"></i></button>
+                    </div>
+                    <pre><code># تثبيت Claude Code عالمياً عبر npm
+npm install -g @anthropic-ai/claude-code
+
+# التحقق من التثبيت
+claude --version
+
+# أو تحقق من مكان التثبيت
+where claude</code></pre>
+                </div>
+                <div class="alert alert-info">
+                    <i class="fas fa-circle-info"></i>
+                    <div>
+                        <h4>متطلبات التثبيت</h4>
+                        <p>Node.js 18+ (موجود عندك)، npm 9+ (موجود عندك). التثبيت سريع لا يحتاج أي إعدادات إضافية.</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Setup with OpenRouter -->
+            <section class="section animate-fade-in-up" style="animation-delay: 0.4s">
+                <div class="step-header">
+                    <div class="step-number">02</div>
+                    <div>
+                        <h3 class="step-title">ربط Claude Code مع OpenRouter (الطريقة الذكية)</h3>
+                        <span class="step-time"><i class="fas fa-clock"></i> 3 دقائق</span>
+                    </div>
+                </div>
+                <div class="alert alert-success">
+                    <i class="fas fa-lightbulb"></i>
+                    <div>
+                        <h4>الفكرة الذكية</h4>
+                        <p>بدل الاشتراك المباشر مع Anthropic ($20+/شهر)، استخدم OpenRouter كجسر — نفس القوة بتكلفة أقل!</p>
+                    </div>
+                </div>
+                <p class="step-description">
+                    أضف هذين المتغيرين في PowerShell (أو احفظهم بشكل دائم في System Variables):
+                </p>
+                <div class="code-block">
+                    <div class="code-header">
+                        <span><i class="fas fa-terminal"></i> PowerShell</span>
+                        <button class="copy-btn" onclick="copyCode(this)"><i class="fas fa-copy"></i></button>
+                    </div>
+                    <pre><code># للجلسة الحالية فقط
+$env:ANTHROPIC_BASE_URL = "https://openrouter.ai/api/v1"
+$env:ANTHROPIC_API_KEY = "sk-or-v1-YOUR_OPENROUTER_KEY"
+
+# للحفظ الدائم (موصى به)
+[System.Environment]::SetEnvironmentVariable('ANTHROPIC_BASE_URL', 'https://openrouter.ai/api/v1', 'User')
+[System.Environment]::SetEnvironmentVariable('ANTHROPIC_API_KEY', 'sk-or-v1-YOUR_KEY', 'User')
+
+# التحقق
+echo $env:ANTHROPIC_BASE_URL
+echo $env:ANTHROPIC_API_KEY</code></pre>
+                </div>
+            </section>
+
+            <!-- Alternative: Direct Anthropic -->
+            <section class="section animate-fade-in-up" style="animation-delay: 0.5s">
+                <h3 class="section-title">
+                    <i class="fas fa-code-branch"></i>
+                    البديل: الاشتراك المباشر مع Anthropic
+                    <span class="section-badge">اختياري</span>
+                </h3>
+                <div class="specs-grid">
+                    <div class="spec-card">
+                        <div class="spec-icon cpu"><i class="fas fa-building"></i></div>
+                        <div class="spec-info">
+                            <span class="spec-label">الطريقة الرسمية</span>
+                            <strong class="spec-value">console.anthropic.com</strong>
+                            <span class="spec-detail">تحتاج بطاقة ائتمان دولية</span>
+                        </div>
+                    </div>
+                    <div class="spec-card">
+                        <div class="spec-icon ram"><i class="fas fa-dollar-sign"></i></div>
+                        <div class="spec-info">
+                            <span class="spec-label">الحد الأدنى</span>
+                            <strong class="spec-value">$5 رصيد</strong>
+                            <span class="spec-detail">يكفي لأسبوعين</span>
+                        </div>
+                    </div>
+                    <div class="spec-card">
+                        <div class="spec-icon gpu"><i class="fas fa-star"></i></div>
+                        <div class="spec-info">
+                            <span class="spec-label">الميزة</span>
+                            <strong class="spec-value">Priority Access</strong>
+                            <span class="spec-detail">أولوية في الاستجابة</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="alert alert-info">
+                    <i class="fas fa-circle-info"></i>
+                    <div>
+                        <h4>متى تختار الاشتراك المباشر؟</h4>
+                        <p>إذا كنت تستخدم Claude Code بشكل مكثف يومياً (6+ ساعات)، الاشتراك المباشر يصبح أرخص. للمستخدم العادي، OpenRouter أفضل.</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Testing -->
+            <section class="section animate-fade-in-up" style="animation-delay: 0.6s">
+                <div class="step-header">
+                    <div class="step-number">03</div>
+                    <div>
+                        <h3 class="step-title">اختبار Claude Code</h3>
+                        <span class="step-time"><i class="fas fa-clock"></i> دقيقتان</span>
+                    </div>
+                </div>
+                <div class="code-block">
+                    <div class="code-header">
+                        <span><i class="fas fa-terminal"></i> PowerShell</span>
+                        <button class="copy-btn" onclick="copyCode(this)"><i class="fas fa-copy"></i></button>
+                    </div>
+                    <pre><code># انتقل لأي مشروع
+cd D:\Projects\AI-Workspace
+
+# شغّل Claude Code
+claude
+
+# ستفتح واجهة تفاعلية، جرّب:
+# "مرحبا! اشرح لي بنية هذا المشروع"
+# "اكتب لي دالة Python لحساب الأعداد الأولية"
+# "راجع آخر commit في git وقل لي رأيك"
+
+# للخروج: اكتب /exit أو اضغط Ctrl+C</code></pre>
+                </div>
+            </section>
+
+            <!-- Key Features -->
+            <section class="section animate-fade-in-up" style="animation-delay: 0.7s">
+                <h3 class="section-title">
+                    <i class="fas fa-sparkles"></i>
+                    ميزات Claude Code المتقدمة
+                    <span class="section-badge">قوي جداً</span>
+                </h3>
+                <div class="search-apis-grid">
+                    <div class="api-card">
+                        <div class="api-icon" style="background: #8b5cf6;"><i class="fas fa-eye"></i></div>
+                        <h4>Extended Thinking</h4>
+                        <p class="api-stats">تفكير عميق قبل الإجابة</p>
+                        <p>Claude يفكر خطوة بخطوة قبل كتابة الكود، مما يقلل الأخطاء بنسبة 70%.</p>
+                    </div>
+                    <div class="api-card">
+                        <div class="api-icon" style="background: #10b981;"><i class="fas fa-folder-tree"></i></div>
+                        <h4>Full Project Context</h4>
+                        <p class="api-stats">يفهم المشروع كاملاً</p>
+                        <p>يقرأ كل الملفات، يفهم العلاقات بينها، ويقترح تحسينات شاملة.</p>
+                    </div>
+                    <div class="api-card">
+                        <div class="api-icon" style="background: #f59e0b;"><i class="fas fa-code-merge"></i></div>
+                        <h4>Multi-File Operations</h4>
+                        <p class="api-stats">تعديل عدة ملفات معاً</p>
+                        <p>يعدّل 10+ ملفات في عملية واحدة مع ضمان الاتساق بينها.</p>
+                    </div>
+                    <div class="api-card">
+                        <div class="api-icon" style="background: #ef4444;"><i class="fas fa-shield-halved"></i></div>
+                        <h4>Security Audits</h4>
+                        <p class="api-stats">مراجعة أمنية احترافية</p>
+                        <p>يفحص الكود لثغرات OWASP Top 10 ويقترح الحلول.</p>
+                    </div>
+                    <div class="api-card">
+                        <div class="api-icon" style="background: #06b6d4;"><i class="fas fa-file-code"></i></div>
+                        <h4>Documentation Generator</h4>
+                        <p class="api-stats">توثيق تلقائي</p>
+                        <p>يولّد JSDoc و README و API docs تلقائياً بجودة احترافية.</p>
+                    </div>
+                    <div class="api-card">
+                        <div class="api-icon" style="background: #ec4899;"><i class="fas fa-arrow-trend-up"></i></div>
+                        <h4>Performance Optimization</h4>
+                        <p class="api-stats">تحسين الأداء</p>
+                        <p>يحلل الكود ويقترح تحسينات للسرعة والـ bundle size.</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Essential Commands -->
+            <section class="section animate-fade-in-up" style="animation-delay: 0.8s">
+                <h3 class="section-title">
+                    <i class="fas fa-keyboard"></i>
+                    الأوامر الأساسية في Claude Code
+                    <span class="section-badge">جاهزة</span>
+                </h3>
+                <div class="code-block">
+                    <div class="code-header">
+                        <span><i class="fas fa-terminal"></i> Claude Code Commands</span>
+                        <button class="copy-btn" onclick="copyCode(this)"><i class="fas fa-copy"></i></button>
+                    </div>
+                    <pre><code># === أوامر داخل Claude Code ===
+
+/help              # عرض كل الأوامر
+/model             # تغيير النموذج (opus-4, sonnet-4.5)
+/clear             # مسح المحادثة
+/reset             # إعادة التهيئة الكاملة
+/exit              # الخروج
+
+# === استخدامات شائعة ===
+
+claude "اشرح لي ملف server.ts"
+claude "ابحث عن bugs في المشروع"
+claude "اكتب tests للـ API endpoints"
+claude "راجع الـ security في login.ts"
+claude "حسّن الأداء في database queries"
+
+# === مع ملفات محددة ===
+claude --file server.ts "راجع هذا الملف"
+claude --dir src/api "راجع كل الـ APIs"</code></pre>
+                </div>
+            </section>
+
+            <!-- Cost Calculator -->
+            <section class="section animate-fade-in-up" style="animation-delay: 0.9s">
+                <h3 class="section-title">
+                    <i class="fas fa-calculator"></i>
+                    حاسبة التكلفة الواقعية
+                    <span class="section-badge success">$10 يكفي لشهور</span>
+                </h3>
+                <div class="comparison-table">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>النموذج</th>
+                                <th>السعر (Input)</th>
+                                <th>السعر (Output)</th>
+                                <th>مهمة متوسطة</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><strong>Claude Haiku 3.5</strong></td>
+                                <td>$0.80/M</td>
+                                <td>$4/M</td>
+                                <td>~$0.05</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Claude Sonnet 4.5</strong></td>
+                                <td>$3/M</td>
+                                <td>$15/M</td>
+                                <td>~$0.30</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Claude Opus 4</strong></td>
+                                <td>$15/M</td>
+                                <td>$75/M</td>
+                                <td>~$1.50</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="alert alert-success">
+                    <i class="fas fa-chart-line"></i>
+                    <div>
+                        <h4>التوزيع الذكي</h4>
+                        <p>
+                            استخدم <strong>Haiku</strong> للمهام البسيطة (أرخص 10x) ·
+                            <strong>Sonnet 4.5</strong> للمهام المتوسطة (الأفضل سعراً/أداءً) ·
+                            <strong>Opus 4</strong> فقط للمهام الحرجة.
+                            النتيجة: $10 يكفي 2-3 أشهر!
+                        </p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Checklist -->
+            <section class="section animate-fade-in-up" style="animation-delay: 1s">
+                <h3 class="section-title">
+                    <i class="fas fa-list-check"></i>
+                    قائمة التحقق
+                    <span class="section-badge">6 خطوات</span>
+                </h3>
+                <div class="checklist">
+                    <label class="check-item"><input type="checkbox"><span class="task-check"><i class="fas fa-check"></i></span><span class="task-text">تثبيت Node.js 18+ (موجود مسبقاً)</span></label>
+                    <label class="check-item"><input type="checkbox"><span class="task-check"><i class="fas fa-check"></i></span><span class="task-text">تثبيت Claude Code: npm install -g @anthropic-ai/claude-code</span></label>
+                    <label class="check-item"><input type="checkbox"><span class="task-check"><i class="fas fa-check"></i></span><span class="task-text">إضافة مفتاح OpenRouter للمتغيرات البيئية</span></label>
+                    <label class="check-item"><input type="checkbox"><span class="task-check"><i class="fas fa-check"></i></span><span class="task-text">اختبار Claude Code بأمر claude في Terminal</span></label>
+                    <label class="check-item"><input type="checkbox"><span class="task-check"><i class="fas fa-check"></i></span><span class="task-text">تجربة أول مهمة حقيقية (مراجعة كود)</span></label>
+                    <label class="check-item"><input type="checkbox"><span class="task-check"><i class="fas fa-check"></i></span><span class="task-text">إيداع $10 في OpenRouter (اختياري لرفع الحدود)</span></label>
+                </div>
+            </section>
+
+            <div class="page-nav-footer">
+                <a href="05-vscode.html" class="page-nav-btn prev">
+                    <i class="fas fa-arrow-right"></i>
+                    <div><span>السابق</span><strong>VS Code + Cline</strong></div>
+                </a>
+                <a href="21-openrouter-bridge.html" class="page-nav-btn next">
+                    <div><span>التالي</span><strong>OpenRouter Bridge</strong></div>
+                    <i class="fas fa-arrow-left"></i>
+                </a>
+            </div>
+        </div>
+    </main>
+
+    <script src="../js/main.js"></script>
+</body>
+</html>

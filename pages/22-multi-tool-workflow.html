@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>مسار العمل المتكامل متعدد المحركات — AI Master Plan</title>
+    <link rel="icon" type="image/svg+xml" href="../assets/icons/favicon.svg">
+    <link rel="manifest" href="../manifest.json">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+    <!-- Animated Background -->
+    <div class="animated-bg">
+        <div class="gradient-orb orb-1"></div>
+        <div class="gradient-orb orb-2"></div>
+        <div class="gradient-orb orb-3"></div>
+    </div>
+
+    <div class="sidebar-overlay" id="sidebarOverlay" onclick="toggleSidebar()"></div>
+
+    <!-- Sidebar -->
+    <nav class="sidebar" id="sidebar">
+        <div class="sidebar-header">
+            <a href="../index.html" class="logo">
+                <div class="logo-icon"><i class="fas fa-microchip"></i></div>
+                <div class="logo-text">
+                    <span class="logo-title">AI Master</span>
+                    <span class="logo-subtitle">Plan v4.0</span>
+                </div>
+            </a>
+            <button class="sidebar-close" onclick="toggleSidebar()" aria-label="إغلاق"><i class="fas fa-xmark"></i></button>
+        </div>
+
+        <div class="sidebar-search">
+            <i class="fas fa-magnifying-glass"></i>
+            <input type="text" placeholder="بحث سريع..." id="sidebarSearch" oninput="searchNav(this.value)">
+            <kbd>Ctrl+K</kbd>
+        </div>
+
+        <div class="sidebar-nav" id="sidebarNav">
+            <div class="nav-section">
+                <span class="nav-section-title"><i class="fas fa-circle-dot"></i> البداية</span>
+                <a href="../index.html" class="nav-link"><i class="fas fa-th-large"></i><span>لوحة التحكم</span></a>
+                <a href="01-overview.html" class="nav-link"><i class="fas fa-compass"></i><span>نظرة عامة</span></a>
+                <a href="18-ai-timeline.html" class="nav-link"><i class="fas fa-clock-rotate-left"></i><span>أحداث 2025-2026</span></a>
+            </div>
+            <div class="nav-section">
+                <span class="nav-section-title"><i class="fas fa-rocket"></i> التأسيس</span>
+                <a href="02-setup.html" class="nav-link"><i class="fas fa-hard-drive"></i><span>تجهيز الجهاز</span></a>
+                <a href="03-ai-local.html" class="nav-link"><i class="fas fa-server"></i><span>AI المحلي</span></a>
+                <a href="04-ai-cloud.html" class="nav-link"><i class="fas fa-cloud"></i><span>AI السحابي</span></a>
+                <a href="05-vscode.html" class="nav-link"><i class="fas fa-code"></i><span>VS Code + Cline</span></a>
+                <a href="20-claude-code.html" class="nav-link"><i class="fas fa-terminal"></i><span>Claude Code</span><span class="nav-badge new">جديد</span></a>
+                <a href="21-openrouter-bridge.html" class="nav-link"><i class="fas fa-bridge"></i><span>OpenRouter Bridge</span><span class="nav-badge new">جديد</span></a>
+                <a href="19-ai-tools-compare.html" class="nav-link"><i class="fas fa-scale-balanced"></i><span>مقارنة الأدوات</span></a>
+            </div>
+            <div class="nav-section">
+                <span class="nav-section-title"><i class="fas fa-wand-magic-sparkles"></i> القدرات</span>
+                <a href="06-mcps.html" class="nav-link"><i class="fas fa-plug"></i><span>MCPs</span></a>
+                <a href="17-mcp-security.html" class="nav-link"><i class="fas fa-shield-virus"></i><span>أمان MCP</span></a>
+                <a href="07-modes.html" class="nav-link"><i class="fas fa-masks-theater"></i><span>Custom Modes</span></a>
+                <a href="08-skills.html" class="nav-link"><i class="fas fa-graduation-cap"></i><span>Skills</span></a>
+                <a href="16-multi-agent.html" class="nav-link"><i class="fas fa-users-gear"></i><span>Multi-Agent</span></a>
+                <a href="22-multi-tool-workflow.html" class="nav-link active"><i class="fas fa-arrows-split-up-and-left"></i><span>Multi-Tool Workflow</span><span class="nav-badge new">جديد</span></a>
+            </div>
+            <div class="nav-section">
+                <span class="nav-section-title"><i class="fas fa-shield-halved"></i> المعايير</span>
+                <a href="09-constitution.html" class="nav-link"><i class="fas fa-scroll"></i><span>الدستور</span></a>
+                <a href="10-security.html" class="nav-link"><i class="fas fa-shield-halved"></i><span>الأمان</span></a>
+                <a href="11-performance.html" class="nav-link"><i class="fas fa-gauge-high"></i><span>الأداء والتوسع</span></a>
+            </div>
+            <div class="nav-section">
+                <span class="nav-section-title"><i class="fas fa-briefcase"></i> التخصصات</span>
+                <a href="12-ecommerce.html" class="nav-link"><i class="fas fa-store"></i><span>التجارة السعودية</span></a>
+                <a href="13-techstack.html" class="nav-link"><i class="fas fa-layer-group"></i><span>Tech Stack</span></a>
+                <a href="14-workflow.html" class="nav-link"><i class="fas fa-route"></i><span>خطوات العمل</span></a>
+                <a href="15-resources.html" class="nav-link"><i class="fas fa-book-open"></i><span>المصادر</span></a>
+            </div>
+        </div>
+
+        <div class="sidebar-footer">
+            <div class="version-info">
+                <i class="fas fa-code-branch"></i>
+                <span>v4.0 — سبتمبر 2026</span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <header class="topbar">
+            <button class="sidebar-toggle-btn" onclick="toggleSidebar()"><i class="fas fa-bars"></i></button>
+            <div class="topbar-title">
+                <div class="topbar-breadcrumb">
+                    <i class="fas fa-home"></i>
+                    <span>الرئيسية / القدرات / Multi-Tool Workflow</span>
+                </div>
+                <h1>تكامل محركات التطوير (Multi-Tool Orchestration)</h1>
+            </div>
+            <div class="topbar-actions">
+                <button class="topbar-btn" onclick="scrollToTop()" title="للأعلى"><i class="fas fa-arrow-up"></i></button>
+                <button class="theme-toggle" onclick="toggleTheme()" title="تبديل الوضع"><i class="fas fa-moon" id="themeIcon"></i></button>
+            </div>
+        </header>
+
+        <div class="content-area">
+            <section class="hero-section animate-fade-in-up">
+                <div class="hero-grid-pattern"></div>
+                <div class="hero-content">
+                    <div class="hero-badge">
+                        <span class="badge-pulse"></span>
+                        <i class="fas fa-arrows-split-up-and-left"></i>
+                        Cline + Claude Code + OpenRouter + Ollama
+                    </div>
+                    <h2 class="hero-title">
+                        <span class="gradient-text">سيمفونية المحركات الذكية</span>
+                    </h2>
+                    <p class="hero-description">
+                        بروتوكول التناغم الفعلي بين محرك البرمجة المحلي <strong class="hero-highlight">Cline</strong> ومحرك الاستدلال العميق <strong class="hero-highlight">Claude Code</strong> عبر جسر <strong class="hero-highlight">OpenRouter</strong> الموحد.
+                        تحقيق أعلى مستويات الجودة البرمجية العالمية بأقل تكلفة ممكنة لا تتجاوز بضعة سنتات للمشروع.
+                    </p>
+                </div>
+            </section>
+
+            <!-- Orchestration Philosophy -->
+            <section class="section animate-fade-in-up" style="animation-delay: 0.1s">
+                <h3 class="section-title">
+                    <i class="fas fa-sitemap"></i>
+                    معمارية تبادل الأدوار (The Handoff Protocol)
+                    <span class="section-badge success">بروتوكول معتمد</span>
+                </h3>
+                <div class="philosophy-grid">
+                    <div class="philosophy-card">
+                        <div class="philosophy-icon"><i class="fas fa-compass-drafting"></i></div>
+                        <h4>1. التخطيط المعماري (Claude Code)</h4>
+                        <p>استدعاء Claude Opus 4 عبر Terminal لتصميم هيكل النظام، فحص الجدوى المعمارية، وتوليد ملف خطة العمل التنفيذية (Plan.md).</p>
+                    </div>
+                    <div class="philosophy-card">
+                        <div class="philosophy-icon"><i class="fas fa-code"></i></div>
+                        <h4>2. البناء والتوليد اليومي (Cline + Ollama)</h4>
+                        <p>تسليم ملف الخطة لـ Cline داخل VS Code ليتولى بناء الواجهات، كتابة المكونات، والربط البرمجي مجاناً 100% عبر Qwen3.6 MoE المحلي.</p>
+                    </div>
+                    <div class="philosophy-card">
+                        <div class="philosophy-icon"><i class="fas fa-shield-halved"></i></div>
+                        <h4>3. التدقيق الأمني والصقل (Claude Code)</h4>
+                        <p>استدعاء Claude Code مجدداً لفحص الكود المنتج ضد ثغرات OWASP، وتحسين بنية الدوال المعقدة قبل النشر النهائي.</p>
+                    </div>
+                    <div class="philosophy-card">
+                        <div class="philosophy-icon"><i class="fas fa-cloud-arrow-up"></i></div>
+                        <h4>4. الاختبار والنشر (Cline)</h4>
+                        <p>إسناد مهام توليد اختبارات الوحدة (Unit Tests)، تشغيل فاحصات k6، والرفع لمستودعات Git لمنظومة Cline التلقائية.</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Real-world Scenario: Salla + ZATCA + Moyasar Feature -->
+            <section class="section animate-fade-in-up" style="animation-delay: 0.2s">
+                <h3 class="section-title">
+                    <i class="fas fa-laptop-code"></i>
+                    سيناريو عملي واقعي: بناء بوابة دفع متوافقة مع ZATCA لمتجر سعودي
+                </h3>
+                <div class="journey-timeline">
+                    <div class="journey-step">
+                        <div class="step-marker" style="background: var(--accent-primary);"><i class="fas fa-terminal"></i></div>
+                        <div class="step-content">
+                            <h4>الخطوة 1: استشارة وتخطيط المعمارية مع Claude Code</h4>
+                            <p>افتح سطر الأوامر في مجلد المشروع ونفّذ الأمر التالي:</p>
+                            <div class="code-block small">
+                                <pre><code>claude "قم بتصميم معمارية API متكاملة للربط مع بوابة Moyasar للدفع بالريال السعودي، وتوليد فواتير إلكترونية متوافقة مع ZATCA Phase 2. صدّر الخطة كملف TASK_PLAN.md"</code></pre>
+                            </div>
+                            <div class="step-outcome">
+                                <i class="fas fa-file-lines"></i>
+                                <span>النتيجة: ملف خطة تفصيلي ودقيق يحوي هياكل البيانات والـ Endpoints المطلوبة.</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="journey-step">
+                        <div class="step-marker" style="background: var(--accent-success);"><i class="fas fa-code"></i></div>
+                        <div class="step-content">
+                            <h4>الخطوة 2: التنفيذ البرمجي المجاني عبر Cline</h4>
+                            <p>افتح VS Code واختر Profile المحلي (Ollama - Qwen3.6)، واطلب منه:</p>
+                            <div class="code-block small">
+                                <pre><code>اقرأ ملف TASK_PLAN.md ونفّذ كود الواجهة الخلفية ومكونات الدفع المطلوبة في مسار src/api/payments بالكامل.</code></pre>
+                            </div>
+                            <div class="step-outcome">
+                                <i class="fas fa-check-circle"></i>
+                                <span>النتيجة: بناء الملفات البرمجية بالكامل مجاناً وبسرعة 60 رمز/ثانية محلياً.</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="journey-step">
+                        <div class="step-marker" style="background: var(--accent-warning);"><i class="fas fa-shield-virus"></i></div>
+                        <div class="step-content">
+                            <h4>الخطوة 3: التدقيق الأمني النهائي مع Claude Code</h4>
+                            <p>أعد استدعاء Claude Code للتحقق من أمان معالجة المفاتيح السرية:</p>
+                            <div class="code-block small">
+                                <pre><code>claude --file src/api/payments/moyasar.ts "افحص هذا الكود للتأكد من تشفير التوقيعات الرقمية وعدم تسريب مفاتيح API السرية أو الوقوع في ثغرات SSRF"</code></pre>
+                            </div>
+                            <div class="step-outcome">
+                                <i class="fas fa-shield-check"></i>
+                                <span>النتيجة: مراجعة خبير دقيقة بتكلفة لا تتجاوز 0.02$ عبر رصيد OpenRouter الموحد.</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Resource Allocation Matrix -->
+            <section class="section animate-fade-in-up" style="animation-delay: 0.3s">
+                <h3 class="section-title">
+                    <i class="fas fa-chart-pie"></i>
+                    مصفوفة توزيع المهام والميزانية الذكية
+                    <span class="section-badge success">توفير 85%</span>
+                </h3>
+                <div class="comparison-table">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>نوع المهمة</th>
+                                <th>المحرك الموصى به</th>
+                                <th>النموذج المستخدم</th>
+                                <th>التكلفة التقديرية</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>كتابة الواجهات والمكونات وتعديل الـ CSS</td>
+                                <td>Cline (VS Code)</td>
+                                <td>Qwen3.6 35B-a3B (محلي)</td>
+                                <td><span class="status-badge free">$0.00 (مجاني)</span></td>
+                            </tr>
+                            <tr>
+                                <td>معالجة سياق المستندات الضخمة (1M Context)</td>
+                                <td>Cline (VS Code)</td>
+                                <td>Google Gemini 3 Flash (سحابي)</td>
+                                <td><span class="status-badge free">$0.00 (مجاني)</span></td>
+                            </tr>
+                            <tr>
+                                <td>التخطيط المعماري وتصميم قواعد البيانات</td>
+                                <td>Claude Code (Terminal)</td>
+                                <td>Claude Sonnet 4.5 via OpenRouter</td>
+                                <td><span class="status-badge optional">~$0.15 للمهمة</span></td>
+                            </tr>
+                            <tr>
+                                <td>الفحص الأمني والـ Refactoring الشامل</td>
+                                <td>Claude Code (Terminal)</td>
+                                <td>Claude Opus 4 via OpenRouter</td>
+                                <td><span class="status-badge optional">~$0.40 للمهمة</span></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+
+            <!-- Orchestration Checklist -->
+            <section class="section animate-fade-in-up" style="animation-delay: 0.4s">
+                <h3 class="section-title">
+                    <i class="fas fa-list-check"></i>
+                    قائمة التحقق لتشغيل المنظومة المزدوجة
+                    <span class="section-badge">جاهزية كاملة</span>
+                </h3>
+                <div class="checklist">
+                    <label class="check-item"><input type="checkbox"><span class="task-check"><i class="fas fa-check"></i></span><span class="task-text">تثبيت محرك Ollama وتشغيل النماذج المحلية على القرص D.</span></label>
+                    <label class="check-item"><input type="checkbox"><span class="task-check"><i class="fas fa-check"></i></span><span class="task-text">تثبيت إضافة Cline في VS Code وضبط بروفايل Ollama و Gemini Flash.</span></label>
+                    <label class="check-item"><input type="checkbox"><span class="task-check"><i class="fas fa-check"></i></span><span class="task-text">تثبيت أداة Claude Code CLI عبر npm وضبط متغيرات بيئة OpenRouter.</span></label>
+                    <label class="check-item"><input type="checkbox"><span class="task-check"><i class="fas fa-check"></i></span><span class="task-text">شحن رصيد OpenRouter بمبلغ 10$ لفتح حد 1000 طلب/يوم للنماذج المجانية ورصيد الطوارئ.</span></label>
+                    <label class="check-item"><input type="checkbox"><span class="task-check"><i class="fas fa-check"></i></span><span class="task-text">تطبيق بروتوكول التبادل (التخطيط بـ Claude Code والتنفيذ بـ Cline).</span></label>
+                </div>
+            </section>
+
+            <!-- Nav Footer -->
+            <div class="page-nav-footer">
+                <a href="21-openrouter-bridge.html" class="page-nav-btn prev">
+                    <i class="fas fa-arrow-right"></i>
+                    <div>
+                        <span>السابق</span>
+                        <strong>OpenRouter Bridge</strong>
+                    </div>
+                </a>
+                <a href="09-constitution.html" class="page-nav-btn next">
+                    <div>
+                        <span>التالي</span>
+                        <strong>الدستور البرمجي</strong>
+                    </div>
+                    <i class="fas fa-arrow-left"></i>
+                </a>
+            </div>
+        </div>
+    </main>
+
+    <script src="../js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,483 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OpenRouter Bridge — AI Master Plan</title>
+    <link rel="icon" type="image/svg+xml" href="../assets/icons/favicon.svg">
+    <link rel="manifest" href="../manifest.json">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+    <div class="animated-bg">
+        <div class="gradient-orb orb-1"></div>
+        <div class="gradient-orb orb-2"></div>
+        <div class="gradient-orb orb-3"></div>
+    </div>
+
+    <div class="sidebar-overlay" id="sidebarOverlay" onclick="toggleSidebar()"></div>
+
+    <nav class="sidebar" id="sidebar">
+        <div class="sidebar-header">
+            <a href="../index.html" class="logo">
+                <div class="logo-icon"><i class="fas fa-microchip"></i></div>
+                <div class="logo-text">
+                    <span class="logo-title">AI Master</span>
+                    <span class="logo-subtitle">Plan v4.0</span>
+                </div>
+            </a>
+            <button class="sidebar-close" onclick="toggleSidebar()"><i class="fas fa-xmark"></i></button>
+        </div>
+
+        <div class="sidebar-search">
+            <i class="fas fa-magnifying-glass"></i>
+            <input type="text" placeholder="بحث سريع..." id="sidebarSearch" oninput="searchNav(this.value)">
+            <kbd>Ctrl+K</kbd>
+        </div>
+
+        <div class="sidebar-nav" id="sidebarNav">
+            <div class="nav-section">
+                <span class="nav-section-title"><i class="fas fa-circle-dot"></i> البداية</span>
+                <a href="../index.html" class="nav-link"><i class="fas fa-th-large"></i><span>لوحة التحكم</span></a>
+                <a href="01-overview.html" class="nav-link"><i class="fas fa-compass"></i><span>نظرة عامة</span></a>
+                <a href="18-ai-timeline.html" class="nav-link"><i class="fas fa-clock-rotate-left"></i><span>أحداث 2025-2026</span></a>
+            </div>
+            <div class="nav-section">
+                <span class="nav-section-title"><i class="fas fa-rocket"></i> التأسيس</span>
+                <a href="02-setup.html" class="nav-link"><i class="fas fa-hard-drive"></i><span>تجهيز الجهاز</span></a>
+                <a href="03-ai-local.html" class="nav-link"><i class="fas fa-server"></i><span>AI المحلي</span></a>
+                <a href="04-ai-cloud.html" class="nav-link"><i class="fas fa-cloud"></i><span>AI السحابي</span></a>
+                <a href="05-vscode.html" class="nav-link"><i class="fas fa-code"></i><span>VS Code + Cline</span></a>
+                <a href="20-claude-code.html" class="nav-link"><i class="fas fa-terminal"></i><span>Claude Code</span><span class="nav-badge new">جديد</span></a>
+                <a href="21-openrouter-bridge.html" class="nav-link active"><i class="fas fa-bridge"></i><span>OpenRouter Bridge</span><span class="nav-badge new">جديد</span></a>
+                <a href="19-ai-tools-compare.html" class="nav-link"><i class="fas fa-scale-balanced"></i><span>مقارنة الأدوات</span></a>
+            </div>
+            <div class="nav-section">
+                <span class="nav-section-title"><i class="fas fa-wand-magic-sparkles"></i> القدرات</span>
+                <a href="06-mcps.html" class="nav-link"><i class="fas fa-plug"></i><span>MCPs</span></a>
+                <a href="17-mcp-security.html" class="nav-link"><i class="fas fa-shield-virus"></i><span>أمان MCP</span></a>
+                <a href="07-modes.html" class="nav-link"><i class="fas fa-masks-theater"></i><span>Custom Modes</span></a>
+                <a href="08-skills.html" class="nav-link"><i class="fas fa-graduation-cap"></i><span>Skills</span></a>
+                <a href="16-multi-agent.html" class="nav-link"><i class="fas fa-users-gear"></i><span>Multi-Agent</span></a>
+                <a href="22-multi-tool-workflow.html" class="nav-link"><i class="fas fa-arrows-split-up-and-left"></i><span>Multi-Tool Workflow</span><span class="nav-badge new">جديد</span></a>
+            </div>
+            <div class="nav-section">
+                <span class="nav-section-title"><i class="fas fa-shield-halved"></i> المعايير</span>
+                <a href="09-constitution.html" class="nav-link"><i class="fas fa-scroll"></i><span>الدستور</span></a>
+                <a href="10-security.html" class="nav-link"><i class="fas fa-shield-halved"></i><span>الأمان</span></a>
+                <a href="11-performance.html" class="nav-link"><i class="fas fa-gauge-high"></i><span>الأداء والتوسع</span></a>
+            </div>
+            <div class="nav-section">
+                <span class="nav-section-title"><i class="fas fa-briefcase"></i> التخصصات</span>
+                <a href="12-ecommerce.html" class="nav-link"><i class="fas fa-store"></i><span>التجارة السعودية</span></a>
+                <a href="13-techstack.html" class="nav-link"><i class="fas fa-layer-group"></i><span>Tech Stack</span></a>
+                <a href="14-workflow.html" class="nav-link"><i class="fas fa-route"></i><span>خطوات العمل</span></a>
+                <a href="15-resources.html" class="nav-link"><i class="fas fa-book-open"></i><span>المصادر</span></a>
+            </div>
+        </div>
+
+        <div class="sidebar-footer">
+            <div class="version-info">
+                <i class="fas fa-code-branch"></i>
+                <span>v4.0 — سبتمبر 2026</span>
+            </div>
+        </div>
+    </nav>
+
+    <main class="main-content">
+        <header class="topbar">
+            <button class="sidebar-toggle-btn" onclick="toggleSidebar()"><i class="fas fa-bars"></i></button>
+            <div class="topbar-title">
+                <div class="topbar-breadcrumb">
+                    <i class="fas fa-home"></i>
+                    <span>الرئيسية / OpenRouter Bridge</span>
+                </div>
+                <h1>OpenRouter — الجسر الذكي</h1>
+            </div>
+            <div class="topbar-actions">
+                <button class="topbar-btn" onclick="scrollToTop()" title="للأعلى"><i class="fas fa-arrow-up"></i></button>
+                <button class="theme-toggle" onclick="toggleTheme()" title="تبديل الوضع"><i class="fas fa-moon" id="themeIcon"></i></button>
+            </div>
+        </header>
+
+        <div class="content-area">
+            <section class="hero-section animate-fade-in-up">
+                <div class="hero-grid-pattern"></div>
+                <div class="hero-content">
+                    <div class="hero-badge">
+                        <span class="badge-pulse"></span>
+                        <i class="fas fa-bridge"></i>
+                        مفتاح واحد لكل النماذج
+                    </div>
+                    <h2 class="hero-title">
+                        <span class="gradient-text">OpenRouter Bridge</span>
+                    </h2>
+                    <p class="hero-description">
+                        جسر ذكي يربطك بـ <strong class="hero-highlight">300+ نموذج AI</strong> من
+                        <strong class="hero-highlight">Anthropic, Google, OpenAI, Meta, DeepSeek</strong> وغيرهم،
+                        بمفتاح واحد ورصيد موحد. استخدمه مع Cline و Claude Code وأي أداة تدعم OpenAI API.
+                    </p>
+                </div>
+            </section>
+
+            <!-- Problem/Solution -->
+            <section class="section animate-fade-in-up" style="animation-delay: 0.1s">
+                <h3 class="section-title">
+                    <i class="fas fa-lightbulb"></i>
+                    لماذا نحتاج OpenRouter؟
+                    <span class="section-badge success">يوفر 70%</span>
+                </h3>
+                <div class="comparison-table">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>الموقف</th>
+                                <th>بدون OpenRouter</th>
+                                <th>مع OpenRouter</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><strong>عدد المفاتيح</strong></td>
+                                <td>5-10 مفاتيح من مزودين مختلفين</td>
+                                <td><i class="fas fa-check text-success"></i> مفتاح واحد فقط</td>
+                            </tr>
+                            <tr>
+                                <td><strong>الرصيد</strong></td>
+                                <td>مقسّم على عدة حسابات</td>
+                                <td><i class="fas fa-check text-success"></i> رصيد موحد</td>
+                            </tr>
+                            <tr>
+                                <td><strong>الوصول للنماذج الجديدة</strong></td>
+                                <td>يحتاج تسجيل في كل منصة</td>
+                                <td><i class="fas fa-check text-success"></i> تلقائي</td>
+                            </tr>
+                            <tr>
+                                <td><strong>تبديل النماذج</strong></td>
+                                <td>معقد (تغيير API URL + Key)</td>
+                                <td><i class="fas fa-check text-success"></i> تغيير اسم النموذج فقط</td>
+                            </tr>
+                            <tr>
+                                <td><strong>النماذج المجانية</strong></td>
+                                <td>محدودة لكل مزود</td>
+                                <td><i class="fas fa-check text-success"></i> 20+ نموذج :free</td>
+                            </tr>
+                            <tr>
+                                <td><strong>الفواتير</strong></td>
+                                <td>فاتورة من كل مزود</td>
+                                <td><i class="fas fa-check text-success"></i> فاتورة واحدة</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+
+            <!-- How it Works -->
+            <section class="section animate-fade-in-up" style="animation-delay: 0.2s">
+                <h3 class="section-title">
+                    <i class="fas fa-diagram-project"></i>
+                    كيف يعمل OpenRouter؟
+                    <span class="section-badge">بسيط وذكي</span>
+                </h3>
+                <div class="code-block">
+                    <div class="code-header">
+                        <span><i class="fas fa-sitemap"></i> المعمارية الذكية</span>
+                        <button class="copy-btn" onclick="copyCode(this)"><i class="fas fa-copy"></i></button>
+                    </div>
+                    <pre><code>
+┌────────────────────────────────────────────────────────┐
+│                     أنت (المستخدم)                      │
+│                                                        │
+│  ┌─────────────┐  ┌─────────────┐  ┌─────────────┐    │
+│  │    Cline    │  │Claude Code  │  │  أي أداة    │    │
+│  └──────┬──────┘  └──────┬──────┘  └──────┬──────┘    │
+└─────────┼────────────────┼────────────────┼───────────┘
+          │                │                │
+          └────────────────┼────────────────┘
+                           │
+                           ▼
+            ┌──────────────────────────────┐
+            │       OpenRouter API         │
+            │   (مفتاح واحد: sk-or-v1-...) │
+            └──────────────┬───────────────┘
+                           │
+          ┌────────────────┼────────────────┐
+          │                │                │
+          ▼                ▼                ▼
+    ┌──────────┐    ┌──────────┐    ┌──────────┐
+    │Anthropic │    │  Google  │    │ OpenAI   │
+    │ Claude 4 │    │ Gemini 3 │    │  GPT-5   │
+    └──────────┘    └──────────┘    └──────────┘
+          │                │                │
+          ▼                ▼                ▼
+    ┌──────────┐    ┌──────────┐    ┌──────────┐
+    │   Meta   │    │ DeepSeek │    │  Qwen    │
+    │ Llama 4  │    │   V4     │    │   3.8    │
+    └──────────┘    └──────────┘    └──────────┘
+                           
+    + 290 نموذج آخر!</code></pre>
+                </div>
+            </section>
+
+            <!-- Setup Steps -->
+            <section class="section animate-fade-in-up" style="animation-delay: 0.3s">
+                <div class="step-header">
+                    <div class="step-number">01</div>
+                    <div>
+                        <h3 class="step-title">الحصول على مفتاح OpenRouter</h3>
+                        <span class="step-time"><i class="fas fa-clock"></i> 3 دقائق</span>
+                    </div>
+                </div>
+                <div class="steps-list">
+                    <h4><i class="fas fa-list-ol"></i> الخطوات</h4>
+                    <ol>
+                        <li>افتح: <a href="https://openrouter.ai/keys" target="_blank">openrouter.ai/keys</a></li>
+                        <li>سجّل بحساب Google أو GitHub (أسرع طريقة)</li>
+                        <li>اضغط <strong>"Create Key"</strong></li>
+                        <li>اختر اسماً للمفتاح (مثلاً: "AI Master Plan")</li>
+                        <li>انسخ المفتاح (يبدأ بـ <code>sk-or-v1-...</code>)</li>
+                        <li><strong>(اختياري):</strong> أودع $10 لرفع الحدود إلى 1000 طلب/يوم</li>
+                    </ol>
+                </div>
+            </section>
+
+            <!-- Integration with Tools -->
+            <section class="section animate-fade-in-up" style="animation-delay: 0.4s">
+                <div class="step-header">
+                    <div class="step-number">02</div>
+                    <div>
+                        <h3 class="step-title">ربط OpenRouter مع الأدوات</h3>
+                        <span class="step-time"><i class="fas fa-clock"></i> 5 دقائق</span>
+                    </div>
+                </div>
+
+                <h4 style="margin: 20px 0 14px; color: var(--accent-primary);">
+                    <i class="fas fa-code"></i> مع Cline:
+                </h4>
+                <div class="steps-list">
+                    <ol>
+                        <li>افتح Cline في VS Code</li>
+                        <li>اضغط Settings (الترس)</li>
+                        <li>اختر Provider: <strong>OpenRouter</strong></li>
+                        <li>ألصق المفتاح</li>
+                        <li>اختر Model (مثلاً: <code>anthropic/claude-sonnet-4.5</code>)</li>
+                    </ol>
+                </div>
+
+                <h4 style="margin: 30px 0 14px; color: var(--accent-primary);">
+                    <i class="fas fa-terminal"></i> مع Claude Code:
+                </h4>
+                <div class="code-block">
+                    <div class="code-header">
+                        <span><i class="fas fa-terminal"></i> PowerShell</span>
+                        <button class="copy-btn" onclick="copyCode(this)"><i class="fas fa-copy"></i></button>
+                    </div>
+                    <pre><code># حفظ دائم في متغيرات النظام
+[System.Environment]::SetEnvironmentVariable(
+    'ANTHROPIC_BASE_URL',
+    'https://openrouter.ai/api/v1',
+    'User'
+)
+[System.Environment]::SetEnvironmentVariable(
+    'ANTHROPIC_API_KEY',
+    'sk-or-v1-YOUR_KEY_HERE',
+    'User'
+)
+
+# التحقق
+echo $env:ANTHROPIC_BASE_URL
+echo $env:ANTHROPIC_API_KEY</code></pre>
+                </div>
+            </section>
+
+            <!-- Available Models -->
+            <section class="section animate-fade-in-up" style="animation-delay: 0.5s">
+                <h3 class="section-title">
+                    <i class="fas fa-list-ul"></i>
+                    أهم النماذج المتاحة
+                    <span class="section-badge">300+ نموذج</span>
+                </h3>
+                <div class="search-apis-grid">
+                    <div class="api-card">
+                        <div class="api-icon" style="background: #d97706;"><i class="fas fa-brain"></i></div>
+                        <h4>Anthropic</h4>
+                        <p class="api-stats">Claude Opus 4, Sonnet 4.5, Haiku 3.5</p>
+                        <p>للمهام المعقدة والمراجعات الاحترافية.</p>
+                    </div>
+                    <div class="api-card">
+                        <div class="api-icon" style="background: #4285F4;"><i class="fab fa-google"></i></div>
+                        <h4>Google</h4>
+                        <p class="api-stats">Gemini 3 Flash, Gemini 3 Pro</p>
+                        <p>سريع ومجاني (:free) مع context ضخم.</p>
+                    </div>
+                    <div class="api-card">
+                        <div class="api-icon" style="background: #10a37f;"><i class="fab fa-openai"></i></div>
+                        <h4>OpenAI</h4>
+                        <p class="api-stats">GPT-5, GPT-5 Mini, o3-mini</p>
+                        <p>النماذج الأحدث من OpenAI.</p>
+                    </div>
+                    <div class="api-card">
+                        <div class="api-icon" style="background: #06b6d4;"><i class="fas fa-water"></i></div>
+                        <h4>DeepSeek</h4>
+                        <p class="api-stats">V4-Pro, V4-Flash</p>
+                        <p>الأرخص عالمياً مع 1M context.</p>
+                    </div>
+                    <div class="api-card">
+                        <div class="api-icon" style="background: #0084ff;"><i class="fab fa-meta"></i></div>
+                        <h4>Meta</h4>
+                        <p class="api-stats">Llama 4, Llama 3.3</p>
+                        <p>Open source قوي ومجاني.</p>
+                    </div>
+                    <div class="api-card">
+                        <div class="api-icon" style="background: #f97316;"><i class="fas fa-dragon"></i></div>
+                        <h4>Qwen (Alibaba)</h4>
+                        <p class="api-stats">Qwen 3.8, Qwen3-Coder 30B</p>
+                        <p>ممتاز للبرمجة والعربية.</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Cost Deep Dive -->
+            <section class="section animate-fade-in-up" style="animation-delay: 0.6s">
+                <h3 class="section-title">
+                    <i class="fas fa-money-bill-wave"></i>
+                    التكلفة بالتفصيل: $10 يكفي كم؟
+                    <span class="section-badge success">واقعي</span>
+                </h3>
+
+                <div class="alert alert-info">
+                    <i class="fas fa-circle-info"></i>
+                    <div>
+                        <h4>قاعدة ذهبية</h4>
+                        <p>الرصيد في OpenRouter <strong>لا ينتهي</strong>! تدفع فقط عند استخدام النماذج المدفوعة. النماذج المجانية (:free) لا تستهلك شيئاً من رصيدك.</p>
+                    </div>
+                </div>
+
+                <div class="specs-grid">
+                    <div class="spec-card">
+                        <div class="spec-icon cpu"><i class="fas fa-gift"></i></div>
+                        <div class="spec-info">
+                            <span class="spec-label">النماذج المجانية (:free)</span>
+                            <strong class="spec-value">1000 طلب/يوم</strong>
+                            <span class="spec-detail">بعد إيداع $10 — للأبد</span>
+                        </div>
+                        <span class="spec-badge excellent">$0</span>
+                    </div>
+                    <div class="spec-card">
+                        <div class="spec-icon ram"><i class="fas fa-feather"></i></div>
+                        <div class="spec-info">
+                            <span class="spec-label">Claude Haiku 3.5</span>
+                            <strong class="spec-value">~200 مهمة</strong>
+                            <span class="spec-detail">بـ $10 رصيد</span>
+                        </div>
+                        <span class="spec-badge good">$0.05/مهمة</span>
+                    </div>
+                    <div class="spec-card">
+                        <div class="spec-icon gpu"><i class="fas fa-balance-scale"></i></div>
+                        <div class="spec-info">
+                            <span class="spec-label">Claude Sonnet 4.5</span>
+                            <strong class="spec-value">~33 مهمة</strong>
+                            <span class="spec-detail">بـ $10 رصيد</span>
+                        </div>
+                        <span class="spec-badge good">$0.30/مهمة</span>
+                    </div>
+                    <div class="spec-card">
+                        <div class="spec-icon psu"><i class="fas fa-crown"></i></div>
+                        <div class="spec-info">
+                            <span class="spec-label">Claude Opus 4</span>
+                            <strong class="spec-value">~6-7 مهام</strong>
+                            <span class="spec-detail">بـ $10 رصيد</span>
+                        </div>
+                        <span class="spec-badge excellent">$1.50/مهمة</span>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Smart Usage Strategy -->
+            <section class="section animate-fade-in-up" style="animation-delay: 0.7s">
+                <h3 class="section-title">
+                    <i class="fas fa-chess"></i>
+                    استراتيجية الاستخدام الذكية
+                    <span class="section-badge success">توفير 85%</span>
+                </h3>
+                <div class="philosophy-grid">
+                    <div class="philosophy-card">
+                        <div class="philosophy-icon"><i class="fas fa-infinity"></i></div>
+                        <h4>80% — النماذج المجانية</h4>
+                        <p>استخدم Gemini Flash، Llama 4 Free، Qwen 3 Free للمهام اليومية. مجاني تماماً!</p>
+                    </div>
+                    <div class="philosophy-card">
+                        <div class="philosophy-icon"><i class="fas fa-balance-scale"></i></div>
+                        <h4>15% — Sonnet 4.5</h4>
+                        <p>للمهام المتوسطة المهمة (مراجعة كود، refactoring). أفضل سعر/أداء.</p>
+                    </div>
+                    <div class="philosophy-card">
+                        <div class="philosophy-icon"><i class="fas fa-crown"></i></div>
+                        <h4>5% — Opus 4</h4>
+                        <p>فقط للمهام الحرجة جداً (architecture كبيرة، security critical).</p>
+                    </div>
+                </div>
+                <div class="alert alert-success">
+                    <i class="fas fa-chart-line"></i>
+                    <div>
+                        <h4>النتيجة الواقعية</h4>
+                        <p>بهذه الاستراتيجية، <strong>$10 يكفيك 2-3 أشهر</strong> من الاستخدام الاحترافي اليومي!</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Monitoring Usage -->
+            <section class="section animate-fade-in-up" style="animation-delay: 0.8s">
+                <h3 class="section-title">
+                    <i class="fas fa-chart-pie"></i>
+                    مراقبة الاستهلاك
+                    <span class="section-badge">مهم</span>
+                </h3>
+                <div class="steps-list">
+                    <h4><i class="fas fa-eye"></i> لمتابعة إنفاقك اليومي</h4>
+                    <ol>
+                        <li>افتح: <a href="https://openrouter.ai/activity" target="_blank">openrouter.ai/activity</a></li>
+                        <li>شاهد تفاصيل كل طلب (النموذج، التكلفة، الوقت)</li>
+                        <li>افتح: <a href="https://openrouter.ai/credits" target="_blank">openrouter.ai/credits</a> لمراقبة الرصيد</li>
+                        <li>فعّل <strong>Spend Limits</strong> من Settings لتجنب المفاجآت</li>
+                    </ol>
+                </div>
+            </section>
+
+            <!-- Checklist -->
+            <section class="section animate-fade-in-up" style="animation-delay: 0.9s">
+                <h3 class="section-title">
+                    <i class="fas fa-list-check"></i>
+                    قائمة التحقق
+                    <span class="section-badge">7 خطوات</span>
+                </h3>
+                <div class="checklist">
+                    <label class="check-item"><input type="checkbox"><span class="task-check"><i class="fas fa-check"></i></span><span class="task-text">إنشاء حساب على openrouter.ai</span></label>
+                    <label class="check-item"><input type="checkbox"><span class="task-check"><i class="fas fa-check"></i></span><span class="task-text">الحصول على مفتاح API (sk-or-v1-...)</span></label>
+                    <label class="check-item"><input type="checkbox"><span class="task-check"><i class="fas fa-check"></i></span><span class="task-text">إضافة المفتاح لملف .env</span></label>
+                    <label class="check-item"><input type="checkbox"><span class="task-check"><i class="fas fa-check"></i></span><span class="task-text">ربط OpenRouter مع Cline</span></label>
+                    <label class="check-item"><input type="checkbox"><span class="task-check"><i class="fas fa-check"></i></span><span class="task-text">ربط OpenRouter مع Claude Code (ANTHROPIC_BASE_URL)</span></label>
+                    <label class="check-item"><input type="checkbox"><span class="task-check"><i class="fas fa-check"></i></span><span class="task-text">إيداع $10 (اختياري لرفع الحدود)</span></label>
+                    <label class="check-item"><input type="checkbox"><span class="task-check"><i class="fas fa-check"></i></span><span class="task-text">تفعيل Spend Limits لحماية الرصيد</span></label>
+                </div>
+            </section>
+
+            <div class="page-nav-footer">
+                <a href="20-claude-code.html" class="page-nav-btn prev">
+                    <i class="fas fa-arrow-right"></i>
+                    <div><span>السابق</span><strong>Claude Code</strong></div>
+                </a>
+                <a href="22-multi-tool-workflow.html" class="page-nav-btn next">
+                    <div><span>التالي</span><strong>Multi-Tool Workflow</strong></div>
+                    <i class="fas fa-arrow-left"></i>
+                </a>
+            </div>
+        </div>
+    </main>
+
+    <script src="../js/main.js"></script>
+</body>
+</html>
